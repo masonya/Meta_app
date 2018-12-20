@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LastWill</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- <link href="http://allfont.ru/allfont.css?fonts=pragmatica" rel="stylesheet" type="text/css" />
+    <link href="http://allfont.ru/allfont.css?fonts=pragmatica-cyrillic" rel="stylesheet" type="text/css" />
+    <link href="http://allfont.ru/allfont.css?fonts=pragmatica-plain001001" rel="stylesheet" type="text/css" /> -->
+
+  </head>
+
+  <body>
+   <section class="nav">
+     <h1 class="logo"><%= link_to 'Meta', root_path %></h1>
+     <h3 class="transmit"><%= link_to 'Передаю', root_path %></h3>
+     <ul class="sidebar">
+      <li><a href="#s1">Документы</a></li>
+      <li><a href="#s2">Аккаунты</a></li>
+      <li><a href="#s3">Наставления</a></li>
+      <li><a href="#s4">Подписки</a></li>
+      <li><a href="#s5">Кошельки</a></li>
+    </ul>
+  </section>
+  <div class="user"></div>
+
+    <%= yield %>
+
+  </body>
+</html>

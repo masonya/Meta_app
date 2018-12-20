@@ -1,0 +1,53 @@
+<div class="doc">
+  <h2>Аккаунты</h2>
+  <%= form_with(model: social_account, local: true) do |form| %>
+    <% if social_account.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(social_account.errors.count, "error") %> prohibited this social_account from being saved:</h2>
+
+        <ul>
+        <% social_account.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="choose">
+      <h3>Выберите аккаунт</h3>
+      <%= form.select(:title, %w{Выберите Facebook Instagram Tumblr Twitter YouTube}) %>
+    </div>
+
+    <div class="login">
+      <h3>Введите данные</h3>
+      <%= form.text_field :login, placeholder: "Логин" %>
+      <%= form.text_field :password, placeholder: "Пароль" %>
+    </div>
+
+    <div class="body">
+      <h3>Добавьте комментарий</h3>
+      <%= form.text_area :body, placeholder: "Напишите..." %>
+    </div>
+
+    <div class="radio_button">
+      <h3>Что сделать с аккаунтом?</h3>
+      <%= form.radio_button :action, 'Удалить', :checked => true %>
+      <%= label :action, 'Удалить' %> <br>
+      <%= form.radio_button :action, 'Удалить и вывести средства' %>
+      <%= label :action, 'Удалить и вывести средства' %> <br>
+      <%= form.radio_button :action, 'Удалить с сообщением' %>
+      <%= label :action, 'Удалить с сообщением' %> <br>
+      <%= form.radio_button :action, 'Оставить пост' %>
+      <%= label :action, 'Оставить пост' %>
+    </div>
+
+    <div class="receiver">
+      <h3>Получатели</h3>
+      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Сохранить' %>
+    </div>
+  <% end %>
+</div>

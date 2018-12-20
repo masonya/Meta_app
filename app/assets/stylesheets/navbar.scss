@@ -1,0 +1,49 @@
+.nav {
+  width: 310px;
+  position: fixed;
+}
+
+.sidebar {
+  margin-top: 25px;
+}
+
+.sidebar li {
+  line-height: 35px;
+}
+
+.sidebar a {
+  font-size: 16px;
+  font-family: 'prg45';
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.transmit{
+  margin-top: 50px;
+}
+
+.transmit a {
+  font-size: 20px;
+  margin-left: 40px;
+  color: black;
+}
+
+.logo {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 32px;
+  color: black;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,35 @@
+
+<div class="doc">
+  <h2>Наставления</h2>
+  <%= form_with(model: instruction, local: true) do |form| %>
+  <% if instruction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(instruction.errors.count, "error") %> prohibited this instruction from being saved:</h2>
+
+      <ul>
+      <% instruction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="title">
+      <h3></h3>
+      <%= form.text_field :title, placeholder: "Ваш заголовок..." %>
+    </div>
+
+    <div class="body">
+      <%= form.text_area :body, placeholder: "Напишите Ваше наставление..." %>
+    </div>
+
+    <div class="receiver">
+      <h3>Получатели</h3>
+      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Сохранить' %>
+    </div>
+  <% end %>
+</div>

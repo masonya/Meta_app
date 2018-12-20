@@ -1,0 +1,22 @@
+
+<section class="main">
+
+  <%= @document.cover %>
+  <%= image_tag @document.cover.url if @document.cover.try(:url) %>
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>
+    <strong></strong>
+    <%= @document.title %>
+  </h1>
+
+  <p class="doc_show">
+    <strong></strong>
+    <%= @document.body %>
+  </p>
+
+  <%= link_to 'Изменить', edit_document_path(@document) %> |
+  <%= link_to 'Назад', documents_path %>
+
+</section>

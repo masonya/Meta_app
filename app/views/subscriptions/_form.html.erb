@@ -1,0 +1,44 @@
+<div class="doc">
+    <h2>Подписки</h2>
+    <%= form_with(model: subscription, local: true) do |form| %>
+      <% if subscription.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+          <ul>
+          <% subscription.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    <div class="title">
+      <h3>Введите URL</h3>
+      <%= form.text_field :title, placeholder: "www.site.ru" %>
+    </div>
+
+    <div class="login">
+      <h3>Введите данные</h3>
+      <%= form.text_field :login, placeholder: "Логин" %>
+    </div>
+
+    <div class="password">
+      <%= form.text_field :password, placeholder: "Пароль" %>
+    </div>
+
+    <div class="body">
+      <h3>Добавьте комментарий</h3>
+      <%= form.text_area :body, placeholder: "Напишите..." %>
+    </div>
+
+    <div class="receiver">
+      <h3>Получатели</h3>
+      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Сохранить' %>
+    </div>
+  <% end %>
+</div>

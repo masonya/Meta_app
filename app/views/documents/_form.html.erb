@@ -1,0 +1,38 @@
+<div class="doc">
+  <h2>Документы</h2>
+  <%= form_with(model: document, local: true) do |form| %>
+    <% if document.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+        <ul>
+        <% document.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+    <div class="title">
+      <h3></h3>
+      <%= form.text_field :title, placeholder: "Ваш заголовок..." %>
+    </div>
+
+    <div class="body">
+      <%= form.text_area :body, placeholder: "Напишите комментарий..." %>
+    </div>
+
+    <label class="custom-file-upload">
+      <%= form.file_field :cover %>
+    </label>
+
+    <div class="receiver">
+      <h3>Получатели</h3>
+      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Сохранить' %>
+    </div>
+  <% end %>
+</div>

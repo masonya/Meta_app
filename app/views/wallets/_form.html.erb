@@ -1,0 +1,41 @@
+<div class="doc">
+  <h2>Кошельки</h2>
+  <%= form_with(model: wallet, local: true) do |form| %>
+    <% if wallet.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(wallet.errors.count, "error") %> prohibited this wallet from being saved:</h2>
+
+        <ul>
+        <% wallet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="choose">
+      <h3>Выберите кошелек</h3>
+      <%= form.select(:title, %w{Выберите Webmoney Qiwi PayPal}) %>
+    </div>
+
+    <div class="login">
+      <h3>Введите данные</h3>
+      <%= form.text_field :login, placeholder: "Логин" %>
+      <%= form.text_field :password, placeholder: "Пароль" %>
+    </div>
+
+    <div class="body">
+      <h3>Добавьте комментарий</h3>
+      <%= form.text_area :body, placeholder: "Напишите..." %>
+    </div>
+
+    <div class="receiver">
+      <h3>Получатели</h3>
+      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Сохранить' %>
+    </div>
+  <% end %>
+</div>

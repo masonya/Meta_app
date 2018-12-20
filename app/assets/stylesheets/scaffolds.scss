@@ -1,0 +1,181 @@
+  body {
+  margin: auto;
+}
+
+p {
+  font-family: 'prg45';
+  font-size: 14px;
+  line-height: 19px;
+}
+
+a {
+  color: #666;
+  font-size: 11px;
+  text-decoration: none;
+
+  &:hover {
+    color: #00AEEF;
+  }
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 32px;
+  margin: auto;
+  font-family: 'pragmaticalightc-bold-2';
+  font-weight: bold;
+}
+
+h2 {
+   font-size: 32px;
+   font-family: 'pragmatica-cyrillic';
+   margin: auto;
+   font-weight: normal;
+   color: inherit;
+ }
+
+ h3 {
+   font-size: 18px;
+   margin-top: 40px;
+  font-family: 'pragmatica-cyrillic';
+ }
+
+ h4 {
+   font-size: 16px;
+   font-weight: lighter;
+   font-family: 'prg45';
+ }
+
+ .section_header {
+   margin-left: 30px;
+ }
+
+.main {
+  width: 950px;
+  padding-left: 280px;
+  padding-top: 118px;
+}
+
+.cards_area {
+  width: 100%;
+  margin-top: 40px;
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 206px;
+  height: 123px;
+  border-radius: 2%;
+  position: relative;
+  background-color: #F5F5F5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  min-width: 0%
+}
+
+.card_new {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.card_new a, .edit a, .delete a {
+ height: 100%;
+ width: 100%;
+ z-index: 1;
+ display: block;
+}
+
+.add {
+  height: 35px;
+  width: 35px;
+  background-image: image_url('add.png');
+  background-size: cover;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 45px;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background-image: image_url('delete.png');
+  background-size: cover;
+  margin-left: 195px;
+  position: absolute;
+  display: none;
+}
+
+.edit {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 195px;
+  position: absolute;
+  background-image: image_url('edit.png');
+  background-size: cover;
+  display: none;
+}
+
+.card:hover .edit, .card:hover .delete  {
+  display:block;
+}
+
+.card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.previev {
+  width: 210px;
+  height: 88px;
+  border-radius: -2%;
+  margin-top: -3px;
+  background-size: contain;
+  background-image: image_url('doc.png');
+}
+
+.card_title {
+  margin-top: 76px;
+  margin-left: 15px;
+  position: absolute;
+}
+
+.user {
+  width: 33px;
+  height: 33px;
+  background-color: #CBCBCB;
+  position: fixed;
+  border-radius: 100%;
+  margin-top: 33px;
+  right: 33px;
+}
+
+.interval {
+  height: 105px;
+}
