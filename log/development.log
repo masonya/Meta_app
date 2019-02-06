@@ -26529,3 +26529,266 @@ Processing by TransmitController#index as HTML
 Completed 200 OK in 304ms (Views: 271.4ms | ActiveRecord: 1.7ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8658120477281130030)[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateUsers (20181121103102)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "login" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181121103102_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181121103102"]]
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DropUser (20190206092856)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ db/migrate/20190206092856_drop_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190206092856"]]
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (3.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-06 09:30:08.358644"], ["updated_at", "2019-02-06 09:30:08.358644"]]
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(8658120477281130030)[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:15 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.6ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.8ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.7ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (1.7ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (70.7ms)
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:19 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.8ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.7ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 11184ms (Views: 10966.4ms | ActiveRecord: 37.4ms)
+
+
+Completed 200 OK in 9940ms (Views: 9913.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:29 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.4ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 852ms (Views: 821.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:31 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.9ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.8ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.9ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 510ms (Views: 484.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:34 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.3ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 459ms (Views: 396.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:35 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (1.2ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 757ms (Views: 713.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:32:37 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.3ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.4ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.7ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 578ms (Views: 544.8ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8658120477281130030)[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsers (20190206093446)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190206093446_devise_create_users.rb:5
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190206093446_devise_create_users.rb:39
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190206093446_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190206093446"]]
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(8658120477281130030)[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:37:05 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.6ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.5ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.6ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 2219ms (Views: 2133.6ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:37:07 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.6ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (1.1ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 693ms (Views: 661.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:37:09 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.3ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 457ms (Views: 436.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-06 12:37:10 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.4ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 632ms (Views: 609.3ms | ActiveRecord: 1.6ms)
+
+
