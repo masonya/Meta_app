@@ -31507,3 +31507,2727 @@ Processing by TransmitController#index as HTML
 Completed 200 OK in 1291ms (Views: 1229.0ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-02-07 21:55:24 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (37.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (4.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (41.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (3.9ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (5.5ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (36.8ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (442.7ms)
+Started GET "/" for 10.0.2.2 at 2019-02-07 21:55:27 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (1.6ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.8ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.4ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.6ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (144.8ms)
+Completed 200 OK in 6742ms (Views: 6588.7ms | ActiveRecord: 5.2ms)
+
+
+Completed 200 OK in 9344ms (Views: 8810.8ms | ActiveRecord: 145.6ms)
+
+
+Started GET "/social_accounts/new" for 10.0.2.2 at 2019-02-07 21:55:40 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SocialAccountsController#new as HTML
+  Rendering social_accounts/new.html.erb within layouts/application
+  Rendered social_accounts/_form.html.erb (700.8ms)
+  Rendered social_accounts/new.html.erb within layouts/application (893.6ms)
+Completed 200 OK in 2390ms (Views: 2200.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/social_accounts" for 10.0.2.2 at 2019-02-07 21:55:47 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SocialAccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hPlVLXx+qwZUSy3RUujCfjykkyEZRmYD2PeC96BOi78Szwj/8z6ZpRoRjjcvqfZePn6rDkXFAMoF6XUNC4vcmA==", "social_account"=>{"title"=>"Выберите", "login"=>"", "password"=>"[FILTERED]", "body"=>"", "action"=>"Удалить", "receiver"=>"Выберите"}, "commit"=>"Сохранить"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/social_accounts_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/social_accounts_controller.rb:31
+  Rendering social_accounts/new.html.erb within layouts/application
+  Rendered social_accounts/_form.html.erb (7.0ms)
+  Rendered social_accounts/new.html.erb within layouts/application (189.4ms)
+Completed 200 OK in 1355ms (Views: 1344.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/social_accounts" for 10.0.2.2 at 2019-02-07 21:58:43 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SocialAccountsController#index as HTML
+Completed 406 Not Acceptable in 4507ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SocialAccountsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/social_accounts" for 10.0.2.2 at 2019-02-07 21:59:23 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SocialAccountsController#index as HTML
+Completed 406 Not Acceptable in 2477ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SocialAccountsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-02-07 21:59:50 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.7ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (1.0ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.8ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (123.9ms)
+Started GET "/" for 10.0.2.2 at 2019-02-07 21:59:54 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (1.3ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (1.0ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.9ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (1.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 22332ms (Views: 22233.0ms | ActiveRecord: 29.6ms)
+
+
+Completed 200 OK in 18968ms (Views: 18909.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/documents/10/edit" for 10.0.2.2 at 2019-02-07 22:00:21 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (55.8ms)
+  Rendered documents/edit.html.erb within layouts/application (104.7ms)
+Completed 200 OK in 1603ms (Views: 1530.1ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/documents/10" for 10.0.2.2 at 2019-02-07 22:00:31 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWXNqu9SJywNJas48wEKUlGrPBgAYDM6z+RMialHkMVaxxj/TpH7p8/9mmAAWYvKyXGRQdk0flIQi1u7XGmWsQ==", "document"=>{"title"=>"ghjk", "body"=>"", "receiver"=>"mary@gmail.com"}, "commit"=>"Сохранить", "id"=>"10"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "ghjk"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.3ms)
+  Rendered documents/edit.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 894ms (Views: 792.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/documents/10" for 10.0.2.2 at 2019-02-07 22:01:25 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 2142ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/documents/" for 10.0.2.2 at 2019-02-07 22:01:32 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#index as HTML
+Completed 406 Not Acceptable in 2273ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/documents/" for 10.0.2.2 at 2019-02-07 22:02:43 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#index as HTML
+Completed 406 Not Acceptable in 2134ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/documents" for 10.0.2.2 at 2019-02-07 22:03:35 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#index as HTML
+Completed 406 Not Acceptable in 2017ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:03:40 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.7ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.6ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 776ms (Views: 751.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/documents/8/edit" for 10.0.2.2 at 2019-02-07 22:03:45 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.0ms)
+  Rendered documents/edit.html.erb within layouts/application (53.4ms)
+Completed 200 OK in 782ms (Views: 739.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:03:49 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03gyTyMKS/+1Z0THzwXe4SBnMWicTPm98cdWI2nPykZWyC7Wn6iYdBOGDDKGdz6Q+/Qbrnq6wLfrtnoB5YoGCw==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.0ms)
+  Rendered documents/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 529ms (Views: 511.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:06:39 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 1971ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:14:32 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (1.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 3501ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:14:37 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (1.0ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.8ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.7ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 1665ms (Views: 1608.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/documents/8/edit" for 10.0.2.2 at 2019-02-07 22:14:41 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.7ms)
+  Rendered documents/edit.html.erb within layouts/application (125.3ms)
+Completed 200 OK in 1201ms (Views: 1114.1ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:14:48 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"95YRUcnlGBygj2E5eOa1ZcCkOTrZCM0DrnJCRUl5GCRyJg3IdUfLlwZuKcwxlFUUGzcT/D/+9Am0A25nxTzUaQ==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.5ms)
+  Rendered documents/edit.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 935ms (Views: 893.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:16:04 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 2799ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:16:12 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fyx9ohLWbGEGdN5GMeBgglVD1BFqFVINlv4xQ7xc/ZKTXVjli/Hs5Ic+SJaWHg9LF69SZ0FqWTlwzsVNnG4oeg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.3ms)
+  Rendered documents/edit.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 805ms (Views: 772.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:16:30 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 1247ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:16:35 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fyx9ohLWbGEGdN5GMeBgglVD1BFqFVINlv4xQ7xc/ZKTXVjli/Hs5Ic+SJaWHg9LF69SZ0FqWTlwzsVNnG4oeg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (1.9ms)
+  Rendered documents/edit.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 2675ms (Views: 2648.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:16:58 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hse/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 2846ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:17:05 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fyx9ohLWbGEGdN5GMeBgglVD1BFqFVINlv4xQ7xc/ZKTXVjli/Hs5Ic+SJaWHg9LF69SZ0FqWTlwzsVNnG4oeg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (46.0ms)
+  Rendered documents/edit.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 18031ms (Views: 17952.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:19:37 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 2766ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:19:44 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fyx9ohLWbGEGdN5GMeBgglVD1BFqFVINlv4xQ7xc/ZKTXVjli/Hs5Ic+SJaWHg9LF69SZ0FqWTlwzsVNnG4oeg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.9ms)
+  Rendered documents/edit.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 1119ms (Views: 1101.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:20:21 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 3129ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:20:27 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fyx9ohLWbGEGdN5GMeBgglVD1BFqFVINlv4xQ7xc/ZKTXVjli/Hs5Ic+SJaWHg9LF69SZ0FqWTlwzsVNnG4oeg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (17.1ms)
+  Rendered documents/edit.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 1217ms (Views: 1184.6ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:20:47 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LUyt0pmzS1UmbRHAFnpoH7CdLs5qHYcsGv/FeqOc28qpPYiVAJTL0KcnhxCxhAfW8nGouEFijBj8zzF0g64OIg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.5ms)
+  Rendered documents/edit.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 1047ms (Views: 1028.5ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:20:58 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tPou/gcx3fzgdQyIyoEiyQHYcmPfAgtjYuISYRsaQE4wiwu5nhZdeWE/mlhtf00AQzT0FfR9AFeE0uZvOyiVpg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (13.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (6.6ms)
+  Rendered documents/edit.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 1447ms (Views: 1412.6ms | ActiveRecord: 14.8ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:21:22 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GeYuM3SkGUmzh1SAyaXSyexAi4uTjQgz5LU4yivBWl4Fr3/VPUQ4KeEi4Kk2PiCZV2EWAUxPxQpoiDtCJ3QgQ==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.1ms)
+  Rendered documents/edit.html.erb within layouts/application (64.1ms)
+Completed 200 OK in 1066ms (Views: 1044.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:21:47 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vOJQIKG7PoHK9HzLI2nj2+syrLAzBpWyhcGMwVOgDQo4k3VnOJy+BEu+6huEl4wSqd4qxhh5noZj8XjPc5LY4g==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.6ms)
+  Rendered documents/edit.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 1250ms (Views: 1232.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:23:06 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cFBSdvw9nKZjI1P9HrpQXOLX+oIlZMPo6b1YBC0/VRf0IXcxZRocI+JpxS25RD+VoDt89A4byNwPjawKDQ2A/w==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.2ms)
+  Rendered documents/edit.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 1133ms (Views: 1117.2ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:23:36 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ncYVR4yghu4yR1xQP3KT+W/MTwwEjB+7DknOu2yZklQZtzAAFYcGa7MNyoCYjPwwLSDJei/zFI/oeTq1TKtHvA==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.5ms)
+  Rendered documents/edit.html.erb within layouts/application (80.8ms)
+Completed 200 OK in 1185ms (Views: 1148.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:23:56 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3JvmBYevcN0u1nleNpJL9IQP/fLq/UO4QdzhgttoZRlY6sNCHojwWK+c746RbCQ9xuN7hMGCSIyn7BWM+1qw8Q==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (17.2ms)
+  Rendered documents/edit.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 1145ms (Views: 1128.5ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:24:05 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JsOKbkRzzztNWsgLZQSoOCn/ZnkDMaMQKNJgd2qSzCKisq8p3VRPvswQXtvC+sfxaxPgDyhOqCTO4pR5SqAZyg==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.1ms)
+  Rendered documents/edit.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 1352ms (Views: 1334.0ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:24:14 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83N9e724CaZ/nYROgUVP3+eSLeFg/GUjoT8xDxZTgGJ3Alg8JJ+JI/7XEp4muyAWpX6rl0uDbhdHD8UBNmFVig==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.9ms)
+  Rendered documents/edit.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 847ms (Views: 827.1ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:29:11 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/mWYcqUjqr5mEqsB4gzEe97FhwytDpxTZnxZKrLVA216FL01PAQqO+dYPdFF8quynCkBeoZxl2eATK0kkufWhQ==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.1ms)
+  Rendered documents/edit.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 1811ms (Views: 1777.0ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:30:19 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vix9v3AStWXIDQFKTCBtr/BIQQ1Iq0TZWiBaRPQXW2vSXVj46TU14ElHl5rr3gJmsqTHe2PUT+28EK5K1CWOgw==", "document"=>{"title"=>"fb", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "fb"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (1.5ms)
+  Rendered documents/edit.html.erb within layouts/application (31.1ms)
+Completed 500 Internal Server Error in 584ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <!-- <link href="http://allfont.ru/allfont.css?fonts=pragmatica" rel="stylesheet" type="text/css" />
+  
+app/assets/stylesheets/scaffolds.scss:185
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___231281396587682399_70065786842060'
+app/controllers/documents_controller.rb:50:in `block (2 levels) in update'
+app/controllers/documents_controller.rb:45:in `update'
+Started GET "/documents/8" for 10.0.2.2 at 2019-02-07 22:30:26 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 2732ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:30:36 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.9ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.8ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.7ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (114.5ms)
+Completed 500 Internal Server Error in 749ms (ActiveRecord: 32.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <!-- <link href="http://allfont.ru/allfont.css?fonts=pragmatica" rel="stylesheet" type="text/css" />
+  
+app/assets/stylesheets/scaffolds.scss:185
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___231281396587682399_70065723197720'
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:30:39 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.6ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 563ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <!-- <link href="http://allfont.ru/allfont.css?fonts=pragmatica" rel="stylesheet" type="text/css" />
+  
+app/assets/stylesheets/scaffolds.scss:185
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___231281396587682399_70065786476800'
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:31:06 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.7ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.5ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.4ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 1098ms (Views: 1042.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/documents/9/edit" for 10.0.2.2 at 2019-02-07 22:31:09 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.4ms)
+  Rendered documents/edit.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 700ms (Views: 639.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:31:14 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sX12dVm1s0TfUlBSq6qoBPTwAG3YGx7MswgNUgPOQg+5MaTEAQUku1BCW7Kf0wfkQC1m/f7rBRotz762MDraxA==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.3ms)
+  Rendered documents/edit.html.erb within layouts/application (71.2ms)
+Completed 200 OK in 703ms (Views: 672.2ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:31:50 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s8liUgz7IrEFi7jsmOQVB0czC0nDHkn3NT6MXYR2spc3uEcVldyiNITBLjw/GnrOBd+NP+hhQsPTDnhTpERnfw==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.8ms)
+  Rendered documents/edit.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 1241ms (Views: 1210.1ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:32:21 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tcBYohednErDdrkibn9a/+4W1yEFgozC7dtBB4LmrLExsX3ljrocz0I8L/LJgTU2rPpRVy79h/YL67UJotR5WQ==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.3ms)
+  Rendered documents/edit.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 1924ms (Views: 1906.5ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:33:07 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T7/3xuZRyrA41NLssNAa0ZhphTHBgXu07VvFl+x2l2fLztKBf3ZKNbmeRDwXLnUY2oUDR+r+cIALazGZzERCjw==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.7ms)
+  Rendered documents/edit.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 1098ms (Views: 1068.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:33:34 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"40j0wLuDI6Iu5m9cL1BJALSV+B8onqmhg9kWjMUsv8xnOdGHIqSjJ6+s+YyIribJ9nl+aQPhopVl6eKC5R5qJA==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (4.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.2ms)
+  Rendered documents/edit.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 1082ms (Views: 1060.0ms | ActiveRecord: 5.3ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:34:31 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC1oAv7OCXZtRiETNENlCUuKbwQ8AA+D/BhaZwKil5BAXE1FZ+mJ8+wMt8OTvQrACWbpchd/BLcaKK5pIpBCeA==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.3ms)
+  Rendered documents/edit.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 1038ms (Views: 1020.1ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:34:45 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sg9fqbg79rZpbuVr1tQM1LUDz6Q3rcjbZ7RxYNqEO3TOfnruIRx2M+gkc7txKmMd9+9J0hzSw++BhIVu+rbunA==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (1.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.1ms)
+  Rendered documents/edit.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 1133ms (Views: 1098.9ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:35:24 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BNlDzPXNiUN8DWHyHOJchOJDdvGhgiiwvokwA9A1e8aAqGaLbOoJxv1H9yK7HDNNoK/wh4r9I4RYucQN8AeuLg==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.6ms)
+  Rendered documents/edit.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 1328ms (Views: 1297.7ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:36:43 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MtkkQQ+sIEj59LX/SdHZgr/cAX6SLsrPEn6/Q9hbWRq2qAEGlougzXi+Iy/uL7ZL/TCHCLlRwfv0TktN+GmM8g==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (12.9ms)
+  Rendered documents/edit.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 1546ms (Views: 1513.3ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:37:36 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mlWPtH0p1+kWsz1nu3lYBts54U2PlsU+3+Mpr/cNL/geJKrz5A5XbJf5q7cchzfPmdVnO6Tpzgo5092h1z/6EA==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (7.4ms)
+  Rendered documents/edit.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 1571ms (Views: 1541.0ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:38:32 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/LNXZzA8CMrA8kEWQkcSTJk339VFthkAS6q5VpIRIal4wnIgqRuIT0G418bluX2F29tZo27JEjStmk1YsiP0QQ==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.1ms)
+  Rendered documents/edit.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 1643ms (Views: 1624.0ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:38:37 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fx+mb/vkwZGpot0H9fxTHfoesMKNPRKeKtTi6G5FwySTboMoYsNBFCjoS9dSAjzUuPI2tKZCGarM5BbmTncWzA==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.0ms)
+  Rendered documents/edit.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 1118ms (Views: 1097.4ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:39:09 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dZUKXbmU5RhUVYccm7kPN3iOtrFqL89UpW7o5kWz4MPx5C8aILNlndUfEcw8R2D+OmIwx0FQxGBDXhzoZYE1Kw==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (14.9ms)
+  Rendered documents/edit.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 1411ms (Views: 1394.3ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/documents/9" for 10.0.2.2 at 2019-02-07 22:39:48 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mG+D1TRQ3uHm0QuiRyIF8uWnb5ahPs/h9EyGFsFZ7gAcHqaSrXdeZGebnXLg3Go7p0vp4IpBxNUSfHIY4Ws76A==", "document"=>{"title"=>"bnjkl;", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"9"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "bnjkl;"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.8ms)
+  Rendered documents/edit.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 1025ms (Views: 1005.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/documents/9" for 10.0.2.2 at 2019-02-07 22:40:21 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+Completed 406 Not Acceptable in 2084ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:40:26 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 881ms (Views: 835.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/documents/8/edit" for 10.0.2.2 at 2019-02-07 22:40:32 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.5ms)
+  Rendered documents/edit.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 1114ms (Views: 1057.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:40:36 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AYwmXCe2C7jH6JIfACsZikxkj5opouo3n5gzQiyA82KEPDrFmxTYM2EJ2upJWfn7l/elXM9U0z2F6R9goMU/Lw==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (14.5ms)
+  Rendered documents/edit.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 732ms (Views: 701.5ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:41:46 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/e5UVZ+1gyJJnCkxgeTnYKd+c6MF9qJ/JqdJjh7jVGLhpwWz1lWiQhs5nRh+fxUwHF/uKdo0b0aqmkoGElYuQ==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.3ms)
+  Rendered documents/edit.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 837ms (Views: 816.6ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:42:03 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R5qmh+uTMTDIbuCzsj9nFoyT/VmbuKkhjkTTOgYGtnbD64PAcrSxtUkkdmMVwQjfzn97L7DHohVodCc0JjRjng==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (5.4ms)
+  Rendered documents/edit.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 859ms (Views: 839.7ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:43:39 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+r1dm4n1iOWqRs2btfca81GxzN/ftfi2Nfurv/N67/l+zHjcENIIYCsMW0sSCXU6E11KqfTK84LTy1+x00g6EQ==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.6ms)
+  Rendered documents/edit.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 844ms (Views: 826.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:44:46 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iBUStRpPLixvYLx1zRrFcMCwX7XzN3KvlAH1PXxrpTcMZDfyg2iuqe4qKqVq5Kq5glzZw9hIeZtyMQEzXFlw3w==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.8ms)
+  Rendered documents/edit.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 946ms (Views: 927.5ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:45:26 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mMnZSZwcq5DnuU8O4+7+10aEsbvZ7bzT7eEGrHuPQFqEgIiv1fyK8LUc+yccdQyH/aUsMQYvceph3AUkdzo6Q==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.5ms)
+  Rendered documents/edit.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 893ms (Views: 874.3ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:46:25 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Obs+LB/82HRVCmLmfY8btAdmC/DlrzDM3WdrWaz1g069yhtrhttY8dRA9DbacXR9RYqNhs7QO/g7V59XjMdWpg==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.9ms)
+  Rendered documents/edit.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 1190ms (Views: 1170.4ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:46:43 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"didLWjOnb/UlYHxC8SxE52cCupbv+BleuS2GYkfZI2HyVm4dqoDvcKQq6pJW0isuJe484MSHEmpfHXJsZ+v2iQ==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (1.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.5ms)
+  Rendered documents/edit.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 1093ms (Views: 1071.8ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:46:52 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pz86nD8/2YGSoXLVjp1WNzElHoyssp9xmWdQ4CjxosYjTh/bphhZBBPr5AUpYzn+c8mY+ofNlEV/V6TuCMN3Lg==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.9ms)
+  Rendered documents/edit.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 668ms (Views: 650.0ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:47:20 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zs+1HjKHeNdnFvO9wUn3RqxfmU5MReMtOr5JE1fc9GzivpBZq6D4UuZcZW1mt5iP7rMfOGc66Bncjr0dd+4hhA==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (7.9ms)
+  Rendered documents/edit.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 635ms (Views: 612.6ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:47:29 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IqI2JaXar47Sc/xxnG+WU6kfsAIDkAsVGGdCojo6Lbmm0xNiPP0vC1M5aqE7kfma6/M2dCjvACH+V7asGgj4UQ==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.1ms)
+  Rendered documents/edit.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 578ms (Views: 559.4ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:49:32 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yCWcRQ4OX6yatJSYayeUAVW52SpccvoaXpSCoZ3/Ml9MVLkClynfKRv+AkjM2fvIF1VfXHcN8S64pHavvc3ntw==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.4ms)
+  Rendered documents/edit.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 861ms (Views: 843.1ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:49:58 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FsTH+tC1lxsN0khg6RSKQfSBPKeNWUn2CwvVeu0i/biSteK9SZIXnoyY3rBO6uWItm260aYmQsLtOyF0zRAoUA==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.4ms)
+  Rendered documents/edit.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 860ms (Views: 841.9ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:50:47 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBFOn8rLH4AZZkhZBrxwdPPKcA1bfCOqOSHgcObOKM8gYGvYU+yfBZgs3omhQh+9sSb2e3ADKJ7fERR+xvz9Jw==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.3ms)
+  Rendered documents/edit.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 854ms (Views: 832.9ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:51:34 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YjYC+ZiRvRLI6Rm1NxeujFOcDILNqSZEQyvDas9QzpfmRye+AbY9l0mjj2WQ6cFFEXCK9ObWLXClGzdk72Ibfw==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (1.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.6ms)
+  Rendered documents/edit.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 854ms (Views: 831.8ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:55:09 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E6NbAz/3XiMGk4kCYtLq5NhsKBaVpNpFq5zyZ+wGn4mX0n5EptDepofZH9LFLIUtmoCuYL7b0XFNrAZpzDRKYQ==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.5ms)
+  Rendered documents/edit.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 593ms (Views: 571.5ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:58:05 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPerDAN5G5HIwBc0fy9HhYE3DrZokQOQbTZKV2+IQMeEvvrqSpk68Zplox2AtLXVOhaTPLdTzqnhC0nfYz06w==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.8ms)
+  Rendered documents/edit.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 689ms (Views: 669.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:58:07 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.7ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.7ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 586ms (Views: 537.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/documents/9/edit" for 10.0.2.2 at 2019-02-07 22:58:09 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.6ms)
+  Rendered documents/edit.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 490ms (Views: 448.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-07 22:58:15 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (0.6ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 941ms (Views: 906.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/documents/8/edit" for 10.0.2.2 at 2019-02-07 22:58:16 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.1ms)
+  Rendered documents/edit.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 662ms (Views: 638.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 22:58:20 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q5u6q/7nqJE8kVP9tflaOeSBQLQOLbEpSZaLf4lD18wuK6YyQkV7GppwGwj8i7pIPxJqcujbiCNT56ddBQYbgQ==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (1.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (4.5ms)
+  Rendered documents/edit.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 549ms (Views: 529.2ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 23:09:52 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O1EetffRByPLmJPsHlHUQmuS2joECPNmsVgmPUJJF1u/IDvybvaHpkrSBTy5r7uLKX5cTC93+FJXaNIzYnvCsw==", "document"=>{"title"=>"", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (1.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", ""], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:46
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.3ms)
+  Rendered documents/edit.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 626ms (Views: 593.0ms | ActiveRecord: 3.1ms)
+
+
+Started PATCH "/documents/8" for 10.0.2.2 at 2019-02-07 23:09:59 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gNmnEn5iPbB9OPXOE2rXbeGRWuE/JmYfpjJGjBWTFj4EqIJV50W9NfxyYx60lLiko33clxRZbStAArKCNaHD1g==", "document"=>{"title"=>"иб", "body"=>"fg", "receiver"=>"Выберите"}, "commit"=>"Сохранить", "id"=>"8"}
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 AND "documents"."id" != $2 LIMIT $3[0m  [["title", "иб"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[36mDocument Update (0.6ms)[0m  [1m[33mUPDATE "documents" SET "title" = $1, "updated_at" = $2 WHERE "documents"."id" = $3[0m  [["title", "иб"], ["updated_at", "2019-02-07 20:09:59.725698"], ["id", 8]]
+  ↳ app/controllers/documents_controller.rb:46
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/documents_controller.rb:46
+Redirected to http://localhost:3333/
+Completed 302 Found in 27ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-02-07 23:09:59 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransmitController#index as HTML
+  Rendering transmit/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/transmit/index.html.erb:6
+  [1m[36mSocialAccount Load (0.6ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts"[0m
+  ↳ app/views/transmit/index.html.erb:35
+  [1m[36mInstruction Load (1.1ms)[0m  [1m[34mSELECT "instructions".* FROM "instructions"[0m
+  ↳ app/views/transmit/index.html.erb:64
+  [1m[36mSubscription Load (0.8ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+  ↳ app/views/transmit/index.html.erb:93
+  [1m[36mWallet Load (0.4ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  ↳ app/views/transmit/index.html.erb:122
+  Rendered transmit/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 557ms (Views: 509.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/documents/new" for 10.0.2.2 at 2019-02-07 23:10:02 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.5ms)
+  Rendered documents/new.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 530ms (Views: 492.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/new" for 10.0.2.2 at 2019-02-07 23:10:06 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.0ms)
+  Rendered documents/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 676ms (Views: 657.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/new" for 10.0.2.2 at 2019-02-07 23:10:10 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#new as HTML
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (2.0ms)
+  Rendered documents/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 532ms (Views: 511.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/documents" for 10.0.2.2 at 2019-02-07 23:10:14 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N5k5ERns+/eIGjabPxQIMEKfd2C3MT7ClauD5E8xasqz6BxWgMt7cglQoEuY6mf5AHPxFpxONfZzm3fqbwO/Ig==", "document"=>{"title"=>"ти", "body"=>"", "receiver"=>"Выберите"}, "commit"=>"Сохранить"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/documents_controller.rb:32
+  [1m[36mDocument Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "documents" WHERE "documents"."title" = $1 LIMIT $2[0m  [["title", "ти"], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/documents_controller.rb:32
+  Rendering documents/new.html.erb within layouts/application
+  Rendered documents/_form.html.erb (3.7ms)
+  Rendered documents/new.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 555ms (Views: 540.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/documents" for 10.0.2.2 at 2019-02-07 23:10:22 +0300
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DocumentsController#index as HTML
+Completed 406 Not Acceptable in 2152ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (DocumentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
