@@ -1,4 +1,8 @@
 class Document < ApplicationRecord
   # belongs_to :user
   mount_uploader :cover, CoverUploader
-end
+  validates :title, :body, :presence => true
+  validates :title, :length => { :minimum => 2 }
+  validates :title, :uniqueness => { :massage => "Already Taken" }
+
+  end
