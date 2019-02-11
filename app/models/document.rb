@@ -1,5 +1,5 @@
 class Document < ApplicationRecord
-  # belongs_to :user
+  belongs_to :user
   mount_uploader :cover, CoverUploader
   validates :title, :body, :presence => true
   validates :title, :length => { :minimum => 2 }
