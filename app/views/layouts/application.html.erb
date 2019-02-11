@@ -15,12 +15,27 @@
   </head>
 
   <body>
+
+    <!-- <section class="menubar">
+
+    </section> -->
+
+
+
+
+
+
     <% if user_signed_in? %>
-      <%= link_to 'Sing out', destroy_user_session_path, method: :delete %>
+      <section class="menubar">
+        <h3 class="transmit"><%= link_to 'Передаю', root_path %></h3>
+        <h3 class="transmit"><%= link_to 'Получаю', obtain_index_path %></h3>
+        <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+        <div class="user"></div>
+      </section>
       <section class="nav">
-         <h1 class="logo"><%= link_to 'Meta', root_path %></h1>
-         <h3 class="transmit"><%= link_to 'Передаю', root_path %></h3>
-         <ul class="sidebar">
+
+           <h1 class="logo"><%= link_to 'Meta', root_path %></h1>
+        <ul class="sidebar">
           <li><a href="#s1">Документы</a></li>
           <li><a href="#s2">Аккаунты</a></li>
           <li><a href="#s3">Наставления</a></li>
@@ -29,11 +44,11 @@
         </ul>
       </section>
     <% else %>
+      <section class="menubar">
         <%= link_to 'Log in', new_user_session_path %>
         <% link_to 'Sing up', new_user_registration_path %>
+      </section>
     <% end %>
-
-  <div class="user"></div>
 
     <%= yield %>
 

@@ -1,0 +1,2 @@
+class ObtainController < ApplicationController
+end

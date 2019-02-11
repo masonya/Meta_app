@@ -1,0 +1,32 @@
+.menubar {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+.menubar a {
+  font-size: 16px;
+  font-family: 'prg45';
+  font-weight: 500;
+  font-style: normal;
+}
+
+.transmit {
+  margin-right: 25px;
+}
+
+.user {
+  width: 33px;
+  height: 33px;
+  background-color: #CBCBCB;
+  border-radius: 100%;
+  // margin-top: 33px;
+  right: 33px;
+  margin-left: 25px;
+  margin-right: 40px;
+}
