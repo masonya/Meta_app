@@ -31,6 +31,12 @@
       <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
     </div>
 
+    <%#= document.cover %>
+
+
+    <%= image_tag document.cover.url %>
+
+
     <div class="actions">
       <%= form.submit 'Сохранить' %>
     </div>
