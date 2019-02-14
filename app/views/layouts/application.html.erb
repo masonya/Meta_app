@@ -22,8 +22,8 @@
 
     <% if user_signed_in? %>
       <section class="menubar">
-        <h3 class="transmit"><%= link_to 'Передаю', root_path %></h3>
-        <h3 class="transmit"><%= link_to 'Получаю', obtain_index_path %></h3>
+        <%= link_to 'Передаю', root_path %>
+        <%= link_to 'Получаю', obtain_index_path %>
         <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
         <div class="user"></div>
       </section>
@@ -45,7 +45,7 @@
       </section>
     <% end %>
 
-    
+
 
     <%= yield %>
 

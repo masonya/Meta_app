@@ -25,7 +25,7 @@ class InstructionsController < ApplicationController
   # POST /instructions.json
   def create
     @instruction = Instruction.new(instruction_params)
-    @document.user_id = current_user.id
+    @instruction.user_id = current_user.id
 
     respond_to do |format|
       if @instruction.save

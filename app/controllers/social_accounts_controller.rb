@@ -25,7 +25,7 @@ class SocialAccountsController < ApplicationController
   # POST /social_accounts.json
   def create
     @social_account = SocialAccount.new(social_account_params)
-    @document.user_id = current_user.id
+    @social_account.user_id = current_user.id
 
     respond_to do |format|
       if @social_account.save

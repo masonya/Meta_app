@@ -25,7 +25,7 @@ class WalletsController < ApplicationController
   # POST /wallets.json
   def create
     @wallet = Wallet.new(wallet_params)
-    @document.user_id = current_user.id
+    @wallet.user_id = current_user.id
 
     respond_to do |format|
       if @wallet.save
