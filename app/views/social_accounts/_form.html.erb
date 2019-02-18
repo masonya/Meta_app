@@ -20,8 +20,11 @@
 
     <div class="login">
       <h3>Введите данные</h3>
-      <%= form.text_field :login, placeholder: "Логин" %>
-      <%= form.text_field :password, placeholder: "Пароль" %>
+        <input type="email" placeholder="E-mail" class="form-control" name="email" value="">
+          <div class="col-md-6">
+          <input id="password-field" type="password" placeholder="Пароль" class="form-control" name="password">
+            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+          </div>
     </div>
 
     <div class="body">
@@ -43,7 +46,7 @@
 
     <div class="receiver">
       <h3>Получатели</h3>
-      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}) %>
+        <input type="email" placeholder="E-mail" class="form-control" name="email" value="">
     </div>
 
     <div class="actions">

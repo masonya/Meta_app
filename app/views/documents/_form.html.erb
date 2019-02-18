@@ -26,15 +26,19 @@
       <%= form.file_field :cover %>
     </label>
 
+
+
+    <% if document.cover.try(:url) %>
+      <%= image_tag document.cover.small.url %>
+    <% end %>
+
+
+
     <div class="receiver">
       <h3>Получатели</h3>
       <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}, :required => true) %>
     </div>
 
-    <%#= document.cover %>
-
-
-    <%# <%= image_tag document.cover.url %> 
 
 
     <div class="actions">
