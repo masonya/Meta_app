@@ -28,15 +28,18 @@
 
 
 
-    <% if document.cover.try(:url) %>
-      <%= image_tag document.cover.small.url %>
-    <% end %>
+    <%# if document.cover.try(:url) %>
+      <%#= image_tag document.cover.small.url %>
+    <%# end %>
 
+
+
+  <%= image_tag document.cover.url if @document.cover? %>
 
 
     <div class="receiver">
       <h3>Получатели</h3>
-      <%= form.select(:receiver, %w{Выберите mary@gmail.com denis@gmail.com andrey@gmail.com}, :required => true) %>
+      <%= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
     </div>
 
 
