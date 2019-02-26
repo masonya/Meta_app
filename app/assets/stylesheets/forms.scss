@@ -135,15 +135,14 @@ input[type=password] {
 }
 
 .field-icon {
-  height: 20px;
-  width: 20px;
+  width: 100px;
+  height: 100px;
   float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2;
-  background-color: yellow;
-}
+   margin-left: -25px;
+   margin-top: -25px;
+   position: relative;
+   z-index: 2;
+ }
 
 
 select {
@@ -165,4 +164,38 @@ select {
   margin-bottom: 40px;
   font-size: 16px;
   font-family: 'prg45';
+}
+
+.passwordVisibilityButton {
+
+  margin-right: 40px;
+  width: 27px;
+  height: 27px;
+  background-image: url(/assets/eyeopen.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.eyeopen {
+  background-image: url(/assets/eyeopen.png);
+}
+
+.eyeclose {
+  background-image: url(/assets/eyeclose.png);
+}
+
+.form-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.imguploader {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.img {
+    margin-top: -100px;
 }
