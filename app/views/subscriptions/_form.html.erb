@@ -1,45 +1,47 @@
-<div class="doc">
-    <h2>Подписки</h2>
-    <%= form_with(model: subscription, local: true, class: "subscriptionForm" ) do |form| %>
-      <% if subscription.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+<div class="MainFormArea">
+  <div class="doc">
+      <h2>Подписки</h2>
+      <%= form_with(model: subscription, local: true, class: "subscriptionForm" ) do |form| %>
+        <% if subscription.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
 
-          <ul>
-          <% subscription.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
+            <ul>
+            <% subscription.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-    <div class="title">
-      <h3>Введите URL</h3>
-      <%= form.text_field :title, placeholder: "www.site.ru" %>
-    </div>
-
-
-    <div class="login">
-      <h3>Введите данные</h3>
-      <%= form.email_field :login, placeholder: "Логин" %>
-      <div class="form-group">
-        <%= form.password_field :password, placeholder: "Пароль", value: subscription.password %>
-        <div class="passwordVisibilityButton"> </div>
+      <div class="title">
+        <h3>Введите URL</h3>
+        <%= form.text_field :title, placeholder: "www.site.ru" %>
       </div>
-    </div>
 
-    <div class="body">
-      <h3>Добавьте комментарий</h3>
-      <%= form.text_area :body, placeholder: "Напишите..." %>
-    </div>
 
-    <div class="receiver">
-      <h3>Получатели</h3>
-      <%= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
-    </div>
+      <div class="login">
+        <h3>Введите данные</h3>
+        <div class="form-group">
+          <%= form.email_field :login, placeholder: "Логин" %>
+          <%= form.password_field :password, placeholder: "Пароль", value: subscription.password %>
+          <div class="passwordVisibilityButton"> </div>
+        </div>
+      </div>
 
-    <div class="actions">
-      <%= form.submit 'Сохранить' %>
-    </div>
-  <% end %>
+      <div class="body">
+        <h3>Добавьте комментарий</h3>
+        <%= form.text_area :body, placeholder: "Напишите..." %>
+      </div>
+
+      <div class="receiver">
+        <h3>Получатели</h3>
+        <%= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit 'Сохранить' %>
+      </div>
+    <% end %>
+  </div>
 </div>

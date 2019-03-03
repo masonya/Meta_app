@@ -1,7 +1,6 @@
-.menubar {
+.settingsbutton {
   width: 100%;
-  height: 40px;
-  // background-color: white;
+  height: 110px;
   position: fixed;
   display: flex;
   justify-content: flex-end;
@@ -9,12 +8,9 @@
   z-index: 1;
 }
 
-.menubar a {
-  font-size: 16px;
-  font-family: 'prg45';
-  font-weight: 500;
-  font-style: normal;
-  margin-right: 30px;
+.settingsbutton p, .settingsbutton a {
+  font-size: 18px;
+  font-family: 'Avenir Next Cyr';
 }
 
 .transmit {
@@ -26,8 +22,27 @@
   height: 33px;
   background-color: #CBCBCB;
   border-radius: 100%;
-  // margin-top: 33px;
   right: 33px;
   margin-left: 25px;
   margin-right: 40px;
+}
+
+.SectionButton {
+  // margin-left: -615px;
+  margin-left: -910px;
+  position: fixed;
+  display: flex;
+  z-index: 1;
+}
+
+.TransmitMenuButton, .ObtainMenuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 915px;
+  top: 45px;
+  width: 110px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }

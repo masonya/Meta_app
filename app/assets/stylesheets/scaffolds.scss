@@ -3,18 +3,19 @@
 }
 
 p {
-  font-family: 'prg45';
+  font-family: 'Avenir Next Cyr';
   font-size: 14px;
   line-height: 19px;
 }
 
 a {
-  color: #666;
+  color: black;
+  // color: #666;
   font-size: 11px;
   text-decoration: none;
 
   &:hover {
-    color: #00AEEF;
+    color: #3A8BDF;
   }
 }
 
@@ -38,7 +39,7 @@ a {
     padding: 15px;
     color: #f55;
     font-size: 13px;
-    font-family: 'pragmatica-cyrillic';
+    font-family: 'Avenir Next Cyr';
     font-weight: normal;
     line-height: 1.5;
     list-style: disc;
@@ -60,66 +61,69 @@ a {
     background: #f55;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    font-family: 'pragmaticalightc-bold-2';
-    font-weight: bold;
+    font-family: 'Avenir Next Cyr';
+    font-weight: normal;
   }
 }
 
 h1 {
-  font-weight: bold;
   font-size: 32px;
   margin: auto;
-  font-family: 'pragmaticalightc-bold-2';
-  font-weight: bold;
+  font-family: 'Avenir Next Cyr';
+  font-weight: normal;
 }
 
 h2 {
    font-size: 32px;
-   font-family: 'pragmatica-cyrillic';
+   font-family: 'Avenir Next Cyr';
    margin: auto;
-   font-weight: normal;
+   font-weight: 500;
    color: inherit;
  }
 
  h3 {
    font-size: 18px;
    margin-top: 40px;
-   font-family: 'pragmatica-cyrillic';
+   font-family: 'Avenir Next Cyr';
+   font-weight: 400;
  }
 
  h4 {
    font-size: 16px;
    font-weight: lighter;
-   font-family: 'prg45';
+   font-family: 'Avenir Next Cyr';
  }
 
  .section_header {
-   margin-left: 30px;
+   margin-left: 40px;
  }
 
+.MainCardsArea{
+  margin-top: 75px;
+}
+
 .main {
-  width: 950px;
-  padding-left: 280px;
-  padding-top: 118px;
+  padding-left: 270px;
+  padding-top: 80px;
 }
 
 .cards_area {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 50px;
   position:relative;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 206px;
-  height: 123px;
+  width: 220px;
+  height: 150px;
   border-radius: 2%;
   position: relative;
-  background-color: #F5F5F5;
+  background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-bottom: 40px;
   display: inline-flex;
   min-width: 0%
 }
@@ -140,13 +144,13 @@ h2 {
 }
 
 .add {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   background-image: image_url('add.png');
   background-size: cover;
-  margin-left: 50%;
+  margin-left: 48%;
   transform: translateX(-50%);
-  margin-top: 45px;
+  margin-top: 52px;
 }
 
 .delete {
@@ -171,6 +175,16 @@ h2 {
   display: none;
 }
 
+.editing {
+  width: 20px;
+  height: 20px;
+  margin-top: 110px;
+  margin-left: -20px;
+  background-image: url(/assets/editing.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .card:hover .edit, .card:hover .delete  {
   display:block;
 }
@@ -180,20 +194,64 @@ h2 {
 }
 
 .previev {
-  width: 210px;
-  height: 88px;
+  width: 230px;
+  height: 105px;
   border-radius: -2%;
   margin-top: -3px;
   background-size: contain;
+  background-repeat: no-repeat;
   background-image: image_url('doc.png');
 }
 
 .card_title {
-  margin-top: 76px;
-  margin-left: 15px;
+  margin-top: 85px;
+  margin-left: 10px;
   position: absolute;
 }
 
 .interval {
   height: 105px;
+}
+
+.custom-file-upload {
+  margin-bottom: -40px;
+}
+
+.IconWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+
+  &:hover {
+    color: #3A8BDF;
+  }
+}
+
+.Icon  {
+  width: 26px;
+  height: 26px;
+  margin-top: 3px;
+  margin-right: 7px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#DocumentIcon {
+  background-image: url(/assets/DocumentIcon.png);
+
+  &:hover {
+    background-image: url(/assets/DocumentIconActive.png);
+  }
+}
+
+#WalletIcon {
+  background-image: url(/assets/WalletIcon.png);
+
+  &:hover {
+    background-image: url(/assets/WalletIconActive.png);
+  }
+}
+
+#AccountIcon {
+  background-image: url(/assets/AccountIcon.png);
 }

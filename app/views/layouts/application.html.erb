@@ -7,34 +7,63 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
   </head>
 
   <body>
+      <% if user_signed_in? %>
 
-    <!-- <section class="menubar">
+      <section class="settingsbutton">
+        <!-- <div class="">
+        <%#= link_to 'Передаю', root_path %>
+        <%#= link_to 'Получаю', obtain_index_path %>
+        </div> -->
+        <div class="SectionButton">
+          <div class="TransmitMenuButton">
+            <!-- <p>Передаю</p> -->
+            <%= link_to 'Передаю', root_path %>
+          </div>
 
-    </section> -->
+          <div class="ObtainMenuButton">
+            <!-- <p>Получаю</p> -->
+            <%= link_to 'Получаю', obtain_index_path %>
+          </div>
+        </div>
 
-    <% if user_signed_in? %>
-      <section class="menubar">
-        <%= link_to 'Передаю', root_path %>
-        <%= link_to 'Получаю', obtain_index_path %>
         <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
         <div class="user"></div>
       </section>
+
       <section class="nav">
 
-           <h1 class="logo"><%= link_to 'Meta', root_path %></h1>
-        <ul class="sidebar">
+      <%= link_to root_path do %>
+         <div class="logo"></div>
+      <% end %>
+
+      <ul class="sidebar">
+        <div class="IconWrapper">
+          <div class="Icon" id="DocumentIcon"></div>
           <li><a href="#s1">Документы</a></li>
+        </div>
+        <div class="IconWrapper">
+          <div class="Icon" id="AccountIcon"></div>
           <li><a href="#s2">Аккаунты</a></li>
-          <li><a href="#s3">Наставления</a></li>
+        </div>
+        <div class="IconWrapper">
+          <div class="Icon" id="WalletIcon"></div>
+          <li><a href="#s3">Кошельки</a></li>
+        </div>
+        <div class="IconWrapper">
+          <div class="Icon" id="WalletIcon"></div>
           <li><a href="#s4">Подписки</a></li>
-          <li><a href="#s5">Кошельки</a></li>
-        </ul>
-      </section>
+        </div>
+        <div class="IconWrapper">
+          <div class="Icon" id="WalletIcon"></div>
+          <li><a href="#s5">Наставления</a></li>
+        </div>
+      </ul>
+
+    </section>
+
     <% else %>
       <section class="menubar">
         <%= link_to 'Log in', new_user_session_path %>
