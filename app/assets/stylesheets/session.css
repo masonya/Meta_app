@@ -1,0 +1,83 @@
+h5 {
+  font-size: 32px;
+  font-family: 'Avenir Next Cyr';
+  margin-top: 200px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: inherit;
+}
+
+input[type=session_login] {
+  text-decoration: #dfdede;
+  height: 40px;
+  width: 330px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+  font-size: 16px;
+  font-family: 'Avenir Next Cyr';
+  font-weight: 100;
+  color: #767676;
+}
+
+input[type=session_submit] {
+  background-color: #549ffd;
+  margin-top: 30px;
+  height: 40px;
+  width: 330px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Avenir Next Cyr';
+  font-weight: 100;
+
+}
+
+.session {
+  display: flex;
+  flex-direction: row;
+  /* margin-top: -70px; */
+}
+
+.session_logo {
+  width: 110px;
+  height: 100px;
+  background-image: url(/assets/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* margin-right: 220px; */
+}
+
+.session_login {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  margin-left: 600px;
+  margin-top: 110px;
+}
+
+.session_image {
+  height: 900px;
+  width: 1000px;
+  background-image: url(/assets/session_login.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: -500px;
+  margin-top: 40px;
+}
+
+.session_actions {
+  margin-top: 30px;
+}

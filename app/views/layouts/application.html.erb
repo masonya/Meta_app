@@ -10,9 +10,14 @@
   </head>
 
   <body>
+
+
       <% if user_signed_in? %>
 
       <section class="settingsbutton">
+        <%= link_to root_path do %>
+           <div class="logo"></div>
+        <% end %>
         <!-- <div class="">
         <%#= link_to 'Передаю', root_path %>
         <%#= link_to 'Получаю', obtain_index_path %>
@@ -35,9 +40,7 @@
 
       <section class="nav">
 
-      <%= link_to root_path do %>
-         <div class="logo"></div>
-      <% end %>
+
 
       <ul class="sidebar">
         <div class="IconWrapper">
@@ -70,8 +73,6 @@
         <% link_to 'Sing up', new_user_registration_path %>
       </section>
     <% end %>
-
-
 
     <%= yield %>
 

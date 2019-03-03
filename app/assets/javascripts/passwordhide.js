@@ -11,4 +11,16 @@
       }
     })
 
+    // $(".passwordVisibilityButton").on("click", function() {
+    //   var field = $(this).parent().find('input')
+    //
+    //   if (field.attr("type") == "session_password") {
+    //     field.attr("type", "text")
+    //     $(this).toggleClass('eyeclose')
+    //   } else {
+    //     field.attr("type", "session_password")
+    //     $(this).toggleClass('eyeclose')
+    //   }
+    // })
+
 });
