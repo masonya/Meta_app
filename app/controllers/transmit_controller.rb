@@ -7,4 +7,8 @@ class TransmitController < ApplicationController
     @subscriptions = Subscription.all
     @wallets = Wallet.all
   end
+
+  # def index
+  #   @social_accounts = SocialAccount.all if @social_account.id == current_user.id
+  # end
 end

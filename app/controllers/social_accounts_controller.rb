@@ -1,5 +1,7 @@
 class SocialAccountsController < ApplicationController
+  # before_action :authenticate_user!, except: [:index, :show]
   before_action :set_social_account, only: [:show, :edit, :update, :destroy]
+  # before_action :authorize_user, only: [:edit, :update, :destroy, :index]
 
   # GET /social_accounts
   # GET /social_accounts.json
@@ -10,6 +12,7 @@ class SocialAccountsController < ApplicationController
   # GET /social_accounts/1
   # GET /social_accounts/1.json
   def show
+
   end
 
   # GET /social_accounts/new
@@ -63,6 +66,12 @@ class SocialAccountsController < ApplicationController
   end
 
   private
+
+    # def authorize_user
+    #   if @social_account.user_id != current_user.id
+    # end
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_social_account
       @social_account = SocialAccount.find(params[:id])

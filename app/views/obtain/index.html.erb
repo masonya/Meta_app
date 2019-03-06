@@ -1,1 +1,16 @@
 
+
+
+
+
+    <%# current_user.inherited_accounts.each do |inherited_account| %>
+    
+    <% @inherited_accounts.each do |inherited_account| %>
+      <%= render 'social_account', social_account: inherited_account.social_account %>
+    <% end %>
+
+
+
+
+
+   <%# <%= current_user.inherited_accounts.collect { |a| a.social_account } %>

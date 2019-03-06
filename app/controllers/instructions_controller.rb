@@ -1,5 +1,8 @@
 class InstructionsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_instruction, only: [:show, :edit, :update, :destroy]
+  # before_action :authorize_user, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /instructions
   # GET /instructions.json

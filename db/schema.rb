@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_23_185352) do
+ActiveRecord::Schema.define(version: 2019_03_02_201058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "account_transfers", force: :cascade do |t|
     t.integer "transmitter_id"
-    t.integer "receiver_id"
     t.integer "transferable_id"
     t.string "transferable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.integer "inheritor_id"
   end
 
   create_table "documents", force: :cascade do |t|
@@ -83,8 +84,6 @@ ActiveRecord::Schema.define(version: 2019_02_23_185352) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "transmitter"
-    t.boolean "inheritor"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
