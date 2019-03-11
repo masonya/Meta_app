@@ -1,29 +1,24 @@
-<h2>Sign up</h2>
-<%= params[:token] %>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<section class="registration">
+  <div class="session_logo"></div>
+  <div class="session_image"></div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="RegistrationForm">
+    <h5>Создайте аккаунт</h5>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email", type: "text" %>
+          <%= f.password_field :password, placeholder: "Пароль", autocomplete: "new-password", type: "password" %>
+          <%= f.password_field :password_confirmation, placeholder: "Подтверждение пароля", autocomplete: "new-password", type: "password" %>
+        </div>
+        <div class="session_actions">
+          <div class="EnterButtonWrapper">
+          <%= f.submit "Зарегистрироваться", class: "SignUpButton" %>
+          <% end %>
+
+          <%- if controller_name != 'sessions' %>
+            <%= link_to "Войти", new_session_path(resource_name) %><br />
+          <% end -%>
+          </div>
+        </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password, %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

@@ -16,7 +16,7 @@
 
       <div class="title">
         <h3>Введите URL</h3>
-        <%= form.text_field :title, placeholder: "www.site.ru" %>
+        <%= form.select(:title, %w{Выберите AppleMusic Netflix Steam}) %>
       </div>
 
 
@@ -24,8 +24,10 @@
         <h3>Введите данные</h3>
         <div class="form-group">
           <%= form.email_field :login, placeholder: "Логин" %>
+        <div class="form-group">
           <%= form.password_field :password, placeholder: "Пароль", value: subscription.password %>
           <div class="passwordVisibilityButton"> </div>
+        </div>
         </div>
       </div>
 

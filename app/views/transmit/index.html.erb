@@ -10,14 +10,22 @@
             <div class="card_title">
               <h4><%= document.title %></h4>
             </div>
-            <div class="edit">
-              <%= link_to '', edit_document_path(document) %>
-            </div>
+
             <div class="editing">
-              <%= link_to '', edit_social_account_path(document) %>
-            </div>
-            <div class="delete">
-              <%= link_to '', document, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="popup">
+                  <div class="EditWrapper">
+                    <div class="Icon" id="EditIcon"></div>
+                    <li>
+                      <%= link_to 'Редактировать', edit_document_path(document) %>
+                    </li>
+                  </div>
+                  <div class="TrashWrapper">
+                    <div class="Icon" id="TrashIcon"></div>
+                    <li>
+                      <%= link_to 'Удалить', document, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </li>
+                  </div>
+              </div>
             </div>
           </div>
         <% end %>
@@ -42,14 +50,22 @@
             <div class="card_title">
               <h4><%= social_account.title %></h4>
             </div>
-            <div class="edit">
-              <%= link_to '', edit_social_account_path(social_account) %>
-            </div>
+
             <div class="editing">
-              <%= link_to '', edit_social_account_path(social_account) %>
-            </div>
-            <div class="delete">
-              <%= link_to '', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="popup">
+                  <div class="EditWrapper">
+                    <div class="Icon" id="EditIcon"></div>
+                    <li>
+                      <%= link_to 'Редактировать', edit_social_account_path(social_account) %>
+                    </li>
+                  </div>
+                  <div class="TrashWrapper">
+                    <div class="Icon" id="TrashIcon"></div>
+                    <li>
+                      <%= link_to 'Удалить', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </li>
+                  </div>
+              </div>
             </div>
           </div>
         <% end %>
@@ -74,14 +90,22 @@
             <div class="card_title">
               <h4><%= wallet.title %></h4>
             </div>
-            <div class="edit">
-              <%= link_to '', edit_wallet_path(wallet) %>
-            </div>
+
             <div class="editing">
-              <%= link_to '', edit_wallet_path(wallet) %>
-            </div>
-            <div class="delete">
-              <%= link_to '', wallet, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="popup">
+                  <div class="EditWrapper">
+                    <div class="Icon" id="EditIcon"></div>
+                    <li>
+                      <%= link_to 'Редактировать', edit_wallet_path(wallet) %>
+                    </li>
+                  </div>
+                  <div class="TrashWrapper">
+                    <div class="Icon" id="TrashIcon"></div>
+                    <li>
+                      <%= link_to 'Удалить', wallet, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </li>
+                  </div>
+              </div>
             </div>
           </div>
         <% end %>
@@ -102,18 +126,26 @@
 
         <% @subscriptions.each do |subscription| %>
           <div class="card">
-            <div class="previev"></div>
+            <div class="previev <%= subscription.title %>"></div>
             <div class="card_title">
               <h4><%= subscription.title %></h4>
             </div>
-            <div class="edit">
-              <%= link_to '', edit_subscription_path(subscription) %>
-            </div
+
             <div class="editing">
-              <%= link_to '', edit_subscription_path(subscription) %>
-            </div>
-            <div class="delete">
-              <%= link_to '', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="popup">
+                  <div class="EditWrapper">
+                    <div class="Icon" id="EditIcon"></div>
+                    <li>
+                      <%= link_to 'Редактировать', edit_subscription_path(subscription) %>
+                    </li>
+                  </div>
+                  <div class="TrashWrapper">
+                    <div class="Icon" id="TrashIcon"></div>
+                    <li>
+                      <%= link_to 'Удалить', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </li>
+                  </div>
+              </div>
             </div>
           </div>
         <% end %>
@@ -133,18 +165,26 @@
 
         <% @instructions.each do |instruction| %>
           <div class="card">
-            <div class="previev"></div>
+            <div class="previev2 <%= instruction.title %>"></div>
             <div class="card_title">
               <h4><%= instruction.title %></h4>
             </div>
-            <div class="edit">
-              <%= link_to '', edit_instruction_path(instruction) %>
-            </div>
+
             <div class="editing">
-              <%= link_to '', edit_instruction_path(instruction) %>
-            </div>
-            <div class="delete">
-              <%= link_to '', instruction, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="popup">
+                  <div class="EditWrapper">
+                    <div class="Icon" id="EditIcon"></div>
+                    <li>
+                      <%= link_to 'Редактировать', edit_instruction_path(instruction) %>
+                    </li>
+                  </div>
+                  <div class="TrashWrapper">
+                    <div class="Icon" id="TrashIcon"></div>
+                    <li>
+                      <%= link_to 'Удалить', instruction, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </li>
+                  </div>
+              </div>
             </div>
           </div>
         <% end %>
