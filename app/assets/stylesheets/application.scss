@@ -14,19 +14,24 @@
  *= require_self
  */
 
+ // @font-face {
+ //   font-family: 'pragmatica-cyrillic';
+ //   src: asset-url('pragmatica-cyrillic.ttf') format('truetype');
+ // }
+ //
+ //
+ // @font-face {
+ //   font-family: 'pragmaticalightc-bold-2';
+ //   src: asset-url('pragmaticalightc-bold-2.ttf') format('truetype');
+ // }
+ //
+ //
+ // @font-face {
+ //   font-family: 'prg45';
+ //   src: asset-url('prg45.ttf') format('truetype');
+ // }
+
  @font-face {
-   font-family: 'pragmatica-cyrillic';
-   src: asset-url('pragmatica-cyrillic.ttf') format('truetype');
- }
-
-
- @font-face {
-   font-family: 'pragmaticalightc-bold-2';
-   src: asset-url('pragmaticalightc-bold-2.ttf') format('truetype');
- }
-
-
- @font-face {
-   font-family: 'prg45';
-   src: asset-url('prg45.ttf') format('truetype');
+   font-family: 'AvenirNextCyr';
+   src: asset-url('AvenirNextCyr-Light.ttf') format('truetype');
  }
