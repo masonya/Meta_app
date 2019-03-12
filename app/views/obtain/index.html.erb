@@ -1,1 +1,31 @@
+<section id="s2" class="main">
+  <div class="MainCardsArea">
+    <h2 class="section_header">Аккаунты</h2>
+    <section class="cards_area">
 
+        <%# current_user.inherited_accounts.each do |inherited_account| %>
+
+        <%# @inherited_accounts.each do |inherited_account| %>
+          <%#= render 'social_account_accepted', social_account: inherited_account.social_account %>
+        <%# end %>
+
+
+          <% @inherited_accounts.each do |inherited_account| %>
+            <% partial_name = inherited_account.accepted ? 'social_account_unaccepted' : 'social_account_accepted' %>
+
+            <%= render "#{ partial_name }", social_account: inherited_account.social_account %>
+
+
+
+            <%# if inherited_account.accepted %>
+              <%#= render 'social_account_unaccepted', social_account: inherited_account.social_account %>
+            <%# else %>
+              <%#= render 'social_account_accepted', social_account: inherited_account.social_account %>
+            <%# end %>
+
+          <% end %>
+
+
+    </section>
+  </div>
+</section>

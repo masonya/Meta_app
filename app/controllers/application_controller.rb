@@ -6,4 +6,7 @@ class ApplicationController < ActionController::Base
       format.html { redirect_to root_url }
     end
   end
+
+  helper_method :current_user
+
 end

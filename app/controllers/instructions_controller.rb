@@ -1,5 +1,8 @@
 class InstructionsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_instruction, only: [:show, :edit, :update, :destroy]
+  # before_action :authorize_user, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /instructions
   # GET /instructions.json
@@ -63,10 +66,15 @@ class InstructionsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_instruction
       @instruction = Instruction.find(params[:id])
     end
+
+    # def authorize_user
+    #   redirect_to instructions_url, notice: "You have not rights" if @instruction.user_id != current_user.id
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def instruction_params
