@@ -10,18 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_23_185352) do
+ActiveRecord::Schema.define(version: 2019_03_10_191551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "account_transfers", force: :cascade do |t|
     t.integer "transmitter_id"
-    t.integer "receiver_id"
     t.integer "transferable_id"
     t.string "transferable_type"
+    t.string "email"
+    t.integer "inheritor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.string "inheritor_email"
+    t.boolean "accepted", default: false
   end
 
   create_table "documents", force: :cascade do |t|
@@ -62,6 +66,7 @@ ActiveRecord::Schema.define(version: 2019_02_23_185352) do
     t.string "password"
     t.string "action"
     t.string "cover"
+    t.string "email"
   end
 
   create_table "subscriptions", force: :cascade do |t|

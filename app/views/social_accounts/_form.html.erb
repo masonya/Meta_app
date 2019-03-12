@@ -45,13 +45,16 @@
         <%= label :action, 'Оставить пост' %>
       </div>
 
-      <div class="receiver">
-        <h3>Получатели</h3>
-          <input type="email" placeholder="E-mail" class="form-control" name="email" value="">
-      </div>
+
+      <!-- <div class="receiver">
+        <h3>Получатели</h3> -->
+        <%#= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
+      <!-- </div> -->
+
+      <%= email_field "account_transfer", "inheritor_email" %>
 
       <div class="actions">
-        <%= form.submit 'Сохранить' %>
+        <%= form.submit 'Далее' %>
       </div>
     <% end %>
   </div>

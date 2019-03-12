@@ -48,6 +48,9 @@ end
 gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem "mini_magick"
+gem 'cancancan', '~> 2.0'
+gem 'faker'
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
