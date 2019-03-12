@@ -1,4 +1,4 @@
-<div class="MainCardsArea">
+<div class="MainFormArea">
   <div class="doc">
     <h2>Аккаунты</h2>
     <%= form_with(model: social_account, local: true, class: "social_accountForm") do |form| %>
@@ -21,14 +21,14 @@
 
       <div class="login">
         <h3>Введите данные</h3>
+        <%= form.email_field :login, placeholder: "Логин" %>
         <div class="form-group">
-          <%= form.email_field :login, placeholder: "Логин" %>
           <%= form.password_field :password, placeholder: "Пароль", value: social_account.password %>
           <div class="passwordVisibilityButton"> </div>
         </div>
       </div>
 
-      <div class="BodyFormBig">
+      <div class="BodyFormSmall">
         <h3>Добавьте комментарий</h3>
         <%= form.text_area :body, placeholder: "Напишите..." %>
       </div>

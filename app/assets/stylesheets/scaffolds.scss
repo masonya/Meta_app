@@ -10,7 +10,6 @@ p {
 
 a {
   color: black;
-  // color: #666;
   font-size: 11px;
   text-decoration: none;
 
@@ -153,38 +152,6 @@ h2 {
   margin-top: 52px;
 }
 
-.delete {
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  background-image: image_url('delete.png');
-  background-size: cover;
-  margin-left: 195px;
-  position: absolute;
-  display: none;
-}
-
-.edit {
-  width: 20px;
-  height: 20px;
-  margin-top: 10px;
-  margin-left: 195px;
-  position: absolute;
-  background-image: image_url('edit.png');
-  background-size: cover;
-  display: none;
-}
-
-.editing {
-  width: 20px;
-  height: 20px;
-  margin-top: 110px;
-  margin-left: -20px;
-  background-image: url(/assets/editing.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .card:hover .edit, .card:hover .delete  {
   display:block;
 }
@@ -200,8 +167,19 @@ h2 {
   margin-top: -3px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: image_url('Paypal.png');
+  background-image: image_url('doc.png');
 }
+
+.previev2 {
+  width: 230px;
+  height: 105px;
+  border-radius: -2%;
+  margin-top: -3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: image_url('instuction.png');
+}
+
 
 .card_title {
   margin-top: 85px;
@@ -209,22 +187,80 @@ h2 {
   position: absolute;
 }
 
-.interval {
-  height: 105px;
+.EditWrapper {
+  display: flex;
+  // display: block;
 }
 
-.custom-file-upload {
-  margin-bottom: -40px;
+.TrashWrapper {
+  display: flex;
+}
+
+.editing {
+  z-index: 2;
+  width: 20px;
+  height: 30px;
+  margin-top: 110px;
+  margin-left: -20px;
+  background-image: url(/assets/editing.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.editing:hover .popup {
+  display: block;
+}
+
+.popup {
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 150px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: -100px;
+  background-repeat: no-repeat;
+  background-color: white;
+  orphans: 0.05;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
+  border-radius: 2%;
+  background-size: cover;
+  display: none;
+}
+
+.popup:hover {
+  display: block;
+}
+
+.popup li {
+  line-height: 30px;
+  list-style-type: none;
+}
+
+.popup a {
+  font-size: 14px;
+  font-family: 'Avenir Next Cyr';
+}
+
+.TrashWrapper:hover #TrashIcon {
+  background-image: url(/assets/TrashIconActive.png);
+}
+
+.TrashWrapper:hover a {
+  color: #FF686E;
+}
+
+.EditWrapper:hover #EditIcon {
+  background-image: url(/assets/EditIconActive.png);
+}
+
+.EditWrapper:hover a {
+  color: #3A8BDF;
 }
 
 .IconWrapper {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-
-  &:hover {
-    color: #3A8BDF;
-  }
 }
 
 .Icon  {
@@ -236,22 +272,63 @@ h2 {
   background-repeat: no-repeat;
 }
 
+#EditIcon {
+  background-image: url(/assets/EditIcon.png);
+}
+
+#TrashIcon {
+  background-image: url(/assets/TrashIcon.png);
+}
+
 #DocumentIcon {
   background-image: url(/assets/DocumentIcon.png);
-
-  &:hover {
-    background-image: url(/assets/DocumentIconActive.png);
-  }
 }
 
 #WalletIcon {
   background-image: url(/assets/WalletIcon.png);
-
-  &:hover {
-    background-image: url(/assets/WalletIconActive.png);
-  }
 }
 
 #AccountIcon {
   background-image: url(/assets/AccountIcon.png);
+}
+
+#SubscriptionIcon {
+  background-image: url(/assets/SubscriptionIcon.png);
+}
+
+#InstructionIcon {
+  background-image: url(/assets/InstructionIcon.png);
+}
+
+.IconWrapper:hover #DocumentIcon {
+  background-image: url(/assets/DocumentIconActive.png);
+}
+
+.IconWrapper:hover #WalletIcon {
+  background-image: url(/assets/WalletIconActive.png);
+}
+
+.IconWrapper:hover #AccountIcon {
+  background-image: url(/assets/AccountIconActive.png);
+}
+
+
+.IconWrapper:hover #SubscriptionIcon {
+  background-image: url(/assets/SubscriptionIconActive.png);
+}
+
+.IconWrapper:hover #InstructionIcon {
+  background-image: url(/assets/InstructionIconActive.png);
+}
+
+.IconWrapper:hover a {
+  color: #3A8BDF;
+}
+
+.interval {
+  height: 105px;
+}
+
+.custom-file-upload {
+  margin-bottom: -40px;
 }

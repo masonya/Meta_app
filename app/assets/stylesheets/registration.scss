@@ -1,0 +1,88 @@
+.registration {
+  display: flex;
+  flex-direction: row;
+}
+
+.RegistrationForm {
+  position: fixed;
+  left: 540px;
+  top: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.session_actions a {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 60px;
+  top: 50px;
+  font-size: 16px;
+  font-family: 'Avenir Next Cyr';
+  font-weight: 100;
+  width: 100px;
+  height: 30px;
+}
+
+.field label {
+  font-size: 16px;
+  font-family: 'Avenir Next Cyr';
+  font-weight: 100;
+}
+
+.EnterButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.EnterButton {
+  background-color: #549ffd;
+  margin-top: 30px;
+  height: 40px;
+  width: 330px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Avenir Next Cyr';
+  font-weight: 100;
+}
+
+ .EnterButton a {
+  display: block;
+  top: 393px;
+  left: 675px;
+  height: 40px;
+  width: 330px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.EnterButton hover a {
+ display: block;
+ top: 393px;
+ left: 675px;
+ height: 40px;
+ width: 330px;
+ border: none;
+ border-radius: 4px;
+ color: white;
+}
+
+input.SignUpButton {
+  width: 330px;
+  margin-top: 15px;
+}

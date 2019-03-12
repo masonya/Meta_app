@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LastWill</title>
+    <title>Meta</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,21 +15,17 @@
       <% if user_signed_in? %>
 
       <section class="settingsbutton">
+
         <%= link_to root_path do %>
            <div class="logo"></div>
         <% end %>
-        <!-- <div class="">
-        <%#= link_to 'Передаю', root_path %>
-        <%#= link_to 'Получаю', obtain_index_path %>
-        </div> -->
+
         <div class="SectionButton">
           <div class="TransmitMenuButton">
-            <!-- <p>Передаю</p> -->
             <%= link_to 'Передаю', root_path %>
           </div>
 
           <div class="ObtainMenuButton">
-            <!-- <p>Получаю</p> -->
             <%= link_to 'Получаю', obtain_index_path %>
           </div>
         </div>
@@ -39,39 +35,30 @@
       </section>
 
       <section class="nav">
-
-
-
-      <ul class="sidebar">
-        <div class="IconWrapper">
-          <div class="Icon" id="DocumentIcon"></div>
-          <li><a href="#s1">Документы</a></li>
-        </div>
-        <div class="IconWrapper">
-          <div class="Icon" id="AccountIcon"></div>
-          <li><a href="#s2">Аккаунты</a></li>
-        </div>
-        <div class="IconWrapper">
-          <div class="Icon" id="WalletIcon"></div>
-          <li><a href="#s3">Кошельки</a></li>
-        </div>
-        <div class="IconWrapper">
-          <div class="Icon" id="WalletIcon"></div>
-          <li><a href="#s4">Подписки</a></li>
-        </div>
-        <div class="IconWrapper">
-          <div class="Icon" id="WalletIcon"></div>
-          <li><a href="#s5">Наставления</a></li>
-        </div>
-      </ul>
-
+        <ul class="sidebar">
+          <div class="IconWrapper">
+            <div class="Icon" id="DocumentIcon"></div>
+            <li><a href="#s1">Документы</a></li>
+          </div>
+          <div class="IconWrapper">
+            <div class="Icon" id="AccountIcon"></div>
+            <li><a href="#s2">Аккаунты</a></li>
+          </div>
+          <div class="IconWrapper">
+            <div class="Icon" id="WalletIcon"></div>
+            <li><a href="#s3">Кошельки</a></li>
+          </div>
+          <div class="IconWrapper">
+            <div class="Icon" id="SubscriptionIcon"></div>
+            <li><a href="#s4">Подписки</a></li>
+          </div>
+          <div class="IconWrapper">
+            <div class="Icon" id="InstructionIcon"></div>
+            <li><a href="#s5">Наставления</a></li>
+          </div>
+        </ul>
     </section>
 
-    <% else %>
-      <section class="menubar">
-        <%= link_to 'Log in', new_user_session_path %>
-        <% link_to 'Sing up', new_user_registration_path %>
-      </section>
     <% end %>
 
     <%= yield %>
