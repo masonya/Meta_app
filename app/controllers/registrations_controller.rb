@@ -20,7 +20,7 @@ class RegistrationsController < Devise::RegistrationsController
       logger.debug resource.email
       logger.debug "============"
 
-      AccountTransfer.where(email: resource.email).each do |account_transfer|
+      AccountTransfer.where(inheritor_email: resource.email).each do |account_transfer|
         account_transfer.inheritor_id = resource.id
         account_transfer.save
       end

@@ -43,17 +43,25 @@ class SocialAccountsController < ApplicationController
   def create
     @social_account = SocialAccount.new(social_account_params)
     @social_account.user_id = current_user.id
+    @social_account.email = current_user.email
+
 
     respond_to do |format|
       if @social_account.save
         logger.debug("========")
-        logger.debug(params[:account_transfer][:inheritor_id])
+        logger.debug(params[:account_transfer][:inheritor_email])
 
         AccountTransfer.create(
-          email: params[:account_transfer][:inheritor_id],
+          inheritor_email: params[:account_transfer][:inheritor_email],
           transmitter_id: current_user.id,
-          transferable_id: @social_account.id
+          transferable_id: @social_account.id,
+          inheritor_id: User.find_by_email(params[:account_transfer][:inheritor_email]).id
         )
+
+
+        # SocialAccount.create(
+        #   email: current_user.email
+        # )
 
         format.html { redirect_to new_social_account_account_transfer_url(@social_account), notice: 'Social account was successfully created.' }
         format.json { render :show, status: :created, location: @social_account }
