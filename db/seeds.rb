@@ -103,7 +103,7 @@ end
 
 def create_social_accounts
   social_accounts = [
-    ["Fasebook", "Test Body", "Test Login", "Test Password"],
+    ["Facebook", "Test Body", "Test Login", "Test Password"],
     ["Instagram", "Test2 Body", "Test2 Login", "Test2 Password"],
     ["YouTube", "Test3 Body", "Test3 Login", "Test3 Password"]
 ]

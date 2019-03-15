@@ -30,8 +30,19 @@
           </div>
         </div>
 
-        <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+
         <div class="user"></div>
+            <div class="user_popup" id="up">
+                <div class="logout">
+                <div class="exitfrompopup">
+                  <div class="exitbutton" id="down"></div>
+                </div>
+                <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+                </div>
+            </div>
+
+
+
       </section>
 
       <section class="nav">

@@ -18,13 +18,63 @@
 }
 
 .user {
-  width: 33px;
-  height: 33px;
-  background-color: #CBCBCB;
+  width: 30px;
+  height: 30px;
+  background-color: #9B9B9B;
   border-radius: 100%;
   right: 33px;
   margin-left: 25px;
   margin-right: 40px;
+}
+
+.user_popup {
+ display: none;
+}
+
+.user_popup_view {
+  padding-top: 14px;
+  width: 150px;
+  height: 70px;
+  margin-top: 65px;
+  margin-left: -40px;
+  background-repeat: no-repeat;
+  background-color: white;
+  orphans: 0.05;
+  border-style: solid;
+  border-width: thin;
+  border-color: #CECECE;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.09);
+  border-radius: 2%;
+  background-size: cover;
+  display: block;
+  position: absolute;
+}
+
+.logout {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 20px;
+  color: #1d2129;
+  display: block;
+  text-decoration: none;
+}
+
+.exitbutton {
+  width: 30px;
+  height: 30px;
+  margin-left: 95px;
+  margin-top: 15px;
+  background-image: url(/assets/exit.png);
+  transform: rotate(-45deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.popup_content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .SectionButton {
@@ -40,6 +90,11 @@
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
+
+// .TransmitMenuButton:hover, .ObtainMenuButton:hover {
+//   background-color: #F9F9F7;
+//   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+// }
 
  .TransmitMenuButton a, .ObtainMenuButton a {
   display: block;
