@@ -270,13 +270,30 @@ h2 {
   background-repeat: no-repeat;
 }
 
-#EditIcon {
-  background-image: url(/assets/EditIcon.png);
+.AcceptWrapper {
+  display: flex;
 }
 
-#TrashIcon {
-  background-image: url(/assets/TrashIcon.png);
+.UnacceptWrapper {
+  display: flex;
 }
+
+.UnacceptWrapper:hover #UnacceptedIcon {
+  background-image: url(/assets/UnacceptIconActive.png);
+}
+
+.UnacceptWrapper:hover a {
+  color: #FF686E;
+}
+
+.AcceptWrapper:hover #AcceptedIcon {
+  background-image: url(/assets/AcceptIconActive.png);
+}
+
+.AcceptWrapper:hover a {
+  color: #3A8BDF;
+}
+
 
 #AcceptedIcon {
   background-image: url(/assets/AcceptIcon.png);
@@ -284,6 +301,14 @@ h2 {
 
 #UnacceptedIcon {
   background-image: url(/assets/UnacceptIcon.png);
+}
+
+#EditIcon {
+  background-image: url(/assets/EditIcon.png);
+}
+
+#TrashIcon {
+  background-image: url(/assets/TrashIcon.png);
 }
 
 #DocumentIcon {
