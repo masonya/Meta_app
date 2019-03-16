@@ -13,13 +13,13 @@
       <div class="editing">
         <div class="popup">
             <div class="EditWrapper">
-              <div class="Icon" id="EditIcon"></div>
+              <div class="Icon" id="AcceptedIcon"></div>
               <li>
                 <%= link_to 'Принять', accept_account_transfer_path(social_account), method: :put %>
               </li>
             </div>
             <div class="TrashWrapper">
-              <div class="Icon" id="TrashIcon"></div>
+              <div class="Icon" id="UnacceptedIcon"></div>
               <li>
                 <%= link_to 'Отклонить', social_account, method: :delete, data: { confirm: 'Are you sure?'} %>
               </li>

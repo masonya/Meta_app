@@ -20,7 +20,8 @@
 .user {
   width: 30px;
   height: 30px;
-  background-color: #9B9B9B;
+  background-color: #000000;
+  opacity: 0.7;
   border-radius: 100%;
   right: 33px;
   margin-left: 25px;
@@ -32,28 +33,26 @@
 }
 
 .user_popup_view {
-  padding-top: 14px;
+  padding-left: 10px;
+  padding-top: 5px;
   width: 150px;
   height: 70px;
-  margin-top: 65px;
-  margin-left: -40px;
-  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  margin-top: 70px;
+  margin-left: -35px;
   background-color: white;
   orphans: 0.05;
-  border-style: solid;
-  border-width: thin;
-  border-color: #CECECE;
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
   border-radius: 2%;
-  background-size: cover;
   display: block;
   position: absolute;
+  font-weight: 100;
 }
 
 .logout {
   position: absolute;
   margin-top: -20px;
-  margin-left: 20px;
+  margin-left: 5px;
   color: #1d2129;
   display: block;
   text-decoration: none;
@@ -62,14 +61,23 @@
 .exitbutton {
   width: 30px;
   height: 30px;
-  margin-left: 95px;
-  margin-top: 15px;
+  margin-left: 110px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   background-image: url(/assets/exit.png);
   transform: rotate(-45deg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+.devider {
+  position: absolute;
+  width: 130px;
+  height: 1px;
+  top: 50px;
+  background-color: #1d2129;
+  opacity: 0.1;
+}
 
 .popup_content{
   display: flex;
@@ -90,11 +98,6 @@
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-
-// .TransmitMenuButton:hover, .ObtainMenuButton:hover {
-//   background-color: #F9F9F7;
-//   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-// }
 
  .TransmitMenuButton a, .ObtainMenuButton a {
   display: block;
