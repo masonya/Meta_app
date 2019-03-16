@@ -342,3 +342,23 @@ h2 {
   font-weight: lighter;
   //background-color: yellow;
 }
+
+.blank {
+  width: 420px;
+    height: 245px;
+    margin-left: 245px;
+    margin-top: 200px;
+    background-image: image_url('blank.png');
+    background-size: contain;
+}
+
+.previev_unaccepted {
+  width: 230px;
+  height: 105px;
+  border-radius: -2%;
+  margin-top: -3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: image_url('unaccepted.png');
+  position: absolute;
+}

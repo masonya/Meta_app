@@ -4,15 +4,6 @@ class SocialAccountsController < ApplicationController
   # before_action :authorize_user, only: [:edit, :update, :destroy, :index]
 
 
-   # class SocialAccount < ActiveRecord::Base
-   #
-   #  before_save :default_values
-   #  def default_values
-   #    self.email ||= "test1@test1.test1)"
-   #  end
-   # end
-
-
   # GET /social_accounts
   # GET /social_accounts.json
   def index
@@ -51,19 +42,20 @@ class SocialAccountsController < ApplicationController
         logger.debug("========")
         logger.debug(params[:account_transfer][:inheritor_email])
 
-        AccountTransfer.create(
-          inheritor_email: params[:account_transfer][:inheritor_email],
-          transmitter_id: current_user.id,
-          transferable_id: @social_account.id,
-          inheritor_id: User.find_by_email(params[:account_transfer][:inheritor_email]).id
-        )
+
+          AccountTransfer.create(
+            inheritor_email: params[:account_transfer][:inheritor_email],
+            transmitter_id: current_user.id,
+            transferable_id: @social_account.id,
+            inheritor_id: User.find_by_email(params[:account_transfer][:inheritor_email]).id
+          )
 
 
         # SocialAccount.create(
         #   email: current_user.email
         # )
 
-        format.html { redirect_to new_social_account_account_transfer_url(@social_account), notice: 'Social account was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Social account was successfully created.' }
         format.json { render :show, status: :created, location: @social_account }
       else
         format.html { render :new }

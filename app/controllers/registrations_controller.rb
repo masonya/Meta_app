@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrationsController
+ class RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
@@ -21,7 +21,7 @@ class RegistrationsController < Devise::RegistrationsController
       logger.debug "============"
 
       AccountTransfer.where(inheritor_email: resource.email).each do |account_transfer|
-        account_transfer.inheritor_id = resource.id
+        account_transfer.inheritor_email = resource.id
         account_transfer.save
       end
 

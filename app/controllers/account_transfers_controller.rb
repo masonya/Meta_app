@@ -2,18 +2,33 @@ class AccountTransfersController < ApplicationController
   before_action :set_account_transfer, only: [:show, :edit, :update, :destroy]
 
 
+  def accept
+    @inherited_account = SocialAccount.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    # logger.debug @inherited_account.to_json
+
+    @account_transfer.update!(accepted: true)
+
+    # logger.debug @inherited_account.to_json
+    # logger.debug AccountTransfer.find(params[:id]).to_json
+
+    # if @inherited_account.save!
+    redirect_to obtain_index_path
+    # end
+  end
 
 
-  # class AccountTransfer < ActiveRecord::Base
-  #
-  #   before_save :default_values
-  #   def default_values
-  #     self.transmitter_id ||= user_id
-  #     self.transferable_id ||= SocialAccount.last.id
-  #     self.transferable_type ||= "SocialAccount"
-  #     # self.inheritor_id ||= User.find_by(email).id
-  #   end
-  # end
+
+
+# def accept
+#   @inherited_account = AccountTransfer.find_by(params[:transferable_id])
+#   if @inherited_account.accepted == false
+#     @accepted = @inherited_account.update(accepted: true)
+#   else
+#     redirect_to obtain_index_path
+#   end
+#   redirect_to obtain_index_path
+# end
 
 
 
@@ -54,7 +69,7 @@ class AccountTransfersController < ApplicationController
 
     respond_to do |format|
       if @account_transfer.save
-         UserMailer.with(inheritor: @inheritor).welcome_email.deliver_later
+         UserMailer.with(inheritor_id: @inheritor.id).welcome_email.deliver_later
 
         format.html { redirect_to root_url, notice: 'Account transfer was successfully created.' }
         format.json { render :show, status: :created, location: @account_transfer }
@@ -101,6 +116,6 @@ class AccountTransfersController < ApplicationController
     #   params.fetch(:account_transfer, {})
     # end
     def account_transfer_params
-      params.require(:account_transfer).permit(:email, :transmitter_id, :inheritor_id, :transferable_id)
+      params.require(:account_transfer).permit(:email, :transmitter_id, :inheritor_id, :transferable_id, :accepted)
     end
 end

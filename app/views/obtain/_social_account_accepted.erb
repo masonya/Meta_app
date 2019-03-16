@@ -10,7 +10,15 @@
             </div>
 
             <div class="editing">
-              <%#= link_to '', edit_social_account_path(social_account) %>
+              <div class="popup">
+            
+                  <div class="TrashWrapper">
+                    <div class="Icon" id="TrashIcon"></div>
+                    <li>
+                      <%= link_to 'Отклонить', social_account, method: :delete, data: { confirm: 'Are you sure?'} %>
+                    </li>
+                  </div>
+              </div>
             </div>
 
           </div>
