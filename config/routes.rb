@@ -18,7 +18,11 @@ Rails.application.routes.draw do
     end
   end
 
-
+  resources :account_transfers do
+    member do
+      delete :unaccept
+    end
+  end
 
 
   # resources :social_accounts do

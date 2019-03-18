@@ -15,7 +15,7 @@
                   <div class="TrashWrapper">
                     <div class="Icon" id="TrashIcon"></div>
                     <li>
-                      <%= link_to 'Отклонить', social_account, method: :delete, data: { confirm: 'Are you sure?'} %>
+                      <%= link_to 'Отклонить', unaccept_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
                     </li>
                   </div>
               </div>

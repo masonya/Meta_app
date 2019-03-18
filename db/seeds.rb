@@ -69,8 +69,8 @@ Rake::Task['db:migrate'].invoke
 
 def seed_data
   create_users
-  create_social_accounts
-  create_account_transfers
+  # create_social_accounts
+  # create_account_transfers
 end
 
 def create_users
@@ -101,28 +101,28 @@ end
 
 
 
-def create_social_accounts
-  social_accounts = [
-    ["Facebook", "Test Body", "Test Login", "Test Password"],
-    ["Instagram", "Test2 Body", "Test2 Login", "Test2 Password"],
-    ["YouTube", "Test3 Body", "Test3 Login", "Test3 Password"]
-]
-
-social_accounts.each { |social_account| create_social_account(social_account) }
-end
-
-def create_social_account(social_account)
-
-  social_account = SocialAccount.create(
-    title: social_account[0],
-    body: social_account[1],
-    login: social_account[2],
-    password: social_account[3],
-    user_id: 1
-  )
-
-  puts "SocialAccount with id #{ social_account.id } created"
-end
+# def create_social_accounts
+#   social_accounts = [
+#     ["Facebook", "Test Body", "Test Login", "Test Password"],
+#     ["Instagram", "Test2 Body", "Test2 Login", "Test2 Password"],
+#     ["YouTube", "Test3 Body", "Test3 Login", "Test3 Password"]
+# ]
+#
+# social_accounts.each { |social_account| create_social_account(social_account) }
+# end
+#
+# def create_social_account(social_account)
+#
+#   social_account = SocialAccount.create(
+#     title: social_account[0],
+#     body: social_account[1],
+#     login: social_account[2],
+#     password: social_account[3],
+#     user_id: 1
+#   )
+#
+#   puts "SocialAccount with id #{ social_account.id } created"
+# end
 
 
 
@@ -138,21 +138,21 @@ end
 # account_transfers.each { |account_transfer| create_account_transfer(account_transfer) }
 # end
 
-def create_account_transfers
-@user1 = User.find_by_email("user1@user1.user1")
-@user3 = User.find_by_email("user3@user3.user3")
-@social_account1 = SocialAccount.find_by_id("1")
-
-  account_transfer = AccountTransfer.create(
-    transmitter_id: @user1.id,
-    transferable_id: @social_account1.id,
-    transferable_type: "SocialAccount",
-    email: "user3@user3.user3",
-    inheritor_id: @user3.id
-  )
-
-  puts "AccountTransfer with id #{ account_transfer.id } created"
-end
+# def create_account_transfers
+# @user1 = User.find_by_email("user1@user1.user1")
+# @user3 = User.find_by_email("user3@user3.user3")
+# @social_account1 = SocialAccount.find_by_id("1")
+#
+#   account_transfer = AccountTransfer.create(
+#     transmitter_id: @user1.id,
+#     transferable_id: @social_account1.id,
+#     transferable_type: "SocialAccount",
+#     email: "user3@user3.user3",
+#     inheritor_id: @user3.id
+#   )
+#
+#   puts "AccountTransfer with id #{ account_transfer.id } created"
+# end
 
 
 

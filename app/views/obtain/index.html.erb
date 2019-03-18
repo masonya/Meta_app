@@ -5,7 +5,7 @@
 
 
 
-    <% if @social_accounts.exists? && @inherited_accounts %>
+    <% if @inherited_accounts.where(:inheritor_id == current_user.id).exists? %>
       <h2 class="section_header">Аккаунты</h2>
       <section class="cards_area">
         <% @inherited_accounts.each do |inherited_account| %>

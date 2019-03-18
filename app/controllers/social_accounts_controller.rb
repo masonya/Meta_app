@@ -4,6 +4,7 @@ class SocialAccountsController < ApplicationController
   # before_action :authorize_user, only: [:edit, :update, :destroy, :index]
 
 
+
   # GET /social_accounts
   # GET /social_accounts.json
   def index
@@ -87,6 +88,7 @@ class SocialAccountsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
 

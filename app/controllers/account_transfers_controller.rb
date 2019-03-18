@@ -18,6 +18,22 @@ class AccountTransfersController < ApplicationController
   end
 
 
+  def unaccept
+    @inherited_account = SocialAccount.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    # logger.debug @inherited_account.to_json
+
+    @account_transfer.destroy!
+
+    # logger.debug @inherited_account.to_json
+    # logger.debug AccountTransfer.find(params[:id]).to_json
+
+    # if @inherited_account.save!
+    redirect_to obtain_index_path
+    # end
+  end
+
+
 
 
 # def accept

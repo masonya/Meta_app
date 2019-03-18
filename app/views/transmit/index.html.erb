@@ -40,35 +40,23 @@
     </section>
 
 
+
+
+
+
+
+
+
+
     <section id="s2" class="main">
       <h2 class="section_header">Аккаунты</h2>
       <section class="cards_area">
 
-        <% @social_accounts.each do |social_account| %>
-          <% if current_user && social_account.user_id == current_user.id %>
-            <div class="card">
-              <div class="previev <%= social_account.title %>"></div>
-              <div class="card_title">
-                <h4><%= social_account.title %></h4>
-              </div>
-
-              <div class="editing">
-                <div class="popup">
-                    <div class="EditWrapper">
-                      <div class="Icon" id="EditIcon"></div>
-                      <li>
-                        <%= link_to 'Редактировать', edit_social_account_path(social_account) %>
-                      </li>
-                    </div>
-                    <div class="TrashWrapper">
-                      <div class="Icon" id="TrashIcon"></div>
-                      <li>
-                        <%= link_to 'Удалить', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
-                      </li>
-                    </div>
-                </div>
-              </div>
-            </div>
+        <% if @account_transfer.present? %>
+          <% if @account_transfer.accepted %>
+            <%= render "social_account_accepted" %>
+          <% else %>
+            <%= render "social_account_unaccepted" %>
           <% end %>
         <% end %>
 
@@ -80,6 +68,18 @@
         </div>
       </section>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section id="s3" class="main">
