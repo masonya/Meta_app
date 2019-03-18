@@ -215,15 +215,13 @@ h2 {
   padding-left: 10px;
   padding-top: 10px;
   width: 150px;
-  height: 70px;
+  padding-bottom: 10px;
   margin-top: 20px;
   margin-left: -100px;
-  background-repeat: no-repeat;
   background-color: white;
   orphans: 0.05;
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
   border-radius: 2%;
-  background-size: cover;
   display: none;
 }
 
@@ -270,6 +268,39 @@ h2 {
   margin-right: 7px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.AcceptWrapper {
+  display: flex;
+}
+
+.UnacceptWrapper {
+  display: flex;
+}
+
+.UnacceptWrapper:hover #UnacceptedIcon {
+  background-image: url(/assets/UnacceptIconActive.png);
+}
+
+.UnacceptWrapper:hover a {
+  color: #FF686E;
+}
+
+.AcceptWrapper:hover #AcceptedIcon {
+  background-image: url(/assets/AcceptIconActive.png);
+}
+
+.AcceptWrapper:hover a {
+  color: #3A8BDF;
+}
+
+
+#AcceptedIcon {
+  background-image: url(/assets/AcceptIcon.png);
+}
+
+#UnacceptedIcon {
+  background-image: url(/assets/UnacceptIcon.png);
 }
 
 #EditIcon {
@@ -333,32 +364,19 @@ h2 {
   margin-bottom: -40px;
 }
 
-
-
 .transmitter_email {
   margin-top: -20px;
   font-size: 12px;
   color: gray;
   font-weight: lighter;
-  //background-color: yellow;
 }
 
 .blank {
   width: 420px;
-    height: 245px;
-    margin-left: 245px;
-    margin-top: 200px;
-    background-image: image_url('blank.png');
-    background-size: contain;
-}
-
-.previev_unaccepted {
-  width: 230px;
-  height: 105px;
-  border-radius: -2%;
-  margin-top: -3px;
+  height: 245px;
+  margin-left: 245px;
+  margin-top: 190px;
+  background-image: image_url('blank.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: image_url('unaccepted.png');
-  position: absolute;
 }
