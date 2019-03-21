@@ -85,8 +85,7 @@ class AccountTransfersController < ApplicationController
 
     respond_to do |format|
       if @account_transfer.save
-         UserMailer.with(inheritor_id: @inheritor.id).welcome_email.deliver_later
-
+  
         format.html { redirect_to root_url, notice: 'Account transfer was successfully created.' }
         format.json { render :show, status: :created, location: @account_transfer }
       else

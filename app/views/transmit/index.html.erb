@@ -52,13 +52,7 @@
       <h2 class="section_header">Аккаунты</h2>
       <section class="cards_area">
 
-        <% if @account_transfer.present? %>
-          <% if @account_transfer.accepted %>
-            <%= render "social_account_accepted" %>
-          <% else %>
-            <%= render "social_account_unaccepted" %>
-          <% end %>
-        <% end %>
+        <%= render 'social_accounts' %>
 
         <div class="card">
           <div class="card_new">
@@ -66,6 +60,7 @@
           </div>
           <div class="add"></div>
         </div>
+
       </section>
     </section>
 

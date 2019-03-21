@@ -50,6 +50,7 @@ gem 'devise'
 gem "mini_magick"
 gem 'cancancan', '~> 2.0'
 gem 'faker'
+gem 'letter_opener'
 
 
 

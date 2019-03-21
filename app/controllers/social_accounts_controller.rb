@@ -36,28 +36,34 @@ class SocialAccountsController < ApplicationController
     @social_account = SocialAccount.new(social_account_params)
     @social_account.user_id = current_user.id
     @social_account.email = current_user.email
-
+    #@inheritor.email = AccountTransfer.inheritor_email
 
     respond_to do |format|
       if @social_account.save
+         #UserMailer.with(inheritor_id: @inheritor.id).welcome_email.deliver_later
+
         logger.debug("========")
         logger.debug(params[:account_transfer][:inheritor_email])
 
+        account_transfer = AccountTransfer.new(
+          inheritor_email: params[:account_transfer][:inheritor_email],
+          transferable_type: "SocialAccount",
+          transmitter_id: current_user.id,
+          transferable_id: @social_account.id
+        )
 
-          AccountTransfer.create(
-            inheritor_email: params[:account_transfer][:inheritor_email],
-            transmitter_id: current_user.id,
-            transferable_id: @social_account.id,
-            inheritor_id: User.find_by_email(params[:account_transfer][:inheritor_email]).id
-          )
 
+        inheritor = User.find_by_email(params[:account_transfer][:inheritor_email])
+        account_transfer.inheritor_id = inheritor.id if inheritor
 
-        # SocialAccount.create(
-        #   email: current_user.email
-        # )
-
-        format.html { redirect_to root_url, notice: 'Social account was successfully created.' }
-        format.json { render :show, status: :created, location: @social_account }
+        if account_transfer.save
+          UserMailer.with(inheritor: @inheritor).welcome_email.deliver_later
+          format.html { redirect_to root_url, notice: 'Social account was successfully created.' }
+          format.json { render :show, status: :created, location: @social_account }
+        else
+          format.html { render :new }
+          format.json { render json: @social_account.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render :new }
         format.json { render json: @social_account.errors, status: :unprocessable_entity }

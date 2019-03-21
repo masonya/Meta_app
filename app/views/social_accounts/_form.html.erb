@@ -39,25 +39,20 @@
         <%= label :action, 'Удалить' %> <br>
         <%= form.radio_button :action, 'Удалить и вывести средства' %>
         <%= label :action, 'Удалить и вывести средства' %> <br>
-        <%= form.radio_button :action, 'Удалить с сообщением' %>
-        <%= label :action, 'Удалить с сообщением' %> <br>
-        <%= form.radio_button :action, 'Оставить пост' %>
-        <%= label :action, 'Оставить пост' %>
       </div>
 
-
-      <% if @social_account.save %>
-        <h3> Получатель: <%= @social_account.email %></h3>
-
-      <% else %>
-        <div class="receiver">
-          <h3>Получатель</h3>
-          <%= email_field  "account_transfer", "inheritor_email" %>
-          <%#= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
-        </div>
-      <% end %>
-
-
+      <div class="receiver">
+        <h3>Получатель</h3>
+        <% if @social_account.save %>
+          <div class="fake_form">
+            <% @inheritor = AccountTransfer.take.inheritor_email %>
+            <h4> <%= @inheritor %></h4>
+          </div>
+        <% else %>
+            <%= email_field "account_transfer", "inheritor_email" %>
+            <%#= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
+        <% end %>
+      </div>
 
       <div class="actions">
         <%= form.submit 'Сохранить' %>

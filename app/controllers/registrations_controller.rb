@@ -21,10 +21,9 @@
       logger.debug "============"
 
       AccountTransfer.where(inheritor_email: resource.email).each do |account_transfer|
-        account_transfer.inheritor_email = resource.id
+        account_transfer.inheritor_id = resource.id
         account_transfer.save
       end
-
 
       if resource.active_for_authentication?
         set_flash_message! :notice, :signed_up
