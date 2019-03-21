@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  font-family: 'Avenir Next Cyr';
+  font-family: 'AvenirNextCyr-Regular';
   font-size: 14px;
   line-height: 19px;
 }
@@ -38,8 +38,7 @@ a {
     padding: 15px;
     color: #f55;
     font-size: 13px;
-    font-family: 'Avenir Next Cyr';
-    font-weight: normal;
+    font-family: 'AvenirNextCyr-Regular';
     line-height: 1.5;
     list-style: disc;
     vertical-align: baseline;
@@ -60,61 +59,60 @@ a {
     background: #f55;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    font-family: 'Avenir Next Cyr';
-    font-weight: normal;
+    font-family: 'AvenirNextCyr-Regular';
   }
 }
 
 h1 {
   font-size: 32px;
   margin: auto;
-  font-family: 'Avenir Next Cyr';
-  font-weight: normal;
+  font-family: 'AvenirNextCyr-Regular';
+  font-weight: 100;
 }
 
 h2 {
    font-size: 32px;
-   font-family: 'Avenir Next Cyr';
+   font-family: 'AvenirNextCyr-Medium';
+   font-weight: 100;
    margin: auto;
-   font-weight: 500;
    color: inherit;
  }
 
  h3 {
    font-size: 18px;
    margin-top: 40px;
-   font-family: 'Avenir Next Cyr';
-   font-weight: 400;
+   font-family: 'AvenirNextCyr-Regular';
+   font-weight: 600;
  }
 
  h4 {
    font-size: 16px;
-   font-weight: lighter;
-   font-family: 'Avenir Next Cyr';
+   font-family: 'AvenirNextCyr-Light';
+   font-weight: 100;
  }
 
- .section_header {
+  .section_header {
    margin-left: 40px;
- }
+  }
 
-.MainCardsArea{
+  .MainCardsArea{
   margin-top: 75px;
-}
+  }
 
-.main {
+  .main {
   padding-left: 270px;
   padding-top: 80px;
-}
+  }
 
-.cards_area {
+  .cards_area {
   width: 100%;
   margin-top: 50px;
   position:relative;
   display: flex;
   flex-wrap: wrap;
-}
+  }
 
-.card {
+  .card {
   width: 220px;
   height: 150px;
   border-radius: 2%;
@@ -125,24 +123,24 @@ h2 {
   margin-bottom: 40px;
   display: inline-flex;
   min-width: 0%
-}
+  }
 
-.card_new {
+  .card_new {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
-}
+  }
 
-.card_new a, .edit a, .delete a {
- height: 100%;
- width: 100%;
- z-index: 1;
- display: block;
-}
+  .card_new a, .edit a, .delete a {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: block;
+  }
 
-.add {
+  .add {
   height: 45px;
   width: 45px;
   background-image: image_url('add.png');
@@ -150,17 +148,17 @@ h2 {
   margin-left: 48%;
   transform: translateX(-50%);
   margin-top: 52px;
-}
+  }
 
-.card:hover .edit, .card:hover .delete  {
+  .card:hover .edit, .card:hover .delete  {
   display:block;
-}
+  }
 
-.card:hover {
+  .card:hover {
   box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-}
+  }
 
-.previev {
+  .previev {
   width: 230px;
   height: 105px;
   border-radius: -2%;
@@ -168,9 +166,9 @@ h2 {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: image_url('doc.png');
-}
+  }
 
-.previev2 {
+  .previev2 {
   width: 230px;
   height: 105px;
   border-radius: -2%;
@@ -178,25 +176,25 @@ h2 {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: image_url('instuction.png');
-}
+  }
 
 
-.card_title {
+  .card_title {
   margin-top: 85px;
   margin-left: 10px;
   position: absolute;
-}
+  }
 
-.EditWrapper {
+  .EditWrapper {
   display: flex;
   // display: block;
-}
+  }
 
-.TrashWrapper {
+  .TrashWrapper {
   display: flex;
-}
+  }
 
-.editing {
+  .editing {
   z-index: 2;
   width: 20px;
   height: 30px;
@@ -205,13 +203,13 @@ h2 {
   background-image: url(/assets/editing.png);
   background-size: contain;
   background-repeat: no-repeat;
-}
+  }
 
-.editing:hover .popup {
+  .editing:hover .popup {
   display: block;
-}
+  }
 
-.popup {
+  .popup {
   padding-left: 10px;
   padding-top: 10px;
   width: 150px;
@@ -223,155 +221,155 @@ h2 {
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.10);
   border-radius: 2%;
   display: none;
-}
+  }
 
-.popup:hover {
+  .popup:hover {
   display: block;
-}
+  }
 
-.popup li {
+  .popup li {
   line-height: 30px;
   list-style-type: none;
-}
+  }
 
-.popup a {
+  .popup a {
   font-size: 14px;
-  font-family: 'Avenir Next Cyr';
-}
+  font-family: 'AvenirNextCyr-Light';
+  }
 
-.TrashWrapper:hover #TrashIcon {
+  .TrashWrapper:hover #TrashIcon {
   background-image: url(/assets/TrashIconActive.png);
-}
+  }
 
-.TrashWrapper:hover a {
+  .TrashWrapper:hover a {
   color: #FF686E;
-}
+  }
 
-.EditWrapper:hover #EditIcon {
+  .EditWrapper:hover #EditIcon {
   background-image: url(/assets/EditIconActive.png);
-}
+  }
 
-.EditWrapper:hover a {
+  .EditWrapper:hover a {
   color: #3A8BDF;
-}
+  }
 
-.IconWrapper {
+  .IconWrapper {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-}
+  }
 
-.Icon  {
+  .Icon  {
   width: 26px;
   height: 26px;
   margin-top: 3px;
   margin-right: 7px;
   background-size: contain;
   background-repeat: no-repeat;
-}
+  }
 
-.AcceptWrapper {
+  .AcceptWrapper {
   display: flex;
-}
+  }
 
-.UnacceptWrapper {
+  .UnacceptWrapper {
   display: flex;
-}
+  }
 
-.UnacceptWrapper:hover #UnacceptedIcon {
+  .UnacceptWrapper:hover #UnacceptedIcon {
   background-image: url(/assets/UnacceptIconActive.png);
-}
+  }
 
-.UnacceptWrapper:hover a {
+  .UnacceptWrapper:hover a {
   color: #FF686E;
-}
+  }
 
-.AcceptWrapper:hover #AcceptedIcon {
+  .AcceptWrapper:hover #AcceptedIcon {
   background-image: url(/assets/AcceptIconActive.png);
-}
+  }
 
-.AcceptWrapper:hover a {
+  .AcceptWrapper:hover a {
   color: #3A8BDF;
-}
+  }
 
 
-#AcceptedIcon {
+  #AcceptedIcon {
   background-image: url(/assets/AcceptIcon.png);
-}
+  }
 
-#UnacceptedIcon {
+  #UnacceptedIcon {
   background-image: url(/assets/UnacceptIcon.png);
-}
+  }
 
-#EditIcon {
+  #EditIcon {
   background-image: url(/assets/EditIcon.png);
-}
+  }
 
-#TrashIcon {
+  #TrashIcon {
   background-image: url(/assets/TrashIcon.png);
-}
+  }
 
-#DocumentIcon {
+  #DocumentIcon {
   background-image: url(/assets/DocumentIcon.png);
-}
+  }
 
-#WalletIcon {
+  #WalletIcon {
   background-image: url(/assets/WalletIcon.png);
-}
+  }
 
-#AccountIcon {
+  #AccountIcon {
   background-image: url(/assets/AccountIcon.png);
-}
+  }
 
-#SubscriptionIcon {
+  #SubscriptionIcon {
   background-image: url(/assets/SubscriptionIcon.png);
-}
+  }
 
-#InstructionIcon {
+  #InstructionIcon {
   background-image: url(/assets/InstructionIcon.png);
-}
+  }
 
-.IconWrapper:hover #DocumentIcon {
+  .IconWrapper:hover #DocumentIcon {
   background-image: url(/assets/DocumentIconActive.png);
-}
+  }
 
-.IconWrapper:hover #WalletIcon {
+  .IconWrapper:hover #WalletIcon {
   background-image: url(/assets/WalletIconActive.png);
-}
+  }
 
-.IconWrapper:hover #AccountIcon {
+  .IconWrapper:hover #AccountIcon {
   background-image: url(/assets/AccountIconActive.png);
-}
+  }
 
 
-.IconWrapper:hover #SubscriptionIcon {
+  .IconWrapper:hover #SubscriptionIcon {
   background-image: url(/assets/SubscriptionIconActive.png);
-}
+  }
 
-.IconWrapper:hover #InstructionIcon {
+  .IconWrapper:hover #InstructionIcon {
   background-image: url(/assets/InstructionIconActive.png);
-}
+  }
 
-.IconWrapper:hover a {
+  .IconWrapper:hover a {
   color: #3A8BDF;
-}
+  }
 
-.interval {
+  .interval {
   height: 105px;
-}
+  }
 
-.custom-file-upload {
+  .custom-file-upload {
   margin-bottom: -40px;
-}
+  }
 
-.transmitter_email {
+  .transmitter_email {
   margin-top: -20px;
   font-size: 12px;
   color: gray;
   font-weight: lighter;
-}
+  }
 
-.blank {
+  .blank {
   width: 420px;
   height: 245px;
   margin-left: 245px;
@@ -379,4 +377,4 @@ h2 {
   background-image: image_url('blank.png');
   background-size: contain;
   background-repeat: no-repeat;
-}
+  }
