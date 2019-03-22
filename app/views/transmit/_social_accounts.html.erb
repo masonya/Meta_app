@@ -26,10 +26,8 @@
   <%# end %>
 <%# end %>
 
-
-
 <% @transfered_accounts.each do |transfered_account| %>
-  <% social_account = transfered_account.social_account %>
+  <% social_account = transfered_account.transferable %>
 
   <% if transfered_account.accepted %>
     <div class="card">

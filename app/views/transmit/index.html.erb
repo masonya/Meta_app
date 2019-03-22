@@ -1,3 +1,23 @@
+<% @transfered_accounts.each do |t| %>
+  <%#= t.transferable.to_json %>
+  <%= t.transferable.class %>
+
+  <% if t.transferable.class == SocialAccount %>
+    <h1>SocialAccount</h1>
+  <% elsif t.transferable.class == Document %>
+    <h1>Document</h1>
+  <% elsif t.transferable.class == Instruction %>
+    <h1>Instruction</h1>
+  <% elsif t.transferable.class == Subscription %>
+    <h1>Subscription</h1>
+  <% elsif t.transferable.class == Wallet %>
+    <h1>Wallet</h1>
+  <% end %>
+  <br>
+<% end %>
+
+
+
 <section id="s1" class="main">
     <div class="MainCardsArea">
 
