@@ -11,20 +11,4 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require_self
  */
-
- @font-face {
-   font-family: 'AvenirNextCyr-Light';
-   src: asset-url('AvenirNextCyr-Light.ttf') format('truetype');
- }
-
- @font-face {
-   font-family: 'AvenirNextCyr-Regular';
-   src: asset-url('AvenirNextCyr-Regular.ttf') format('truetype');
-  }
-
- @font-face {
-   font-family: 'AvenirNextCyr-Medium';
-   src: asset-url('AvenirNextCyr-Medium.ttf') format('truetype');
-  }
