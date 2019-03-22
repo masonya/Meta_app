@@ -200,7 +200,7 @@ h2 {
   height: 30px;
   margin-top: 110px;
   margin-left: -20px;
-  background-image: url(/assets/editing.png);
+  background-image: image_url('editing.png');
   background-size: contain;
   background-repeat: no-repeat;
   }
@@ -238,7 +238,7 @@ h2 {
   }
 
   .TrashWrapper:hover #TrashIcon {
-  background-image: url(/assets/TrashIconActive.png);
+  background-image: image_url('TrashIconActive.png');
   }
 
   .TrashWrapper:hover a {
@@ -246,7 +246,7 @@ h2 {
   }
 
   .EditWrapper:hover #EditIcon {
-  background-image: url(/assets/EditIconActive.png);
+  background-image: image_url('EditIconActive.png');
   }
 
   .EditWrapper:hover a {
@@ -277,7 +277,7 @@ h2 {
   }
 
   .UnacceptWrapper:hover #UnacceptedIcon {
-  background-image: url(/assets/UnacceptIconActive.png);
+  background-image: image_url('UnacceptIconActive.png');
   }
 
   .UnacceptWrapper:hover a {
@@ -285,7 +285,7 @@ h2 {
   }
 
   .AcceptWrapper:hover #AcceptedIcon {
-  background-image: url(/assets/AcceptIconActive.png);
+  background-image: image_url('AcceptIconActive.png');
   }
 
   .AcceptWrapper:hover a {
@@ -294,60 +294,60 @@ h2 {
 
 
   #AcceptedIcon {
-  background-image: url(/assets/AcceptIcon.png);
+  background-image: image_url('AcceptIcon.png');
   }
 
   #UnacceptedIcon {
-  background-image: url(/assets/UnacceptIcon.png);
+  background-image: image_url('UnacceptIcon.png');
   }
 
   #EditIcon {
-  background-image: url(/assets/EditIcon.png);
+  background-image: image_url('EditIcon.png');
   }
 
   #TrashIcon {
-  background-image: url(/assets/TrashIcon.png);
+  background-image: image_url('TrashIcon.png');
   }
 
   #DocumentIcon {
-  background-image: url(/assets/DocumentIcon.png);
+  background-image: image_url('DocumentIcon.png');
   }
 
   #WalletIcon {
-  background-image: url(/assets/WalletIcon.png);
+  background-image: image_url('WalletIcon.png');
   }
 
   #AccountIcon {
-  background-image: url(/assets/AccountIcon.png);
+  background-image: image_url('AccountIcon.png');
   }
 
   #SubscriptionIcon {
-  background-image: url(/assets/SubscriptionIcon.png);
+  background-image: image_url('SubscriptionIcon.png');
   }
 
   #InstructionIcon {
-  background-image: url(/assets/InstructionIcon.png);
+  background-image: image_url('InstructionIcon.png');
   }
 
   .IconWrapper:hover #DocumentIcon {
-  background-image: url(/assets/DocumentIconActive.png);
+  background-image: image_url('DocumentIconActive.png');
   }
 
   .IconWrapper:hover #WalletIcon {
-  background-image: url(/assets/WalletIconActive.png);
+  background-image: image_url('WalletIconActive.png');
   }
 
   .IconWrapper:hover #AccountIcon {
-  background-image: url(/assets/AccountIconActive.png);
+  background-image: image_url('AccountIconActive.png');
   }
 
 
   .IconWrapper:hover #SubscriptionIcon {
-  background-image: url(/assets/SubscriptionIconActive.png);
+  background-image: image_url('SubscriptionIconActive.png');
   }
 
   .IconWrapper:hover #InstructionIcon {
-  background-image: url(/assets/InstructionIconActive.png);
+  background-image: image_url('InstructionIconActive.png');
   }
 
   .IconWrapper:hover a {
