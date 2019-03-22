@@ -7,7 +7,7 @@
   position: fixed;
   width: 110px;
   height: 110px;
-  background-image: url(/assets/logo.png);
+  background-image: image_url('logo.png');
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: 28px;
@@ -31,7 +31,7 @@
   margin-top: 350px;
   height: 500px;
   width: 760px;
-  background-image: url(/assets/session_login.png);
+  background-image: image_url('session_login.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -87,7 +87,7 @@ input.Enter_Password {
 .passwordVisibilityButtonSession{
   width: 28px;
   height: 28px;
-  background-image: url(/assets/eyeopen.png);
+  background-image: image_url('eyeopen.png');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.9;
@@ -96,11 +96,11 @@ input.Enter_Password {
 }
 
 .eyeopen {
-  background-image: url(/assets/eyeopen.png);
+  background-image: image_url('eyeopen.png');
 }
 
 .eyeclose {
-  background-image: url(/assets/eyeclose.png);
+  background-image: image_url('eyeclose.png');
 }
 
 input.EnterButton {

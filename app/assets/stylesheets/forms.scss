@@ -176,7 +176,7 @@ select {
   top: 500px;
   width: 28px;
   height: 28px;
-  background-image: url(/assets/eyeopen.png);
+  background-image: image_url('eyeopen.png');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.9;
@@ -185,11 +185,11 @@ select {
 }
 
 .eyeopen {
-  background-image: url(/assets/eyeopen.png);
+  background-image: image_url('eyeopen.png');
 }
 
 .eyeclose {
-  background-image: url(/assets/eyeclose.png);
+  background-image: image_url('eyeclose.png');
 }
 
 .form-group {
