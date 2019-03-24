@@ -1,220 +1,85 @@
-<% @transfered_accounts.each do |t| %>
-  <%#= t.transferable.to_json %>
-  <%= t.transferable.class %>
+<section id="s1" class="main_first">
+  <h2 class="section_header">Документы</h2>
+  <section class="cards_area">
 
-  <% if t.transferable.class == SocialAccount %>
-    <h1>SocialAccount</h1>
-  <% elsif t.transferable.class == Document %>
-    <h1>Document</h1>
-  <% elsif t.transferable.class == Instruction %>
-    <h1>Instruction</h1>
-  <% elsif t.transferable.class == Subscription %>
-    <h1>Subscription</h1>
-  <% elsif t.transferable.class == Wallet %>
-    <h1>Wallet</h1>
-  <% end %>
-  <br>
-<% end %>
+     <%= render "documents" %>
 
-
-
-<section id="s1" class="main">
-    <div class="MainCardsArea">
-
-      <h2 class="section_header">Документы</h2>
-      <section class="cards_area">
-
-        <% @documents.each do |document| %>
-          <div class="card">
-            <div class="previev"></div>
-            <div class="card_title">
-              <h4><%= document.title %></h4>
-            </div>
-
-            <div class="editing">
-              <div class="popup">
-                  <div class="EditWrapper">
-                    <div class="Icon" id="EditIcon"></div>
-                    <li>
-                      <%= link_to 'Редактировать', edit_document_path(document) %>
-                    </li>
-                  </div>
-                  <div class="TrashWrapper">
-                    <div class="Icon" id="TrashIcon"></div>
-                    <li>
-                      <%= link_to 'Удалить', document, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </li>
-                  </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
-
-        <div class="card">
-          <div class="card_new">
-            <%= link_to '', new_document_path %>
-          </div>
-          <div class="add"></div>
-        </div>
-      </section>
-    </section>
-
-
-
-
-
-
-
-
-
-
-    <section id="s2" class="main">
-      <h2 class="section_header">Аккаунты</h2>
-      <section class="cards_area">
-
-        <%= render 'social_accounts' %>
-
-        <div class="card">
-          <div class="card_new">
-            <%= link_to '', new_social_account_path %>
-          </div>
-          <div class="add"></div>
-        </div>
-
-      </section>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="s3" class="main">
-      <h2 class="section_header">Кошельки</h2>
-      <section class="cards_area">
-
-        <% @wallets.each do |wallet| %>
-          <div class="card">
-            <div class="previev <%= wallet.title %>"></div>
-            <div class="card_title">
-              <h4><%= wallet.title %></h4>
-            </div>
-
-            <div class="editing">
-              <div class="popup">
-                  <div class="EditWrapper">
-                    <div class="Icon" id="EditIcon"></div>
-                    <li>
-                      <%= link_to 'Редактировать', edit_wallet_path(wallet) %>
-                    </li>
-                  </div>
-                  <div class="TrashWrapper">
-                    <div class="Icon" id="TrashIcon"></div>
-                    <li>
-                      <%= link_to 'Удалить', wallet, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </li>
-                  </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
-
-        <div class="card">
-          <div class="card_new">
-            <%= link_to '', new_wallet_path %>
-          </div>
-          <div class="add"></div>
-        </div>
-      </section>
-    </section>
-
-
-    <section id="s4" class="main">
-      <h2 class="section_header">Подписки</h2>
-      <section class="cards_area">
-
-        <% @subscriptions.each do |subscription| %>
-          <div class="card">
-            <div class="previev <%= subscription.title %>"></div>
-            <div class="card_title">
-              <h4><%= subscription.title %></h4>
-            </div>
-
-            <div class="editing">
-              <div class="popup">
-                  <div class="EditWrapper">
-                    <div class="Icon" id="EditIcon"></div>
-                    <li>
-                      <%= link_to 'Редактировать', edit_subscription_path(subscription) %>
-                    </li>
-                  </div>
-                  <div class="TrashWrapper">
-                    <div class="Icon" id="TrashIcon"></div>
-                    <li>
-                      <%= link_to 'Удалить', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </li>
-                  </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
-
-        <div class="card">
-          <div class="card_new">
-            <%= link_to '', new_subscription_path %>
-          </div>
-          <div class="add"></div>
-        </div>
-      </section>
-    </section>
-
-    <section id="s5" class="main">
-      <h2 class="section_header">Наставления</h2>
-      <section class="cards_area">
-
-        <% @instructions.each do |instruction| %>
-          <div class="card">
-            <div class="previev2 <%= instruction.title %>"></div>
-            <div class="card_title">
-              <h4><%= instruction.title %></h4>
-            </div>
-
-            <div class="editing">
-              <div class="popup">
-                  <div class="EditWrapper">
-                    <div class="Icon" id="EditIcon"></div>
-                    <li>
-                      <%= link_to 'Редактировать', edit_instruction_path(instruction) %>
-                    </li>
-                  </div>
-                  <div class="TrashWrapper">
-                    <div class="Icon" id="TrashIcon"></div>
-                    <li>
-                      <%= link_to 'Удалить', instruction, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </li>
-                  </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
-
-        <div class="card">
-          <div class="card_new">
-            <%= link_to '', new_instruction_path %>
-          </div>
-          <div class="add"></div>
-        </div>
-      </section>
-
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_document_path %>
+      </div>
+      <div class="add"></div>
     </div>
+
   </section>
+</section>
+
+
+<section id="s2" class="main">
+  <h2 class="section_header">Аккаунты</h2>
+  <section class="cards_area">
+
+     <%= render "social_accounts" %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_social_account_path %>
+      </div>
+      <div class="add"></div>
+    </div>
+
+  </section>
+</section>
+
+
+<section id="s3" class="main">
+  <h2 class="section_header">Кошельки</h2>
+  <section class="cards_area">
+
+     <%= render "wallets" %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_wallet_path %>
+      </div>
+      <div class="add"></div>
+    </div>
+
+  </section>
+</section>
+
+
+<section id="s4" class="main">
+  <h2 class="section_header">Подписки</h2>
+  <section class="cards_area">
+
+     <%= render "subscriptions" %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_subscription_path %>
+      </div>
+      <div class="add"></div>
+    </div>
+
+  </section>
+</section>
+
+
+<section id="s5" class="main">
+  <h2 class="section_header">Наставления</h2>
+  <section class="cards_area">
+
+     <%= render "instructions" %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_instruction_path %>
+      </div>
+      <div class="add"></div>
+    </div>
+
+  </section>
+</section>
 
 <div class="interval"></div>

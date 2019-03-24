@@ -1,8 +1,7 @@
 class InstructionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_instruction, only: [:show, :edit, :update, :destroy]
-  # before_action :authorize_user, only: [:edit, :update, :destroy]
-  load_and_authorize_resource
+
 
   # GET /instructions
   # GET /instructions.json
@@ -13,6 +12,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/1
   # GET /instructions/1.json
   def show
+
   end
 
   # GET /instructions/new
@@ -29,11 +29,32 @@ class InstructionsController < ApplicationController
   def create
     @instruction = Instruction.new(instruction_params)
     @instruction.user_id = current_user.id
+    @instruction.email = current_user.email
 
     respond_to do |format|
       if @instruction.save
-        format.html { redirect_to root_url, notice: 'Instruction was successfully created.' }
-        format.json { render :show, status: :created, location: @instruction }
+
+      logger.debug("========")
+      logger.debug(params[:account_transfer][:inheritor_email])
+
+      account_transfer = AccountTransfer.new(
+        inheritor_email: params[:account_transfer][:inheritor_email],
+        transferable_type: "Instruction",
+        transmitter_id: current_user.id,
+        transferable_id: @instruction.id
+      )
+
+        inheritor = User.find_by_email(params[:account_transfer][:inheritor_email])
+        account_transfer.inheritor_id = inheritor.id if inheritor
+
+        if account_transfer.save
+          UserMailer.with(inheritor: @inheritor).welcome_email.deliver_later
+          format.html { redirect_to root_url, notice: 'Instruction was successfully created.' }
+          format.json { render :show, status: :created, location: @instruction }
+        else
+          format.html { render :new }
+          format.json { render json: @instruction.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render :new }
         format.json { render json: @instruction.errors, status: :unprocessable_entity }
@@ -72,12 +93,9 @@ class InstructionsController < ApplicationController
       @instruction = Instruction.find(params[:id])
     end
 
-    # def authorize_user
-    #   redirect_to instructions_url, notice: "You have not rights" if @instruction.user_id != current_user.id
-    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def instruction_params
-      params.require(:instruction).permit(:title, :body, :receiver)
+      params.require(:instruction).permit(:title, :body, :receiver, :email)
     end
 end

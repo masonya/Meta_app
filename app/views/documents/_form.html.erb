@@ -30,12 +30,6 @@
           <%= image_tag document.cover.url(:thumb), style: "margin-bottom: 100px" if @document.cover? %>
       </div>
 
-<!--
-      <div class="receiver">
-        <h3>Получатели</h3>
-        <%#= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
-      </div> -->
-
 
       <div class="receiver">
         <h3>Получатель</h3>
@@ -46,10 +40,8 @@
           </div>
         <% else %>
             <%= email_field "account_transfer", "inheritor_email" %>
-            <%#= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
         <% end %>
       </div>
-
 
 
       <div class="actions">

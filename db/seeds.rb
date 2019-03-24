@@ -99,8 +99,6 @@ end
 
 
 
-
-
 # def create_social_accounts
 #   social_accounts = [
 #     ["Facebook", "Test Body", "Test Login", "Test Password"],
@@ -153,7 +151,6 @@ end
 #
 #   puts "AccountTransfer with id #{ account_transfer.id } created"
 # end
-
 
 
 seed_data

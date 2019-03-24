@@ -1,0 +1,12 @@
+<% @inherited_accounts.each do |i| %>
+  <% document = i.transferable %>
+  <% if i.transferable.class == Document %>
+      <div class="card">
+        <div class="previev <%= document.title %>"></div>
+        <div class="card_title">
+          <h4><%= document.title %></h4>
+          <p class="transmitter_email"><%= document.email %></p>
+        </div>
+      </div>
+  <% end %>
+<% end %>

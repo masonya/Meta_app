@@ -2,58 +2,6 @@ class AccountTransfersController < ApplicationController
   before_action :set_account_transfer, only: [:show, :edit, :update, :destroy]
 
 
-  def accept
-    @inherited_account = SocialAccount.find(params[:id])
-    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
-    # logger.debug @inherited_account.to_json
-
-    @account_transfer.update!(accepted: true)
-
-    # logger.debug @inherited_account.to_json
-    # logger.debug AccountTransfer.find(params[:id]).to_json
-
-    # if @inherited_account.save!
-    redirect_to obtain_index_path
-    # end
-  end
-
-
-  def unaccept
-    @inherited_account = SocialAccount.find(params[:id])
-    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
-    # logger.debug @inherited_account.to_json
-
-    @account_transfer.destroy!
-
-    # logger.debug @inherited_account.to_json
-    # logger.debug AccountTransfer.find(params[:id]).to_json
-
-    # if @inherited_account.save!
-    redirect_to obtain_index_path
-    # end
-  end
-
-
-
-
-# def accept
-#   @inherited_account = AccountTransfer.find_by(params[:transferable_id])
-#   if @inherited_account.accepted == false
-#     @accepted = @inherited_account.update(accepted: true)
-#   else
-#     redirect_to obtain_index_path
-#   end
-#   redirect_to obtain_index_path
-# end
-
-
-
-  # if @inheritor.present?
-  #   def default_values
-  #     self.inheritor_id ||= User.find_by(email).id
-  #   end
-  # end
-
 
   # GET /account_transfers
   # GET /account_transfers.json
@@ -85,7 +33,7 @@ class AccountTransfersController < ApplicationController
 
     respond_to do |format|
       if @account_transfer.save
-  
+
         format.html { redirect_to root_url, notice: 'Account transfer was successfully created.' }
         format.json { render :show, status: :created, location: @account_transfer }
       else
@@ -118,6 +66,90 @@ class AccountTransfersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
+
+  def accept_social_account
+    @inherited_account = SocialAccount.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.update!(accepted: true)
+    redirect_to obtain_index_path
+  end
+
+
+  def unaccept_social_account
+    @inherited_account = SocialAccount.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.destroy!
+    redirect_to obtain_index_path
+  end
+
+
+  def accept_document
+    @inherited_account = Document.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.update!(accepted: true)
+    redirect_to obtain_index_path
+  end
+
+
+  def unaccept_document
+    @inherited_account = Document.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.destroy!
+    redirect_to obtain_index_path
+  end
+
+
+  def accept_wallet
+    @inherited_account = Wallet.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.update!(accepted: true)
+    redirect_to obtain_index_path
+  end
+
+
+  def unaccept_wallet
+    @inherited_account = Wallet.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.destroy!
+    redirect_to obtain_index_path
+  end
+
+
+  def accept_subscription
+    @inherited_account = Subscription.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.update!(accepted: true)
+    redirect_to obtain_index_path
+  end
+
+
+  def unaccept_subscription
+    @inherited_account = Subscription.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.destroy!
+    redirect_to obtain_index_path
+  end
+
+
+  def accept_instruction
+    @inherited_account = Instruction.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.update!(accepted: true)
+    redirect_to obtain_index_path
+  end
+
+
+  def unaccept_instruction
+    @inherited_account = Instruction.find(params[:id])
+    @account_transfer = @inherited_account.account_transfers.where(inheritor_id: current_user.id)[0]
+    @account_transfer.destroy!
+    redirect_to obtain_index_path
+  end
+
+
 
 
   private

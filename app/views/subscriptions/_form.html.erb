@@ -19,7 +19,6 @@
         <%= form.select(:title, %w{Выберите AppleMusic Netflix Steam}) %>
       </div>
 
-
       <div class="login">
         <h3>Введите данные</h3>
         <div class="form-group">
@@ -37,8 +36,15 @@
       </div>
 
       <div class="receiver">
-        <h3>Получатели</h3>
-        <%= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
+        <h3>Получатель</h3>
+        <% if @subscription.save %>
+          <div class="fake_form">
+            <% @inheritor = AccountTransfer.take.inheritor_email %>
+            <h4> <%= @inheritor %></h4>
+          </div>
+        <% else %>
+            <%= email_field "account_transfer", "inheritor_email" %>
+        <% end %>
       </div>
 
       <div class="actions">

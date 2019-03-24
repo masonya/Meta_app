@@ -1,0 +1,29 @@
+<% @transfered_accounts.each do |t| %>
+  <% instruction = t.transferable %>
+
+  <% if t.transferable.class == Instruction %>
+    <div class="card">
+      <div class="previev2 <%= instruction.title %>"></div>
+      <div class="card_title">
+        <h4><%= instruction.title %></h4>
+      </div>
+
+      <div class="editing">
+        <div class="popup">
+            <div class="EditWrapper">
+              <div class="Icon" id="EditIcon"></div>
+              <li>
+                <%= link_to 'Редактировать', edit_instruction_path(instruction) %>
+              </li>
+            </div>
+            <div class="TrashWrapper">
+              <div class="Icon" id="TrashIcon"></div>
+              <li>
+                <%= link_to 'Удалить', instruction, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </li>
+            </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+<% end %>

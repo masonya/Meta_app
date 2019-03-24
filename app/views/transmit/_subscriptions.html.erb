@@ -1,12 +1,12 @@
 <% @transfered_accounts.each do |t| %>
-  <% social_account = t.transferable %>
+  <% subscription = t.transferable %>
 
-  <% if t.transferable.class == SocialAccount %>
+  <% if t.transferable.class == Subscription %>
     <% if t.accepted %>
       <div class="card">
-        <div class="previev <%= social_account.title %>"></div>
+        <div class="previev <%= subscription.title %>"></div>
         <div class="card_title">
-          <h4><%= social_account.title %></h4>
+          <h4><%= subscription.title %></h4>
         </div>
 
         <div class="editing">
@@ -14,13 +14,13 @@
               <div class="EditWrapper">
                 <div class="Icon" id="EditIcon"></div>
                 <li>
-                  <%= link_to 'Редактировать', edit_social_account_path(social_account) %>
+                  <%= link_to 'Редактировать', edit_subscription_path(subscription) %>
                 </li>
               </div>
               <div class="TrashWrapper">
                 <div class="Icon" id="TrashIcon"></div>
                 <li>
-                  <%= link_to 'Удалить', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Удалить', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
                 </li>
               </div>
           </div>
@@ -29,9 +29,9 @@
     <% else %>
     <div class="card">
       <div class="previev_unaccepted"></div>
-      <div class="previev <%= social_account.title %>"></div>
+      <div class="previev <%= subscription.title %>"></div>
       <div class="card_title">
-        <h4><%= social_account.title %></h4>
+        <h4><%= subscription.title %></h4>
       </div>
 
       <div class="editing">
@@ -39,13 +39,13 @@
             <div class="EditWrapper">
               <div class="Icon" id="EditIcon"></div>
               <li>
-                <%= link_to 'Редактировать', edit_social_account_path(social_account) %>
+                <%= link_to 'Редактировать', edit_subscription_path(subscription) %>
               </li>
             </div>
             <div class="TrashWrapper">
               <div class="Icon" id="TrashIcon"></div>
               <li>
-                <%= link_to 'Удалить', social_account, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Удалить', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
               </li>
             </div>
         </div>

@@ -16,6 +16,7 @@
 
       <div class="title">
         <h3></h3>
+        <%= form.text_field :title, placeholder: "Ваш заголовок..." %>
       </div>
 
       <div class="body">
@@ -23,8 +24,15 @@
       </div>
 
       <div class="receiver">
-        <h3>Получатели</h3>
-        <%= form.email_field :receiver, placeholder: "Введите почту получателя..." %>
+        <h3>Получатель</h3>
+        <% if @instruction.save %>
+          <div class="fake_form">
+            <% @inheritor = AccountTransfer.take.inheritor_email %>
+            <h4> <%= @inheritor %></h4>
+          </div>
+        <% else %>
+            <%= email_field "account_transfer", "inheritor_email" %>
+        <% end %>
       </div>
 
       <div class="actions">

@@ -10,6 +10,7 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/1
   # GET /subscriptions/1.json
   def show
+
   end
 
   # GET /subscriptions/new
@@ -26,11 +27,32 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
     @subscription.user_id = current_user.id
+    @subscription.email = current_user.email
 
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to root_url, notice: 'Subscription was successfully created.' }
-        format.json { render :show, status: :created, location: @subscription }
+
+      logger.debug("========")
+      logger.debug(params[:account_transfer][:inheritor_email])
+
+      account_transfer = AccountTransfer.new(
+        inheritor_email: params[:account_transfer][:inheritor_email],
+        transferable_type: "Subscription",
+        transmitter_id: current_user.id,
+        transferable_id: @subscription.id
+      )
+
+        inheritor = User.find_by_email(params[:account_transfer][:inheritor_email])
+        account_transfer.inheritor_id = inheritor.id if inheritor
+
+        if account_transfer.save
+          UserMailer.with(inheritor: @inheritor).welcome_email.deliver_later
+          format.html { redirect_to root_url, notice: 'Subscription was successfully created.' }
+          format.json { render :show, status: :created, location: @subscription }
+        else
+          format.html { render :new }
+          format.json { render json: @subscription.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render :new }
         format.json { render json: @subscription.errors, status: :unprocessable_entity }
@@ -70,6 +92,6 @@ class SubscriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      params.require(:subscription).permit(:title, :body, :receiver, :login, :password)
+      params.require(:subscription).permit(:title, :body, :receiver, :login, :password, :email)
     end
 end

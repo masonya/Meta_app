@@ -1,26 +1,9 @@
-# class UserMailer < ApplicationMailer
-#   # default from: 'notifications@example.com'
-#
-#   def welcome_email
-#     #@user = params[:user]
-#     @inheritor = User.find(params[:inheritor_id])
-#     #@user = User.find params.require(:user_id)
-#     #@inheritor = @user.inheritor_id
-#     @url  = 'http://example.com/login'
-#     mail(to: @inheritor.inheritor_email, subject: 'Welcome to My Awesome Site')
-#   end
-# end
-#mail(to: @user.email, subject: 'Welcome to My Awesome Site')
-
-
-
-
 class UserMailer < ApplicationMailer
-  default from: 'notifications@example.com'
+  default from: "user@user.user"
 
   def welcome_email
     @inheritor = AccountTransfer.last.inheritor_email
-    @url  = 'http://example.com/login'
-    mail(to: @inheritor, subject: 'Welcome to My Awesome Site')
+    @url  = 'http://localhost:3331/obtain'
+    mail(to: @inheritor, subject: 'You have been given an inheritance!')
   end
 end

@@ -1,7 +1,5 @@
 class SocialAccountsController < ApplicationController
-  # before_action :authenticate_user!, except: [:index, :show]
   before_action :set_social_account, only: [:show, :edit, :update, :destroy]
-  # before_action :authorize_user, only: [:edit, :update, :destroy, :index]
 
 
 
@@ -97,10 +95,6 @@ class SocialAccountsController < ApplicationController
 
 
   private
-
-    # def authorize_user
-    #   if @social_account.user_id != current_user.id
-    # end
 
 
     # Use callbacks to share common setup or constraints between actions.
