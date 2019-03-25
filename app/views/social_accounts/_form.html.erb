@@ -44,7 +44,7 @@
       <div class="receiver">
         <h3>Получатель</h3>
         <% if @social_account.save %>
-          <% @inheritor = AccountTransfer.find_by_id(params[:id]).id %>
+          <% @inheritor = AccountTransfer.take.inheritor_email %>
           <h4> <%= @inheritor %></h4>
         <% else %>
             <%= email_field "account_transfer", "inheritor_email" %>
