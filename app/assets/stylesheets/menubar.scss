@@ -108,3 +108,26 @@
   padding-left: 15px;
   padding-top: 8px;
 }
+
+
+.red_point {
+  height: 23px;
+  width: 23px;
+  background-color: #FD7373;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 50;
+  margin-left: 205px;
+  margin-top: -6px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.red_point p {
+  font-size: 10px;
+  position: absolute;
+  color: white;
+  margin-top: 2px;
+  font-family: 'AvenirNextCyr-Light';
+}

@@ -19,6 +19,14 @@
       <% end %>
 
       <div class="SectionButton">
+
+      <% a = AccountTransfer.where(:inheritor_id => current_user.id, :accepted => false) %>
+      <% if a.exists? %>
+        <div class="red_point">
+          <p> <%= a.count %> </p>
+        </div>
+      <% end %>
+
         <div class="TransmitMenuButton">
           <%= link_to 'Передаю', root_path %>
         </div>

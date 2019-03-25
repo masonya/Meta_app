@@ -29,6 +29,7 @@ class DocumentsController < ApplicationController
     @document.user_id = current_user.id
     @document.email = current_user.email
 
+
     respond_to do |format|
       if @document.save
 
@@ -44,6 +45,7 @@ class DocumentsController < ApplicationController
 
         inheritor = User.find_by_email(params[:account_transfer][:inheritor_email])
         account_transfer.inheritor_id = inheritor.id if inheritor
+
 
         if account_transfer.save
           UserMailer.with(inheritor: @inheritor).welcome_email.deliver_later
@@ -63,6 +65,7 @@ class DocumentsController < ApplicationController
   # PATCH/PUT /documents/1
   # PATCH/PUT /documents/1.json
   def update
+  
     respond_to do |format|
       if @document.update(document_params)
         format.html { redirect_to root_url, notice: 'Document was successfully updated.' }

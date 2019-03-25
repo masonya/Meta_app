@@ -34,10 +34,8 @@
       <div class="receiver">
         <h3>Получатель</h3>
         <% if @document.save %>
-          <div class="fake_form">
-            <% @inheritor = AccountTransfer.take.inheritor_email %>
-            <h4> <%= @inheritor %></h4>
-          </div>
+          <% @inheritor = AccountTransfer.find(params[:id]) %>
+            <h4> <%= @inheritor.inheritor_email %></h4>
         <% else %>
             <%= email_field "account_transfer", "inheritor_email" %>
         <% end %>

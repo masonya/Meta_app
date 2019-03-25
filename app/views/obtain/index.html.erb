@@ -1,7 +1,7 @@
 <div class="MainCardsArea">
-  <% if @inherited_accounts.where(:inheritor_id == current_user.id).exists? %>
+  <% if @inherited_accounts.exists? %>
 
-    <% if AccountTransfer.where(:transferable_type => "Document").present? %>
+    <% if AccountTransfer.where(:transferable_type => "Document", :inheritor_id => current_user.id).present? %>
       <section id="s1" class="main">
           <h2 class="section_header">Документы</h2>
           <section class="cards_area">
@@ -13,7 +13,7 @@
     <% end %>
 
 
-    <% if AccountTransfer.where(:transferable_type => "SocialAccount").present? %>
+    <% if AccountTransfer.where(:transferable_type => "SocialAccount", :inheritor_id => current_user.id).present? %>
       <section id="s2" class="main">
         <h2 class="section_header">Аккаунты</h2>
         <section class="cards_area">
@@ -25,7 +25,7 @@
     <% end %>
 
 
-    <% if AccountTransfer.where(:transferable_type => "Wallet").present? %>
+    <% if AccountTransfer.where(:transferable_type => "Wallet", :inheritor_id => current_user.id).present? %>
       <section id="s3" class="main">
         <h2 class="section_header">Кошельки</h2>
         <section class="cards_area">
@@ -37,7 +37,7 @@
     <% end %>
 
 
-    <% if AccountTransfer.where(:transferable_type => "Subscription").present? %>
+    <% if AccountTransfer.where(:transferable_type => "Subscription", :inheritor_id => current_user.id).present? %>
       <section id="s4" class="main">
         <h2 class="section_header">Подписки</h2>
         <section class="cards_area">
@@ -49,7 +49,7 @@
     <% end %>
 
 
-    <% if AccountTransfer.where(:transferable_type => "Instruction").present? %>
+      <% if AccountTransfer.where(:transferable_type => "Instruction", :inheritor_id => current_user.id).present? %>
       <section id="s5" class="main">
         <h2 class="section_header">Наставления</h2>
         <section class="cards_area">

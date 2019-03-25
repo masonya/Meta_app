@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+
+  def index
+    #@social_accounts = current_user.social_accounts
+    @inherited_accounts = AccountTransfer.find(parms[:inheritor_id])
+  end
+
+
 end

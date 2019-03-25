@@ -2,8 +2,34 @@
   <% document = t.transferable %>
 
   <% if t.transferable.class == Document %>
+    <% if t.accepted %>
+      <div class="card">
+        <div class="previev <%= document.title %>"></div>
+        <div class="card_title">
+          <h4><%= document.title %></h4>
+        </div>
+
+        <div class="editing">
+          <div class="popup">
+              <div class="EditWrapper">
+                <div class="Icon" id="EditIcon"></div>
+                <li>
+                  <%= link_to 'Редактировать', edit_document_path(document) %>
+                </li>
+              </div>
+              <div class="TrashWrapper">
+                <div class="Icon" id="TrashIcon"></div>
+                <li>
+                  <%= link_to 'Удалить', document, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </li>
+              </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
     <div class="card">
-      <div class="previev"></div>
+      <div class="previev_unaccepted"></div>
+      <div class="previev <%= document.title %>"></div>
       <div class="card_title">
         <h4><%= document.title %></h4>
       </div>
@@ -25,5 +51,7 @@
         </div>
       </div>
     </div>
+    <% end %>
   <% end %>
+
 <% end %>

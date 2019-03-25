@@ -1,12 +1,36 @@
 <% @inherited_accounts.each do |i| %>
   <% instruction = i.transferable %>
   <% if i.transferable.class == Instruction %>
-    <div class="card">
-      <div class="previev2 <%= instruction.title %>"></div>
-      <div class="card_title">
-        <h4><%= instruction.title %></h4>
-        <p class="transmitter_email"><%= instruction.email %></p>
+
+    <% if i.accepted %>
+      <div class="card">
+        <div class="previev2 <%= instruction.title %>"></div>
+        <div class="card_title">
+          <h4><%= instruction.title %></h4>
+          <p class="transmitter_email"><%= instruction.email %></p>
+        </div>
       </div>
-    </div>
+    <% else %>
+      <div class="card">
+        <div class="previev_unaccepted"></div>
+        <div class="previev2 <%= instruction.title %>"></div>
+        <div class="card_title">
+          <h4><%= instruction.title %></h4>
+          <p class="transmitter_email"><%= instruction.email %></p>
+        </div>
+
+        <div class="editing">
+          <div class="popup">
+            <div class="AcceptWrapper">
+              <div class="Icon" id="AcceptedIcon"></div>
+              <li>
+                <%= link_to 'Подтвердить', accept_instruction_account_transfer_path(instruction), method: :put %>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
   <% end %>
 <% end %>
