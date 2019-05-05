@@ -34,6 +34,16 @@
         <%= form.text_area :body, placeholder: "Напишите..." %>
       </div>
 
+      <div class="radio_button">
+        <h3>Что сделать с кошельком?</h3>
+        <%= form.radio_button :action, 'Вывести средства', :checked => true %>
+        <%= label :action, 'Вывести средства' %> <br>
+        <%= form.radio_button :action, 'Удалить/заблокировать' %>
+        <%= label :action, 'Удалить/заблокировать' %> <br>
+        <%= form.radio_button :action, 'Вывести средства и заблокировать' %>
+        <%= label :action, 'Вывести средства и заблокировать' %> <br>
+      </div>
+
       <div class="receiver">
         <h3>Получатель</h3>
         <% if @wallet.save %>

@@ -1,21 +1,4 @@
 <section id="s1" class="main_first">
-  <h2 class="section_header">Документы</h2>
-  <section class="cards_area">
-
-     <%= render "documents" %>
-
-    <div class="card">
-      <div class="card_new">
-        <%= link_to '', new_document_path %>
-      </div>
-      <div class="add"></div>
-    </div>
-
-  </section>
-</section>
-
-
-<section id="s2" class="main">
   <h2 class="section_header">Аккаунты</h2>
   <section class="cards_area">
 
@@ -32,7 +15,7 @@
 </section>
 
 
-<section id="s3" class="main">
+<section id="s2" class="main">
   <h2 class="section_header">Кошельки</h2>
   <section class="cards_area">
 
@@ -49,7 +32,7 @@
 </section>
 
 
-<section id="s4" class="main">
+<section id="s3" class="main">
   <h2 class="section_header">Подписки</h2>
   <section class="cards_area">
 
@@ -58,6 +41,23 @@
     <div class="card">
       <div class="card_new">
         <%= link_to '', new_subscription_path %>
+      </div>
+      <div class="add"></div>
+    </div>
+
+  </section>
+</section>
+
+
+<section id="s4" class="main">
+  <h2 class="section_header">Документы</h2>
+  <section class="cards_area">
+
+     <%= render "documents" %>
+
+    <div class="card">
+      <div class="card_new">
+        <%= link_to '', new_document_path %>
       </div>
       <div class="add"></div>
     </div>
