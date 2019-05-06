@@ -16,7 +16,7 @@
 
       <div class="choose">
         <h3>Выберите аккаунт</h3>
-        <%= form.select(:title, %w{Выберите Facebook Instagram Tumblr Twitter YouTube}) %>
+        <%= form.select(:title, %w{Выберите Facebook Instagram Tumblr Twitter YouTube Twitch}) %>
       </div>
 
       <div class="login">
@@ -39,6 +39,12 @@
         <%= label :action, 'Удалить' %> <br>
         <%= form.radio_button :action, 'Удалить и вывести средства' %>
         <%= label :action, 'Удалить и вывести средства' %> <br>
+        <%= form.radio_button :action, 'Продолжать вести' %>
+        <%= label :action, 'Продолжать вести' %> <br>
+        <%= form.radio_button :action, 'Оставить прощальный пост' %>
+        <%= label :action, 'Оставить прощальный пост' %> <br>
+        <%= form.radio_button :action, 'Оставить прощальный пост и удалить' %>
+        <%= label :action, 'Оставить прощальный пост и удалить' %> <br>
       </div>
 
       <div class="receiver">

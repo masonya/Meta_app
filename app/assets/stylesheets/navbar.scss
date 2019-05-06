@@ -12,9 +12,14 @@
 }
 
 .sidebar a {
-  font-size: 18px;
+  margin-left: 5px;
+  font-size: 15px;
   font-family: 'AvenirNextCyr-Regular';
 }
+
+ .BlankSpace {
+   height: 20px;
+ }
 
 .logo {
   width: 110px;
@@ -22,7 +27,7 @@
   background-image: image_url('logo.png');
   background-repeat: no-repeat;
   background-size: contain;
-  margin-left: -1317px;
+  margin-left: -1315px;
   margin-top: 31px;
 }
 
