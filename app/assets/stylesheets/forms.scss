@@ -67,9 +67,9 @@ input[type=file]:before {
   display: inline-block;
   background: white;
   border: none;
-  padding: 0 10px;
+  padding: 0 5px;
   text-align: left;
-      font-family: 'AvenirNextCyr-Regular';
+  font-family: 'AvenirNextCyr-Regular';
 }
 
 input[type=file]::-webkit-file-upload-button {
@@ -201,6 +201,7 @@ select {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin-top: 5px;
 }
 
 .img {

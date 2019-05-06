@@ -25,9 +25,9 @@
 
       <div class="imguploader">
         <label class="custom-file-upload">
-          <%= form.file_field :cover %>
+          <%= form.file_field :image %>
         </label>
-          <%= image_tag document.cover.url(:thumb), style: "margin-bottom: 100px" if @document.cover? %>
+          <%= image_tag document.image.url, style: "width: 229px; height: 65px; border-radius: 29px; margin-bottom: 60px;" if @document.image? %>
       </div>
 
 
