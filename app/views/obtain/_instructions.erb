@@ -22,15 +22,19 @@
         </div>
 
         <div class="editing">
-          <div class="popup">
-            <div class="AcceptWrapper">
-              <div class="Icon" id="AcceptedIcon"></div>
-              <li>
-                <%= link_to 'Подтвердить', accept_instruction_account_transfer_path(instruction), method: :put %>
-              </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <div class="AcceptWrapper">
+                  <li>
+                    <%= link_to 'Подтвердить', accept_instruction_account_transfer_path(instruction), method: :put %>
+                  </li>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
     <% end %>

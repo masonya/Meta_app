@@ -12,16 +12,19 @@
         </div>
 
         <div class="editing">
-          <div class="popup">
-
-              <div class="UnacceptWrapper">
-                <div class="Icon" id="UnacceptedIcon"></div>
-                <li>
-                  <%= link_to 'Отклонить', unaccept_social_account_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
-                </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <div class="UnacceptWrapperAlreadyAccepted">
+                  <li>
+                    <%= link_to 'Отказаться', unaccept_social_account_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
+                  </li>
+                </div>
               </div>
+            </div>
           </div>
         </div>
+
       </div>
     <% else %>
       <div class="card">
@@ -34,21 +37,24 @@
         </div>
 
         <div class="editing">
-          <div class="popup">
-              <div class="AcceptWrapper">
-                <div class="Icon" id="AcceptedIcon"></div>
-                <li>
-                  <%= link_to 'Принять', accept_social_account_account_transfer_path(social_account), method: :put %>
-                </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <div class="UnacceptWrapper">
+                  <li>
+                    <%= link_to 'Отказаться', unaccept_social_account_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
+                  </li>
+                </div>
+                <div class="AcceptWrapper">
+
+                    <%= link_to 'Согласиться', accept_social_account_account_transfer_path(social_account), method: :put %>
+
+                </div>
               </div>
-              <div class="UnacceptWrapper">
-                <div class="Icon" id="UnacceptedIcon"></div>
-                <li>
-                  <%= link_to 'Отклонить', unaccept_social_account_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
-                </li>
-              </div>
+            </div>
           </div>
         </div>
+
       </div>
 
     <% end %>

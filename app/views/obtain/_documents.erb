@@ -6,7 +6,7 @@
       <div class="card">
         <div class="previev <%= document.title %>"></div>
         <div class="TitleWrap">
-          <div class="card_title"></div>
+          <div class="card_title">
           <h4><%= document.title %></h4>
           <p class="transmitter_email"><%= document.email %></p>
         </div>
@@ -15,22 +15,25 @@
       <div class="card">
         <div class="previev_unaccepted"></div>
         <div class="previev <%= document.title %>"></div>
-        <div class="TitleWrap">
-          <div class="card_title"></div>
+        <div class="card_title">
           <h4><%= document.title %></h4>
           <p class="transmitter_email"><%= document.email %></p>
         </div>
 
         <div class="editing">
-          <div class="popup">
-            <div class="AcceptWrapper">
-              <div class="Icon" id="AcceptedIcon"></div>
-              <li>
-                <%= link_to 'Подтвердить', accept_document_account_transfer_path(document), method: :put %>
-              </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <div class="AcceptWrapper">
+                  <li>
+                    <%= link_to 'Подтвердить', accept_document_account_transfer_path(document), method: :put %>
+                  </li>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
     <% end %>
