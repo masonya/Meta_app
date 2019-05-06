@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: "user@user.user"
+  default from: "user1@meta.ru"
 
   def welcome_email
     @inheritor = AccountTransfer.last.inheritor_email
