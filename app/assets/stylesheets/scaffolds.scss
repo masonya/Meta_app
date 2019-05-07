@@ -135,7 +135,7 @@ h2 {
 }
 
 .card_odtain {
-  height: 300px;
+
 }
 
 
@@ -239,8 +239,6 @@ h2 {
   margin-left: -100px;
   background-color: white;
   orphans: 0.05;
-  // border: 1px solid #E6E8EB;
-  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
   border: 1px solid #F6F6F6;
   border-radius: 2%;
@@ -308,9 +306,10 @@ h2 {
   font-family: 'AvenirNextCyr-Light';
 }
 
-.ActionForCard {
+.ButtonForCard {
   display: flex;
   justify-content: center;
+  // flex-direction: column;
 }
 
 .AcceptWrapper {
@@ -338,7 +337,21 @@ h2 {
   color: white;
 }
 
+.ActionForCard h4 {
+  margin-top: 18px;
+  font-size: 14px;
+  font-family: 'AvenirNextCyr-Medium';
+  font-weight: 100;
+  color: #649DF4;
+}
 
+.ActionForCard h5 {
+  margin-left: 15px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-family: 'AvenirNextCyr-Light';
+  font-weight: 100;
+}
 
 
 .TrashWrapper:hover #TrashIcon {
