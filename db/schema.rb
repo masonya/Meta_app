@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_23_120832) do
+ActiveRecord::Schema.define(version: 2019_05_17_070855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,22 @@ ActiveRecord::Schema.define(version: 2019_03_23_120832) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "accepted", default: false
+  end
+
+  create_table "appoint_responsibles", force: :cascade do |t|
+    t.string "email"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "inheritor_email"
+    t.integer "inheritor_id"
+    t.boolean "accepted", default: false
+  end
+
+  create_table "death_certificates", force: :cascade do |t|
+    t.string "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "documents", force: :cascade do |t|
@@ -54,6 +70,18 @@ ActiveRecord::Schema.define(version: 2019_03_23_120832) do
     t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "responsibility_transfers", force: :cascade do |t|
+    t.string "inheritor_email"
+    t.integer "transmitter_id"
+    t.integer "inheritor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "r_transferable_id"
+    t.string "r_transferable_type"
+    t.string "transmitter_email"
+    t.boolean "accepted", default: false
   end
 
   create_table "social_accounts", force: :cascade do |t|

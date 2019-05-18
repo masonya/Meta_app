@@ -1,0 +1,17 @@
+<% @inherited_responsibilitys.each do |i| %>
+  <%# appoint_responsible = i.r_transferable %>
+  <%# i.r_transferable.class == AppointResponsible %>
+
+    <% if i.accepted %>
+      <div class="responsibility_card">
+        <div class="ResponsibilityTitleWrap">
+          <h3><%= i.email %></h3>
+          <div class="responsibility_action">
+            <div class="responsibility_decline" href=""><%= link_to 'Отказаться', unaccept_responsibility_appoint_responsible_path(i), method: :delete %></div>
+            <div class="responsibility_bell"><%= link_to "", new_appoint_responsible_death_certificate_path(i) %></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  <% end %>

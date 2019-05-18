@@ -1,0 +1,30 @@
+<section class="main">
+
+<%= form_with(model: death_certificate, local: true) do |form| %>
+  <% if death_certificate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(death_certificate.errors.count, "error") %> prohibited this death_certificate from being saved:</h2>
+
+      <ul>
+      <% death_certificate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="imguploader">
+    <label class="custom-file-upload">
+      <%= form.file_field :file %>
+    </label>
+      <%= image_tag death_certificate.file.url, style: "width: 229px; height: 65px; border-radius: 29px; margin-bottom: 60px;" if @death_certificate.file? %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+</section>

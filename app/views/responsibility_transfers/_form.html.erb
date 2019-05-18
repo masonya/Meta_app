@@ -1,0 +1,37 @@
+<%= form_with(model: responsibility_transfer, local: true) do |form| %>
+  <% if responsibility_transfer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(responsibility_transfer.errors.count, "error") %> prohibited this responsibility_transfer from being saved:</h2>
+
+      <ul>
+      <% responsibility_transfer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :inheritor_email %>
+    <%= form.text_field :inheritor_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transmitter_id %>
+    <%= form.number_field :transmitter_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inheritor_id %>
+    <%= form.number_field :inheritor_id %>
+  </div>
+
+  <!-- <div class="field">
+    <%#= form.label :transferable_id %>
+    <%#= form.number_field :transferable_id %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

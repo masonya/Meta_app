@@ -13,4 +13,10 @@ class User < ApplicationRecord
   has_many :account_transfers, as: :transferable
   has_many :transfered_accounts, class_name: 'AccountTransfer', foreign_key: 'transmitter_id'
   has_many :inherited_accounts, class_name: 'AccountTransfer', foreign_key: 'inheritor_id'
+
+  has_many :appoint_responsibles
+
+  # has_many :responsibility_transfers, as: :r_transferable
+  # has_many :transfered_responsibilitys, class_name: 'ResponsibilityTransfer', foreign_key: 'transmitter_id'
+  # has_many :inherited_responsibilitys, class_name: 'ResponsibilityTransfer', foreign_key: 'inheritor_id'
 end

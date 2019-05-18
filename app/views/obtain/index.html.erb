@@ -1,35 +1,40 @@
 <div class="MainCardsArea">
-  <% if @inherited_accounts.exists? %>
 
-    <% if AccountTransfer.where(:transferable_type => "Document", :inheritor_id => current_user.id).present? %>
-      <section id="s1" class="main">
-          <h2 class="section_header">Документы</h2>
-          <section class="cards_area">
 
-             <%= render "documents" %>
 
-          </section>
-      </section>
+
+
+<% if @inherited_accounts.exists? || @inherited_responsibilitys.exists? %>
+
+
+    <% if AppointResponsible.where(:inheritor_id => current_user.id).present? %>
+      <%# if AppointResponsible.death_certificate.fale.exists? %>
+      <%# else %>
+        <section class="main">
+            <h2 class="section_header">Ответственность</h2>
+            <section class="cards_area">
+
+              <div class="banner">
+              </div>
+
+               <%= render "responsibilitys" %>
+               <%= render "responsibilitys_accepted" %>
+
+            </section>
+        </section>
+      <%# end %>
     <% end %>
 
 
-    <% if AccountTransfer.where(:transferable_type => "SocialAccount", :inheritor_id => current_user.id).present? %>
+
+
+    <% if AccountTransfer.where(:inheritor_id => current_user.id, :accepted => false).present? %>
       <section id="s2" class="main">
-        <h2 class="section_header">Аккаунты</h2>
+        <h2 class="section_header">Не принятые активы</h2>
         <section class="cards_area">
 
            <%= render "social_accounts" %>
-
-        </section>
-      </section>
-    <% end %>
-
-
-    <% if AccountTransfer.where(:transferable_type => "Wallet", :inheritor_id => current_user.id).present? %>
-      <section id="s3" class="main">
-        <h2 class="section_header">Кошельки</h2>
-        <section class="cards_area">
-
+           <%= render "subscriptions" %>
            <%= render "wallets" %>
 
         </section>
@@ -37,33 +42,23 @@
     <% end %>
 
 
-    <% if AccountTransfer.where(:transferable_type => "Subscription", :inheritor_id => current_user.id).present? %>
-      <section id="s4" class="main">
-        <h2 class="section_header">Подписки</h2>
+    <% if AccountTransfer.where(:inheritor_id => current_user.id, :accepted => true).present? %>
+      <section id="s2" class="main">
+        <h2 class="section_header">Принятые активы</h2>
         <section class="cards_area">
 
-           <%= render "subscriptions" %>
+           <%= render "social_accounts_accepted" %>
+           <%= render "subscriptions_accepted" %>
+           <%= render "wallets_accepted" %>
 
         </section>
       </section>
     <% end %>
-
-
-      <% if AccountTransfer.where(:transferable_type => "Instruction", :inheritor_id => current_user.id).present? %>
-      <section id="s5" class="main">
-        <h2 class="section_header">Наставления</h2>
-        <section class="cards_area">
-
-           <%= render "instructions" %>
-
-        </section>
-      </section>
-    <% end %>
-
 
   <% else %>
     <%= render "blank" %>
   <% end %>
+
 </div>
 
 <div class="interval"></div>

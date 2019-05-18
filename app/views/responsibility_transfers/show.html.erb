@@ -1,0 +1,26 @@
+<section class="main">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inheritor email:</strong>
+  <%= @responsibility_transfer.inheritor_email %>
+</p>
+
+<p>
+  <strong>Transmitter:</strong>
+  <%= @responsibility_transfer.transmitter_id %>
+</p>
+
+<p>
+  <strong>Inheritor:</strong>
+  <%= @responsibility_transfer.inheritor_id %>
+</p>
+
+<p>
+  <strong>Transferable:</strong>
+  <%#= @responsibility_transfer.transferable_id %>
+</p>
+
+<%= link_to 'Edit', edit_responsibility_transfer_path(@responsibility_transfer) %> |
+<%= link_to 'Back', responsibility_transfers_path %>
+</section>

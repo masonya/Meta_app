@@ -3,9 +3,7 @@
   <% if i.transferable.class == Subscription %>
 
     <% if i.accepted %>
-    <% else %>
       <div class="card">
-        <div class="previev_unaccepted"></div>
         <div class="previev <%= subscription.title %>"></div>
         <div class="TitleWrap">
           <div class="card_title"></div>
@@ -15,12 +13,7 @@
 
         <div class="editing">
           <div class="popup">
-              <div class="AcceptWrapper">
-                <div class="Icon" id="AcceptedIcon"></div>
-                <li>
-                  <%= link_to 'Принять', accept_subscription_account_transfer_path(subscription), method: :put %>
-                </li>
-              </div>
+
               <div class="UnacceptWrapper">
                 <div class="Icon" id="UnacceptedIcon"></div>
                 <li>

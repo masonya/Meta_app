@@ -1,0 +1,19 @@
+
+<section class="main">
+  <div class="MainFormArea">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @appoint_responsible.email %>
+    </p>
+
+    <p>
+      <strong>User:</strong>
+      <%= @appoint_responsible.user_id %>
+    </p>
+
+    <%= link_to 'Edit', edit_appoint_responsible_path(@appoint_responsible) %> |
+    <%= link_to 'Back', appoint_responsibles_path %>
+  </div>
+</section>

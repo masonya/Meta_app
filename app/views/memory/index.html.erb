@@ -1,0 +1,38 @@
+<% accounts = {} %>
+
+<% current_user.inherited_accounts.each do |account| %>
+  <% accounts[account.user_id] = [] %>
+<% end %>
+
+<%= accounts %>
+
+<% current_user.inherited_accounts.each do |account| %>
+  <% accounts[account.user_id].push(account.transferable_type) %>
+<% end %>
+
+<%= accounts %>
+
+<div class="MainCardsArea">
+  <section class="cards_area">
+    <h1>Память</h1>
+
+    <% accounts.each do |key, value| %>
+      <%= key %>
+      <%= value %>
+
+      <%= User.find(key).email %>
+
+      <% if value.include?("SocialAccount") %>
+        <div class="">
+          Аккаунты
+        </div>
+      <% end %>
+
+      <%# {nil=>["SocialAccount", "Wallet", "SocialAccount"]}  %>
+
+      <div class="card">
+        Ушел из жизни <%#= group[0].user.email %>
+      </div>
+    <% end %>
+  </section>
+</div>

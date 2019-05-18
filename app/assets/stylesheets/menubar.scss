@@ -123,6 +123,25 @@
   padding-left: 31px;
 }
 
+.AppointMenuButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+  height: 37px;
+  background-color: #649DF4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #F6F6F6;
+  margin-left: 378px;
+  border-radius: 3%;
+  margin-right: -580px;
+}
+
+.AppointMenuButton a {
+  padding-top: 7px;
+  color: white;
+  margin-right: 14px;
+}
+
 
 .red_point {
   height: 24px;

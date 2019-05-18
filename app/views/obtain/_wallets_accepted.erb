@@ -3,10 +3,7 @@
   <% if i.transferable.class == Wallet %>
 
     <% if i.accepted %>
-      
-    <% else %>
       <div class="card">
-        <div class="previev_unaccepted"></div>
         <div class="previev <%= wallet.title %>"></div>
         <div class="TitleWrap">
           <div class="card_title"></div>
@@ -16,12 +13,7 @@
 
         <div class="editing">
           <div class="popup">
-              <div class="AcceptWrapper">
-                <div class="Icon" id="AcceptedIcon"></div>
-                <li>
-                  <%= link_to 'Принять', accept_wallet_account_transfer_path(wallet), method: :put %>
-                </li>
-              </div>
+
               <div class="UnacceptWrapper">
                 <div class="Icon" id="UnacceptedIcon"></div>
                 <li>
@@ -31,7 +23,7 @@
           </div>
         </div>
       </div>
-
+    
     <% end %>
   <% end %>
 <% end %>

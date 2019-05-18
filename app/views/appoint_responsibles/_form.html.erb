@@ -1,0 +1,37 @@
+
+<%= form_with(model: appoint_responsible, local: true) do |form| %>
+  <% if appoint_responsible.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appoint_responsible.errors.count, "error") %> prohibited this appoint_responsible from being saved:</h2>
+
+      <ul>
+      <% appoint_responsible.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= form.label :email %>
+    <%#= form.text_field :email %>
+  </div>
+
+  <!-- <div class="field">
+    <%#= form.label :user_id %>
+    <% form.number_field :inheritor_id %>
+  </div> -->
+
+
+  <div class="receiver">
+    <h3>Хранитель</h3>
+    <%#= email_field "responsibility_transfer", "inheritor_email" %>
+    <%= form.email_field :inheritor_email %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

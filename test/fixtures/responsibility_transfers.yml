@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inheritor_email: MyString
+  transmitter_id: 1
+  inheritor_id: 1
+  transferable_id: 1
+
+two:
+  inheritor_email: MyString
+  transmitter_id: 1
+  inheritor_id: 1
+  transferable_id: 1
