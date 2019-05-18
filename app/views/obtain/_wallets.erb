@@ -3,7 +3,31 @@
   <% if i.transferable.class == Wallet %>
 
     <% if i.accepted %>
-      
+      <div class="card">
+        <div class="previev <%= wallet.title %>"></div>
+        <div class="TitleWrap">
+          <div class="card_title"></div>
+          <h4><%= wallet.title %></h4>
+          <p class="transmitter_email"><%= wallet.email %></p>
+        </div>
+
+        <div class="editing">
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <h4>Поручение</h4>
+                <h5><%= wallet.action %></h5>
+              </div>
+              <div class="ButtonForCard">
+                <div class="UnacceptWrapperAlreadyAccepted">
+                    <%= link_to 'Отказаться', unaccept_wallet_account_transfer_path(wallet), method: :delete, data: { confirm: 'Are you sure?'} %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     <% else %>
       <div class="card">
         <div class="previev_unaccepted"></div>
@@ -15,21 +39,24 @@
         </div>
 
         <div class="editing">
-          <div class="popup">
-              <div class="AcceptWrapper">
-                <div class="Icon" id="AcceptedIcon"></div>
-                <li>
-                  <%= link_to 'Принять', accept_wallet_account_transfer_path(wallet), method: :put %>
-                </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <h4>Поручение</h4>
+                <h5><%= wallet.action  %></h5>
               </div>
-              <div class="UnacceptWrapper">
-                <div class="Icon" id="UnacceptedIcon"></div>
-                <li>
-                  <%= link_to 'Отклонить', unaccept_wallet_account_transfer_path(wallet), method: :delete, data: { confirm: 'Are you sure?'} %>
-                </li>
+              <div class="ButtonForCard">
+                <div class="UnacceptWrapper">
+                    <%= link_to 'Отказаться', unaccept_wallet_account_transfer_path(wallet), method: :delete, data: { confirm: 'Are you sure?'} %>
+                </div>
+                <div class="AcceptWrapper">
+                    <%= link_to 'Согласиться', accept_wallet_account_transfer_path(wallet), method: :put %>
+                </div>
               </div>
+            </div>
           </div>
         </div>
+
       </div>
 
     <% end %>
