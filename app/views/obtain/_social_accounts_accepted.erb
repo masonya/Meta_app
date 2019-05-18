@@ -12,18 +12,22 @@
         </div>
 
         <div class="editing">
-          <div class="popup">
-
-              <div class="UnacceptWrapper">
-                <div class="Icon" id="UnacceptedIcon"></div>
-                <li>
-                  <%= link_to 'Отклонить', unaccept_social_account_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
-                </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+              <div class="ActionForCard">
+                <h4>Поручение</h4>
+                <h5><%= social_account.action %></h5>
               </div>
+              <div class="ButtonForCard">
+                <div class="UnacceptWrapperAlreadyAccepted">
+                    <%= link_to 'Отказаться', unaccept_social_account_account_transfer_path(social_account), method: :delete, data: { confirm: 'Are you sure?'} %>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    
+
     <% end %>
   <% end %>
 <% end %>

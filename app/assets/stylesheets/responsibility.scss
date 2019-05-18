@@ -7,8 +7,8 @@
   margin-left: 40px;
   margin-bottom: 40px;
   display: inline-flex;
-  border: 1px solid #F0F0F0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #F6F6F6;
 }
 
 
@@ -25,15 +25,18 @@
 
 .ResponsibilityTitleWrap h3 {
   font-family: 'AvenirNextCyr-Medium';
+  font-size: 20px;
+  margin-top: 50px;
 }
 
 
 .banner {
   width: 996px;
   height: 200px;
-  background: #4190F3;
+  background: #649DF4;
   margin-bottom: 40px;
   margin-left: 40px;
+  border-radius: 3px;
 }
 
 
@@ -61,11 +64,12 @@
   display: flex;
   align-items: center;
   margin-left: 35px;
-  height: 35px;
+  height: 30px;
   width: 140px;
-  background: #4190F3;
+  background: #649DF4;
   justify-content: center;
   border-radius: 3px;
+  margin-top: 4px;
 }
 
 .responsibility_accept a {
@@ -75,7 +79,7 @@
   display: block;
   width: 100px;
   height: 25px;
-  padding-top: 5px;
+  padding-top: 7px;
   padding-left: 16px;
 }
 
