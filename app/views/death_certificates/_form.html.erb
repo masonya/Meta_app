@@ -1,4 +1,4 @@
-<section class="main">
+<section class="uploading_page">
 
 <%= form_with(model: death_certificate, local: true) do |form| %>
   <% if death_certificate.errors.any? %>
@@ -14,7 +14,7 @@
   <% end %>
 
 
-  <div class="imguploader">
+  <div class="uploader_doc">
     <label class="custom-file-upload">
       <%= form.file_field :file %>
     </label>

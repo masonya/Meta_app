@@ -12,14 +12,16 @@
         </div>
 
         <div class="editing">
-          <div class="popup">
-
-              <div class="UnacceptWrapper">
-                <div class="Icon" id="UnacceptedIcon"></div>
-                <li>
-                  <%= link_to 'Отклонить', unaccept_subscription_account_transfer_path(subscription), method: :delete, data: { confirm: 'Are you sure?'} %>
-                </li>
+          <div class="ForFake">
+            <div class="popup_obtain">
+                <div class="ActionForCard">
+                </div>
+                <div class="ButtonForCard">
+                <div class="UnacceptWrapperAlreadyAccepted">
+                    <%= link_to 'Отказаться', unaccept_subscription_account_transfer_path(subscription), method: :delete, data: { confirm: 'Are you sure?'} %>
+                </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
