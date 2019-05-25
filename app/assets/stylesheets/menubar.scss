@@ -136,15 +136,6 @@
   margin-right: -580px;
 }
 
-.AppointMenuButton a {
-  width: 200px;
-  height: 40px;
-  padding-top: 16px;
-  padding-left: 14px;
-  color: white;
-}
-
-
 .red_point {
   height: 24px;
   width: 24px;
@@ -164,4 +155,38 @@
   color: white;
   margin-top: 3px;
   font-family: 'AvenirNextCyr-Light';
+}
+
+.AppointMenuButton a {
+  width: 200px;
+  height: 40px;
+  padding-top: 16px;
+  padding-left: 14px;
+  color: white;
+}
+
+
+.ForFakeAppoint {
+  display: flex;
+  justify-content: center;
+  width: 275px;
+  height: 30px;
+  display: none;
+  position: absolute;
+  margin-top: 35px;
+}
+
+.AppointMenuButton:hover .ForFakeAppoint{
+  display: block;
+}
+
+.popup_appoint {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  width: 275px;
+  min-height: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #F6F6F6;
+  margin-top: 20px;
 }
