@@ -130,7 +130,7 @@
   width: 200px;
   height: 40px;
   background-color: #649DF4;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-left: 378px;
   border-radius: 3px;
   margin-right: -580px;
@@ -163,13 +163,18 @@
   padding-top: 16px;
   padding-left: 14px;
   color: white;
+
+  &:hover {
+    color: white;
+  }
+
 }
 
 
 .ForFakeAppoint {
   display: flex;
   justify-content: center;
-  width: 275px;
+  width: 350px;
   height: 30px;
   display: none;
   position: absolute;
@@ -184,9 +189,9 @@
   display: flex;
   position: absolute;
   background-color: white;
-  width: 275px;
+  width: 350px;
   min-height: 40px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
   border: 1px solid #F6F6F6;
   margin-top: 20px;
 }
@@ -197,41 +202,46 @@
 
 
 .custodian_container {
-  width: 275px;
+  width: 350px;
   background-color: #F7F9FA;
+
 }
 
 
 .custodian_container_title {
   border: 0.5px solid #DADADA;
-  width: 275px;
+  width: 349px;
   height: 40px;
   display: flex;
   align-items: center;
+  margin-top: -2px;
 }
 
 .custodian_container_title p {
-  margin-left: 20px;
+  margin-left: 24px;
   font-size: 13px;
+
 }
 
 .custodian_container_content {
   border: 0.5px solid #DADADA;
-  width: 275px;
-  height: 45px;
+  width: 349px;
+  height: 55px;
+  margin-top: -1px;
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
 .custodian_container_content p {
-  margin-left: 20px;
+  margin-left: 24px;
   font-size: 13px;
 }
 
 .unaccepted_custodian {
   background-image: image_url('unaccepted.png');
   width: 240px;
-  height: 55px;
+  height: 65px;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -245,20 +255,20 @@
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  margin-left: 240px;
+  margin-left: 300px;
 }
 
 .custodian input[type=email] {
+  // padding-left: -100px;
   text-decoration: #dfdede;
-  height: 50px;
-  width: 278px;
-  padding: 12px;
-  /* margin-bottom: 15px; */
+  height: 55px;
+  width: 350px;
+  padding: 24px;
   border: 1px solid #dbdbdb;
-  /* border-radius: 5px; */
+  border-radius: 2px;
   box-sizing: border-box;
   resize: vertical;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'AvenirNextCyr-Light';
   font-weight: 100;
   color: #767676;
@@ -273,9 +283,10 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  margin-top: -36px;
-  margin-left: 236px;
+  margin-top: -38px;
+  margin-left: 300px;
   background-image: image_url('plane.png');
+  opacity: 0.6;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
