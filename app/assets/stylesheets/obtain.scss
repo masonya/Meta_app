@@ -1,1 +1,35 @@
 
+.close_button {
+  width: 30px;
+  height: 30px;
+  background-image: image_url('close_button.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 940px;
+  margin-top: 20px;
+}
+
+.closed_banner {
+  display: none;;
+}
+
+.banner_img1 {
+  width: 130px;
+  height: 130px;
+  background-image: image_url('banner_img1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 30px;
+
+}
+
+.banner {
+  width: 996px;
+  height: 200px;
+  background: #649DF4;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  border-radius: 3px;
+}

@@ -7,6 +7,7 @@ class SocialAccountsController < ApplicationController
   # GET /social_accounts.json
   def index
     @social_accounts = SocialAccount.all
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /social_accounts/1
@@ -22,10 +23,12 @@ class SocialAccountsController < ApplicationController
   # GET /social_accounts/new
   def new
     @social_account = SocialAccount.new
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /social_accounts/1/edit
   def edit
+    @appoint_responsible = AppointResponsible.new
   end
 
   # POST /social_accounts
@@ -38,7 +41,7 @@ class SocialAccountsController < ApplicationController
 
     respond_to do |format|
       if @social_account.save
-  
+
         logger.debug("========")
         logger.debug(params[:account_transfer][:inheritor_email])
 

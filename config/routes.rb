@@ -15,11 +15,15 @@ Rails.application.routes.draw do
   resources :memory
   resources :appoint_responsibles
   resources :responsibility_transfers
+  resources :inheritance
 
+  # resources :inheritance do
+  #   resources :transmitter_id
+  # end
 
-  resources :appoint_responsibles do
-    resources :death_certificates
-  end
+  # resources :appoint_responsibles do
+  #   resources :death_certificates
+  # end
 
   resources :appoint_responsibles do
     member do
@@ -44,6 +48,6 @@ Rails.application.routes.draw do
     end
   end
 
-  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

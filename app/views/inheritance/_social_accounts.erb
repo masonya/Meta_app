@@ -1,0 +1,17 @@
+<% @inherited_accounts.each do |i| %>
+  <% social_account = i.transferable %>
+  <% if social_account.user_id == request.path.last.to_i %>
+    <% if i.transferable.class == SocialAccount %>
+
+        <div class="card">
+          <div class="previev <%= social_account.title %>"></div>
+          <div class="TitleWrap">
+            <div class="card_title"></div>
+            <h4><%= social_account.title %></h4>
+            <p class="transmitter_email"><%= social_account.email %></p>
+          </div>
+        </div>
+
+    <% end %>
+  <% end %>
+<% end %>

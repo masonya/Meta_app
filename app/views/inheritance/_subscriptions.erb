@@ -1,0 +1,17 @@
+<% @inherited_accounts.each do |i| %>
+  <% subscription = i.transferable %>
+  <% if subscription.user_id == request.path.last.to_i %>
+    <% if i.transferable.class == Subscription %>
+
+        <div class="card">
+          <div class="previev <%= subscription.title %>"></div>
+          <div class="TitleWrap">
+            <div class="card_title"></div>
+            <h4><%= subscription.title %></h4>
+            <p class="transmitter_email"><%= subscription.email %></p>
+          </div>
+        </div>
+
+    <% end %>
+  <% end %>
+<% end %>

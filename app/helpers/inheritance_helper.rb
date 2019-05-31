@@ -1,0 +1,2 @@
+module InheritanceHelper
+end

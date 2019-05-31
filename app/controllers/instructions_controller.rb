@@ -7,6 +7,7 @@ class InstructionsController < ApplicationController
   # GET /instructions.json
   def index
     @instructions = Instruction.all
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /instructions/1
@@ -18,10 +19,12 @@ class InstructionsController < ApplicationController
   # GET /instructions/new
   def new
     @instruction = Instruction.new
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /instructions/1/edit
   def edit
+    @appoint_responsible = AppointResponsible.new
   end
 
   # POST /instructions

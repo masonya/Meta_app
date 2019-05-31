@@ -3,29 +3,6 @@
   <% if i.transferable.class == Subscription %>
 
     <% if i.accepted %>
-      <div class="card">
-        <div class="previev <%= subscription.title %>"></div>
-        <div class="TitleWrap">
-          <div class="card_title"></div>
-          <h4><%= subscription.title %></h4>
-          <p class="transmitter_email"><%= subscription.email %></p>
-        </div>
-
-        <div class="editing">
-          <div class="ForFake">
-            <div class="popup_obtain">
-                <div class="ActionForCard">
-                </div>
-                <div class="ButtonForCard">
-                <div class="UnacceptWrapperAlreadyAccepted">
-                    <%= link_to 'Отказаться', unaccept_subscription_account_transfer_path(subscription), method: :delete, data: { confirm: 'Are you sure?'} %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
     <% else %>
       <div class="card">
         <div class="previev_unaccepted"></div>

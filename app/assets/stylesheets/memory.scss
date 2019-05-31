@@ -1,3 +1,87 @@
-// Place all the styles related to the Memory controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.card_memory {
+  width: 480px;
+  height: 347px;
+  border-radius: 1%;
+  position: relative;
+  background-color: white;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #F6F6F6;
+}
+
+.card_memory h3 {
+  font-size: 21px;
+  margin-left: 45px;
+  width: 390px;
+}
+
+.memory_content {
+  width: 319px;
+  height: 145px;
+  // background-color: red;
+  margin-left: 45px;
+  margin-top: 40px;
+}
+
+.open_button {
+  display: flex;
+  width: 121px;
+  height: 37px;
+  background-color: #649DF4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-left: 310px;
+  border-radius: 3px;
+}
+
+.open_button a {
+  display: flex;
+  width: 110px;
+  height: 40px;
+  z-index: 5;
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 30px;
+  color: white;
+  font-family: 'AvenirNextCyr-Light';
+  font-size: 15px;
+}
+
+
+.instruction_body {
+  width: 749px;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+
+
+.backward_button {
+  display: flex;
+  width: 121px;
+  height: 37px;
+  background-color: #649DF4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.backward_button a {
+  width: 110px;
+  height: 40px;
+  z-index: 5;
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 37px;
+  color: white;
+  font-family: 'AvenirNextCyr-Light';
+  font-size: 15px;
+}
+
+
+.main_first_mamory {
+  padding-top: 155px;
+  padding-left: 180px;
+}

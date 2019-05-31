@@ -5,6 +5,7 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions.json
   def index
     @subscriptions = Subscription.all
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /subscriptions/1
@@ -16,10 +17,12 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/new
   def new
     @subscription = Subscription.new
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /subscriptions/1/edit
   def edit
+    @appoint_responsible = AppointResponsible.new
   end
 
   # POST /subscriptions

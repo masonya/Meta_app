@@ -7,6 +7,7 @@ class AccountTransfersController < ApplicationController
   # GET /account_transfers.json
   def index
     @account_transfers = AccountTransfer.all
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /account_transfers/1
@@ -19,6 +20,7 @@ class AccountTransfersController < ApplicationController
   # GET /account_transfers/new
   def new
     @account_transfer = AccountTransfer.new
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /account_transfers/1/edit

@@ -1,38 +1,55 @@
 <% accounts = {} %>
 
 <% current_user.inherited_accounts.each do |account| %>
-  <% accounts[account.user_id] = [] %>
+  <% accounts[account.transmitter_id] = [] %>
 <% end %>
 
-<%= accounts %>
+<%#= accounts %>
 
 <% current_user.inherited_accounts.each do |account| %>
-  <% accounts[account.user_id].push(account.transferable_type) %>
+  <% accounts[account.transmitter_id].push(account.transferable_type) %>
 <% end %>
 
-<%= accounts %>
+<%#= accounts %>
 
-<div class="MainCardsArea">
+
+<section class="main_first_mamory">
+  <h2 class="section_header"></h2>
   <section class="cards_area">
-    <h1>Память</h1>
 
     <% accounts.each do |key, value| %>
-      <%= key %>
-      <%= value %>
+      <div class="card_memory">
+        <%#= key %>
+        <%#= value %>
 
-      <%= User.find(key).email %>
+        <h3>Пользователь <%= User.find(key).email %> ушел из жизни</h3>
 
-      <% if value.include?("SocialAccount") %>
-        <div class="">
-          Аккаунты
+        <div class="memory_content">
+          <% if value.include?("SocialAccount") %>
+            <p>Аккаунты</p>
+          <% end %>
+          <% if value.include?("Wallet") %>
+            <p>Кошельки</p>
+          <% end %>
+          <% if value.include?("Subscription") %>
+            <p>Подписки</p>
+          <% end %>
+          <% if value.include?("Document") %>
+            <p>Документы</p>
+          <% end %>
+          <% if value.include?("Instruction") %>
+            <p>Наставления</p>
+          <% end %>
         </div>
-      <% end %>
 
-      <%# {nil=>["SocialAccount", "Wallet", "SocialAccount"]}  %>
+        <div class="open_button">
+          <%= link_to 'Открыть', inheritance_path(key) %>
+        </div>
 
-      <div class="card">
-        Ушел из жизни <%#= group[0].user.email %>
+        <%# {nil=>["SocialAccount", "Wallet", "SocialAccount"]}  %>
+        <%#= group[0].user.email %>
       </div>
     <% end %>
+
   </section>
-</div>
+</section>

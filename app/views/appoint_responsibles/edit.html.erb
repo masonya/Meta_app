@@ -1,8 +1,44 @@
-<section class="main">
-  <h1>Editing Appoint Responsible</h1>
+<section class="uploading_page">
 
-  <%= render 'form', appoint_responsible: @appoint_responsible %>
 
-  <%= link_to 'Show', @appoint_responsible %> |
-  <%= link_to 'Back', appoint_responsibles_path %>
+  <h1>Добавить свидетельство о смерти</h1>
+  <h4>Завещание станет доступным после проверки администратором</h4>
+  <div class="uploader"></div>
+
+
+  <%= form_with(model: @appoint_responsible, local: true) do |form| %>
+    <% if @appoint_responsible.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@appoint_responsible.errors.count, "error") %> prohibited this appoint_responsible from being saved:</h2>
+
+        <ul>
+        <% @appoint_responsible.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+
+    <div class="uploader_doc">
+      <label class="custom-file-upload">
+        <%= form.file_field :file %>
+      </label>
+        <%= image_tag appoint_responsible.file.url, style: "width: 229px; height: 65px; border-radius: 29px; margin-bottom: 60px;" if @appoint_responsible.file? %>
+    </div>
+
+
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+
+</section>
+
+
+
+<%= link_to 'Назад', obtain_index_path %>
 </section>

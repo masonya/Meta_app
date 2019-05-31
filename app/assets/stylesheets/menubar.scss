@@ -190,3 +190,93 @@
   border: 1px solid #F6F6F6;
   margin-top: 20px;
 }
+
+
+
+
+
+
+.custodian_container {
+  width: 275px;
+  background-color: #F7F9FA;
+}
+
+
+.custodian_container_title {
+  border: 0.5px solid #DADADA;
+  width: 275px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.custodian_container_title p {
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.custodian_container_content {
+  border: 0.5px solid #DADADA;
+  width: 275px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.custodian_container_content p {
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.unaccepted_custodian {
+  background-image: image_url('unaccepted.png');
+  width: 240px;
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 100px;
+}
+
+.delete_custodian {
+  background-image: image_url('UnacceptIcon.png');
+  width: 48px;
+  height: 21px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 240px;
+}
+
+.custodian input[type=email] {
+  text-decoration: #dfdede;
+  height: 50px;
+  width: 278px;
+  padding: 12px;
+  /* margin-bottom: 15px; */
+  border: 1px solid #dbdbdb;
+  /* border-radius: 5px; */
+  box-sizing: border-box;
+  resize: vertical;
+  font-size: 16px;
+  font-family: 'AvenirNextCyr-Light';
+  font-weight: 100;
+  color: #767676;
+  margin-bottom: auto;
+}
+
+
+.custodian_button input[type=submit] {
+  background-color: rgba(0, 120, 201, 0.0);
+  height: 25px;
+  width: 25px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin-top: -36px;
+  margin-left: 236px;
+  background-image: image_url('plane.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}

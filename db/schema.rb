@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_17_070855) do
+ActiveRecord::Schema.define(version: 2019_05_24_094110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_05_17_070855) do
     t.string "inheritor_email"
     t.integer "inheritor_id"
     t.boolean "accepted", default: false
+    t.string "file"
   end
 
   create_table "death_certificates", force: :cascade do |t|

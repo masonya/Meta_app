@@ -1,0 +1,11 @@
+<% @inherited_accounts.each do |i| %>
+  <% document = i.transferable %>
+  <% if document.user_id == request.path.last.to_i %>
+
+    <% if i.transferable.class == Document %>
+
+        <%#= document.image %>
+
+    <% end %>
+  <% end %>
+<% end %>

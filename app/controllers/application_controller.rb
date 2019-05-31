@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
   def index
     #@social_accounts = current_user.social_accounts
     @inherited_accounts = AccountTransfer.find(parms[:inheritor_id])
+    @appoint_responsibles = AppointResponsible.all
+    @appoint_responsible = AppointResponsible.new
   end
 
 

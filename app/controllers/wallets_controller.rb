@@ -5,6 +5,7 @@ class WalletsController < ApplicationController
   # GET /wallets.json
   def index
     @wallets = Wallet.all
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /wallets/1
@@ -16,10 +17,12 @@ class WalletsController < ApplicationController
   # GET /wallets/new
   def new
     @wallet = Wallet.new
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /wallets/1/edit
   def edit
+    @appoint_responsible = AppointResponsible.new
   end
 
   # POST /wallets

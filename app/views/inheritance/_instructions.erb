@@ -1,0 +1,13 @@
+<% @inherited_accounts.each do |i| %>
+  <% instruction = i.transferable %>
+  <% if instruction.user_id == request.path.last.to_i %>
+    <% if i.transferable.class == Instruction %>
+
+
+    <div class="instruction_body">
+      <p><%= instruction.body %></p>
+    </div>
+
+    <% end %>
+  <% end %>
+<% end %>

@@ -28,7 +28,6 @@ class AppointResponsiblesController < ApplicationController
     @appoint_responsible = AppointResponsible.new(appoint_responsible_params)
     @appoint_responsible.user_id = current_user.id
     @appoint_responsible.email = current_user.email
-    @appoint_responsible.inheritor_id = User.find_by_email(@appoint_responsible.inheritor_email).id
 
     # inheritor = User.find_by_email(params[:inheritor_email])
     # @appoint_responsible.inheritor_id = inheritor.id if inheritor
@@ -66,10 +65,13 @@ class AppointResponsiblesController < ApplicationController
         #     format.json { render json: @appoint_responsible.errors, status: :unprocessable_entity }
         #   end
         else
-          format.html { render :new }
-          format.json { render json: @appoint_responsible.errors, status: :unprocessable_entity }
+          # format.html { render :index }
+          # format.json { render json: @appoint_responsible.errors, status: :unprocessable_entity }
         end
       end
+
+      @appoint_responsible.inheritor_id = User.find_by_email(@appoint_responsible.inheritor_email).id
+
     end
 
   # PATCH/PUT /appoint_responsibles/1
@@ -126,6 +128,6 @@ class AppointResponsiblesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appoint_responsible_params
-      params.require(:appoint_responsible).permit(:email, :user_id, :inheritor_email, :inheritor_id, :accepted)
+      params.require(:appoint_responsible).permit(:email, :user_id, :inheritor_email, :inheritor_id, :accepted, :file)
     end
 end

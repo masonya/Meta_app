@@ -1,0 +1,18 @@
+<% @inherited_accounts.each do |i| %>
+  <% wallet = i.transferable %>
+  <% if wallet.user_id == request.path.last.to_i %>
+    <% if i.transferable.class == Wallet %>
+
+
+        <div class="card">
+          <div class="previev <%= wallet.title %>"></div>
+          <div class="TitleWrap">
+            <div class="card_title"></div>
+            <h4><%= wallet.title %></h4>
+            <p class="transmitter_email"><%= wallet.email %></p>
+          </div>
+        </div>
+
+    <% end %>
+  <% end %>
+<% end %>

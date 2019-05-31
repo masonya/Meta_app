@@ -1,6 +1,6 @@
+
+
 <div class="MainCardsArea">
-
-
 
 
 
@@ -8,14 +8,17 @@
 
 
     <% if AppointResponsible.where(:inheritor_id => current_user.id).present? %>
-      <%# if AppointResponsible.death_certificate.fale.exists? %>
-      <%# else %>
+      <%# if AppointResponsible.where(:file => nil).present? %>
         <section class="main">
             <h2 class="section_header">Ответственность</h2>
             <section class="cards_area">
 
+            <!-- <div class="closed_banner" id="up"> -->
               <div class="banner">
+                <div class="banner_img1"></div>
+                <div class="close_button" id="down"></div>
               </div>
+            <!-- </div> -->
 
                <%= render "responsibilitys" %>
                <%= render "responsibilitys_accepted" %>

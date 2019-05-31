@@ -1,0 +1,67 @@
+<% accounts = {} %>
+
+<% current_user.inherited_accounts.each do |account| %>
+  <% accounts[account.transmitter_id] = [] %>
+<% end %>
+
+<%#= accounts %>
+
+<% current_user.inherited_accounts.each do |account| %>
+  <% accounts[account.transmitter_id].push(account.transferable_type) %>
+<% end %>
+
+<%#= accounts %>
+
+
+<section class="main_first_mamory">
+
+
+
+  <% url_number = request.path.last %>
+  <% accounts.each do |key, value| %>
+    <% if key == url_number.to_i %>
+
+  <h3><%= User.find(key).email %></h3>
+
+        <% if value.include?("Document") %>
+          <%= render "documents" %>
+        <% end %>
+
+        <h2 class="section_header">Наставления</h2>
+
+        <% if value.include?("Instruction") %>
+          <%= render "instructions" %>
+        <% end %>
+
+
+
+        <h2 class="section_header">Виртуальные активы</h2>
+        <section class="cards_area">
+
+
+            <% if value.include?("SocialAccount") %>
+              <%= render "social_accounts" %>
+            <% end %>
+
+            <% if value.include?("Wallet") %>
+                <%= render "wallets" %>
+            <% end %>
+
+            <% if value.include?("Subscription") %>
+              <%= render "subscriptions" %>
+            <% end %>
+
+        </section>
+
+
+          <div class="backward_button">
+            <%= link_to 'Назад', memory_index_path %>
+          </div>
+
+
+    <% end %>
+  <% end %>
+
+</section>
+
+<div class="interval"></div>

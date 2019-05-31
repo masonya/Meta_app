@@ -5,6 +5,7 @@ class DocumentsController < ApplicationController
   # GET /documents.json
     def index
      @documents = Document.all
+     @appoint_responsible = AppointResponsible.new
     end
 
   # GET /documents/1
@@ -16,10 +17,12 @@ class DocumentsController < ApplicationController
   # GET /documents/new
   def new
     @document = Document.new
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /documents/1/edit
   def edit
+    @appoint_responsible = AppointResponsible.new
   end
 
   # POST /documents
@@ -65,7 +68,7 @@ class DocumentsController < ApplicationController
   # PATCH/PUT /documents/1
   # PATCH/PUT /documents/1.json
   def update
-  
+
     respond_to do |format|
       if @document.update(document_params)
         format.html { redirect_to root_url, notice: 'Document was successfully updated.' }

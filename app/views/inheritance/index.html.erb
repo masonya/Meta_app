@@ -1,0 +1,64 @@
+<% accounts = {} %>
+
+<% current_user.inherited_accounts.each do |account| %>
+  <% accounts[account.transmitter_id] = [] %>
+<% end %>
+
+<%#= accounts %>
+
+<% current_user.inherited_accounts.each do |account| %>
+  <% accounts[account.transmitter_id].push(account.transferable_type) %>
+<% end %>
+
+<%#= accounts %>
+
+
+<section class="main_first">
+  <h2 class="section_header">Мое наследство</h2>
+  <section class="cards_area">
+
+
+        <% accounts.each do |key, value| %>
+
+            <%#= key %>
+            <%#= value %>
+            <%= inheritance_index_url(key) %>
+
+            <% if key == inheritance_index_path(key) %>
+
+            <div class="card_memory">
+
+              <h3>Пользователь <%= User.find(key).email %> ушел из жизни</h3>
+
+              <div class="memory_content">
+                <% if value.include?("SocialAccount") %>
+                  <p>Аккаунты</p>
+                <% end %>
+                <% if value.include?("Wallet") %>
+                  <p>Кошельки</p>
+                <% end %>
+                <% if value.include?("Subscription") %>
+                  <p>Подписки</p>
+                <% end %>
+                <% if value.include?("Document") %>
+                  <p>Документы</p>
+                <% end %>
+                <% if value.include?("Instruction") %>
+                  <p>Наставления</p>
+                <% end %>
+              </div>
+
+              <div class="open_button">
+                <%= link_to 'Открыть' %>
+              </div>
+
+              <%# {nil=>["SocialAccount", "Wallet", "SocialAccount"]}  %>
+              <%#= group[0].user.email %>
+            </div>
+
+          <% end %>
+        <% end %>
+
+
+  </section>
+</section>
