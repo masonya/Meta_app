@@ -28,9 +28,11 @@ class AppointResponsiblesController < ApplicationController
     @appoint_responsible = AppointResponsible.new(appoint_responsible_params)
     @appoint_responsible.user_id = current_user.id
     @appoint_responsible.email = current_user.email
+    # @appoint_responsible.inheritor_id = User.find_by_email(@appoint_responsible.inheritor_email).id
 
-    # inheritor = User.find_by_email(params[:inheritor_email])
-    # @appoint_responsible.inheritor_id = inheritor.id if inheritor
+    inheritor = User.find_by_email(@appoint_responsible.inheritor_email)
+    @appoint_responsible.inheritor_id = inheritor.id if inheritor
+
 
 
     respond_to do |format|
@@ -70,7 +72,7 @@ class AppointResponsiblesController < ApplicationController
         end
       end
 
-      @appoint_responsible.inheritor_id = User.find_by_email(@appoint_responsible.inheritor_email).id
+
 
     end
 

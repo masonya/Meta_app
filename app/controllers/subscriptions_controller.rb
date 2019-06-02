@@ -11,7 +11,7 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/1
   # GET /subscriptions/1.json
   def show
-
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /subscriptions/new

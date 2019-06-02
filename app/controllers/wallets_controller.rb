@@ -11,7 +11,7 @@ class WalletsController < ApplicationController
   # GET /wallets/1
   # GET /wallets/1.json
   def show
-
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /wallets/new

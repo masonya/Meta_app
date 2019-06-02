@@ -1,0 +1,39 @@
+
+<section class="main_first">
+
+        <!-- <div class="previev_inheritance <%#= @social_account.title %>"></div> -->
+        <h2 class="section_header"><%= @social_account.title %></h2>
+        <section class="data_area">
+
+          <div class="data">
+            <h3>Логин:</h3>
+            <p><%= @social_account.login %></p>
+          </div>
+
+          <div class="data">
+            <h3>Пароль:</h3>
+            <p><%= @social_account.password %></p>
+          </div>
+
+          <div class="data">
+            <h3>Что сделать с аккаунтом?</h3>
+            <p><%= @social_account.action %></p>
+          </div>
+
+          <div class="data">
+            <h3>Комментарий</h3>
+            <p><%= @social_account.body%></p>
+          </div>
+
+        </section>
+
+
+          <div class="backward_button">
+            <%= link_to 'Назад', inheritance_path %>
+          </div>
+
+
+
+</section>
+
+<div class="interval"></div>

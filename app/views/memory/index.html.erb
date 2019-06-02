@@ -12,44 +12,50 @@
 
 <%#= accounts %>
 
+<% if AccountTransfer.where(:inheritor_id => current_user.id, :checked => true).present? %>
+  <section class="main_first_mamory">
+    <h2 class="section_header"></h2>
+    <section class="cards_area">
 
-<section class="main_first_mamory">
-  <h2 class="section_header"></h2>
-  <section class="cards_area">
 
-    <% accounts.each do |key, value| %>
-      <div class="card_memory">
-        <%#= key %>
-        <%#= value %>
+        <% accounts.each do |key, value| %>
+        <% b = User.find(key).transfered_accounts.where(:inheritor_id => current_user.id).collect {|a| a.checked} %>
+          <% if b.include?(true) %>
 
-        <h3>Пользователь <%= User.find(key).email %> ушел из жизни</h3>
+                <div class="card_memory">
 
-        <div class="memory_content">
-          <% if value.include?("SocialAccount") %>
-            <p>Аккаунты</p>
-          <% end %>
-          <% if value.include?("Wallet") %>
-            <p>Кошельки</p>
-          <% end %>
-          <% if value.include?("Subscription") %>
-            <p>Подписки</p>
-          <% end %>
-          <% if value.include?("Document") %>
-            <p>Документы</p>
-          <% end %>
-          <% if value.include?("Instruction") %>
-            <p>Наставления</p>
-          <% end %>
-        </div>
+                  <h3>Пользователь <%= User.find(key).email %> ушел из жизни</h3>
 
-        <div class="open_button">
-          <%= link_to 'Открыть', inheritance_path(key) %>
-        </div>
+                  <div class="memory_content">
+                    <% if value.include?("SocialAccount") %>
+                      <p>Аккаунты</p>
+                    <% end %>
+                    <% if value.include?("Wallet") %>
+                      <p>Кошельки</p>
+                    <% end %>
+                    <% if value.include?("Subscription") %>
+                      <p>Подписки</p>
+                    <% end %>
+                    <% if value.include?("Document") %>
+                      <p>Документы</p>
+                    <% end %>
+                    <% if value.include?("Instruction") %>
+                      <p>Наставления</p>
+                    <% end %>
+                  </div>
 
-        <%# {nil=>["SocialAccount", "Wallet", "SocialAccount"]}  %>
-        <%#= group[0].user.email %>
-      </div>
-    <% end %>
+                  <div class="open_button">
+                    <%= link_to 'Открыть', inheritance_path(key) %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
 
+
+
+    </section>
   </section>
-</section>
+
+<% else %>
+  <%= render "blank" %>
+<% end %>
