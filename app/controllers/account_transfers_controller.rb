@@ -165,6 +165,6 @@ class AccountTransfersController < ApplicationController
     #   params.fetch(:account_transfer, {})
     # end
     def account_transfer_params
-      params.require(:account_transfer).permit(:email, :transmitter_id, :inheritor_id, :transferable_id, :accepted)
+      params.require(:account_transfer).permit(:email, :transmitter_id, :inheritor_id, :transferable_id, :accepted, :checked)
     end
 end

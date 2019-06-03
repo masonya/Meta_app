@@ -531,3 +531,15 @@ h2 {
   transform: translateX(-50%);
   margin-top: 205px;
 }
+
+.blank2 {
+  width: 420px;
+  height: 245px;
+  background-image: image_url('blank.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 205px;
+}

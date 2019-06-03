@@ -155,6 +155,27 @@
   font-family: 'AvenirNextCyr-Light';
 }
 
+
+.memory_point {
+  height: 24px;
+  width: 24px;
+  background-color: #F7DD74;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 415px;
+  margin-top: -7px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.memory_point p {
+  font-size: 15px;
+  position: absolute;
+  margin-top: 3px;
+  font-family: 'AvenirNextCyr-Light';
+}
+
 .AppointMenuButton a {
   width: 200px;
   height: 40px;

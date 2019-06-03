@@ -27,6 +27,17 @@
           </div>
         <% end %>
 
+
+
+        <% b = current_user.inherited_accounts.where(:inheritor_id => current_user.id, :checked => true) %>
+        <% if b.exists? %>
+          <div class="memory_point">
+            <p>!</p>
+          </div>
+        <% end %>
+
+
+
           <div class="TransmitMenuButton">
             <%= link_to 'Передаю', root_path %>
           </div>

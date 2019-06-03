@@ -1,0 +1,35 @@
+
+<section class="main_first">
+
+        <!-- <div class="previev_inheritance <%#= @social_account.title %>"></div> -->
+        <h2 class="section_header"><%= @subscription.title %></h2>
+        <section class="data_area">
+
+          <div class="data">
+            <h3>Логин:</h3>
+            <p><%= @subscription.login %></p>
+          </div>
+
+          <div class="data">
+            <h3>Пароль:</h3>
+            <p><%= @subscription.password %></p>
+          </div>
+
+
+          <div class="data">
+            <h3>Комментарий</h3>
+            <p><%= @subscription.body%></p>
+          </div>
+
+        </section>
+
+
+          <div class="backward_button">
+            <%= link_to 'Назад', inheritance_path %>
+          </div>
+
+
+
+</section>
+
+<div class="interval"></div>
