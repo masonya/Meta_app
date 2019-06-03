@@ -1,0 +1,217 @@
+h1 {
+  font-family: 'AvenirNextCyr-Regular';
+  font-size: 46px;
+  line-height: 56px;
+  color: white;
+  /* font-weight: 500; */
+}
+
+body {
+  margin: auto;
+}
+
+.cover {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+.textblock {
+  position: absolute;
+  left: 206px;
+  top: 159px;
+  width: 763px;
+  z-index: 1;
+
+}
+
+.LogoWhite {
+  position: absolute;
+  top: 49px;
+  width: 127px;
+  height: 127px;
+  background-image: image_url('LogoWhite.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.BlueBlock {
+  /* display: flex;
+  justify-content: flex-start; */
+  position: absolute;
+  right: -10px;
+  top: -40px;
+  width: 1370px;
+  height: 836px;
+  background-image: image_url('Rectangle17.10.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.imageblock {
+  position: absolute;
+
+  width: 763px;
+  z-index: 1;
+
+}
+
+.ImgArrow {
+  position: absolute;
+  left: 862px;
+  width: 576px;
+  height: 766px;
+  background-image: image_url('Arrow.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ImgMacBook {
+  position: absolute;
+  left: 845px;
+  top: 124px;
+  width: 597px;
+  height: 630px;
+  background-image: image_url('macbook-pro-clay.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.LevitateUser {
+  position: absolute;
+  left: 1054px;
+  top: 385px;
+  height: 74px;
+  width: 161px;
+  background-image: image_url('user.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+
+  animation: type 0.9s 1s steps(10, end) forwards;
+
+    @keyframes type {
+    to {
+    width: 100%;
+  }
+}
+}
+/*
+.LevitateUser {
+width: 0;
+animation: type 0.9s 1s steps(10, end) forwards;
+
+@keyframes type {
+to {
+width: 100%;
+}
+ */
+
+.MainFirst {
+  margin-top: 1040px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.FirstGroup {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1000px;
+  margin-left: 197px;
+}
+
+.FirstGroupText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 200px;
+
+}
+
+.FirstGroupImg {
+  height: 290px;
+  width: 447px;
+  background-image: image_url('1illustrate.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.SecondGroup {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  margin-left: 231px;
+}
+
+.SecondGroupText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+.SecondGroupImg {
+  height: 440px;
+  width: 447px;
+  background-image: image_url('2illustrate.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.ThirdGroup {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1000px;
+  margin-left: 197px;
+}
+
+.ThirdGroupText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 200px;
+
+
+}
+
+.ThirdGroupImg {
+  height: 482px;
+  width: 447px;
+  background-image: image_url('3illustrate.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.FourthGroup {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  margin-left: 231px;
+
+}
+
+.FourthGroupText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 200px;
+
+}
+
+.FourthGroupImg {
+  height: 352px;
+  width: 416px;
+  background-image: image_url('4illustrate.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
