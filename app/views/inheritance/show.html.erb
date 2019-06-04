@@ -13,7 +13,7 @@
 <%#= accounts %>
 
 
-<section class="main_first_mamory">
+<section class="main_inheritance">
 
 
 
@@ -21,15 +21,19 @@
   <% accounts.each do |key, value| %>
     <% if key == url_number.to_i %>
 
-  <h3><%= User.find(key).email %></h3>
+    <div class="dead_user">
+      <h3><%= User.find(key).email %></h3>
+    </div>
 
         <% if value.include?("Document") %>
+          <h2 class="section_header">Документы</h2>
           <%= render "documents" %>
         <% end %>
 
-        <h2 class="section_header">Наставления</h2>
+
 
         <% if value.include?("Instruction") %>
+          <h2 class="section_header">Наставления</h2>
           <%= render "instructions" %>
         <% end %>
 
@@ -37,7 +41,6 @@
 
         <h2 class="section_header">Виртуальные активы</h2>
         <section class="cards_area">
-
 
             <% if value.include?("SocialAccount") %>
               <%= render "social_accounts" %>

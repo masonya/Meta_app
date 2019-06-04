@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   margin-left: 940px;
   margin-top: 20px;
+  position: absolute;
 }
 
 
@@ -34,4 +35,15 @@
   margin-bottom: 40px;
   margin-left: 40px;
   border-radius: 3px;
+}
+
+.banner p {
+  width: 470px;
+  color: white;
+  margin-left: 340px;
+  margin-top: 70px;
+  align-items: center;
+  position: absolute;
+  font-size: 15px;
+  font-family: 'AvenirNextCyr-Light';
 }

@@ -14,6 +14,7 @@ class SocialAccountsController < ApplicationController
   # GET /social_accounts/1.json
   def show
     @appoint_responsible = AppointResponsible.new
+    @inherited_accounts = current_user.inherited_accounts
   end
 
   def transfer

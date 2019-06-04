@@ -310,3 +310,32 @@
   background-repeat: no-repeat;
   position: absolute;
 }
+
+.explanation_section {
+  width: 350px;
+  height: 225px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+
+}
+
+.explanation {
+  width: 180px;
+}
+
+.explanation p {
+  text-align: center;
+  color: #786F6F;
+  margin-top: 130px;;
+}
+
+.explanation_img {
+  background-image: image_url('explonation.png');
+  width: 100px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: 30px;
+}

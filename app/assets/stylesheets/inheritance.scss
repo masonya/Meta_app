@@ -9,7 +9,7 @@
 }
 
 .data p {
-  width: 300px;
+  width: 550px;
   color: #666666;
 }
 
@@ -40,3 +40,33 @@
   display: inline-flex;
   position: absolute;
 }
+
+.instruction_body {
+  width: 749px;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+
+.testament {
+  width: 170px;
+  height: 43px;
+  margin-left: 40px;
+  margin-top: -50px;
+  margin-bottom: 90px;
+  background-image: image_url('Testament.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main_first_mamory {
+  padding-top: 155px;
+  padding-left: 180px;
+}
+
+ .dead_user h3 {
+  margin-left: 40px;
+  color: #959595;
+  margin-bottom: 40px;
+ }

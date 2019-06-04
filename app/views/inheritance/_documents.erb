@@ -4,7 +4,13 @@
 
     <% if i.transferable.class == Document %>
 
-        <%#= document.image %>
+        <div class="instruction_body">
+          <p><%= document.body %></p>
+        </div>
+
+        <div class="testament">
+
+        </div>
 
     <% end %>
   <% end %>

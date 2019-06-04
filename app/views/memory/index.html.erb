@@ -17,6 +17,14 @@
     <h2 class="section_header"></h2>
     <section class="cards_area">
 
+      <div id="up">
+        <div class="banner">
+          <div class="banner_img1"></div>
+          <p>В разделе «Память» Вы можете посмотреть завещание <br> и наследство, которое пользователи, ушедшие из жизни оставили Вам.</p>
+          <div class="close_button" id="down"></div>
+        </div>
+      </div>
+
 
         <% accounts.each do |key, value| %>
         <% b = User.find(key).transfered_accounts.where(:inheritor_id => current_user.id).collect {|a| a.checked} %>
@@ -27,21 +35,43 @@
                   <h3>Пользователь <%= User.find(key).email %> ушел из жизни</h3>
 
                   <div class="memory_content">
-                    <% if value.include?("SocialAccount") %>
-                      <p>Аккаунты</p>
-                    <% end %>
-                    <% if value.include?("Wallet") %>
-                      <p>Кошельки</p>
-                    <% end %>
-                    <% if value.include?("Subscription") %>
-                      <p>Подписки</p>
-                    <% end %>
-                    <% if value.include?("Document") %>
-                      <p>Документы</p>
-                    <% end %>
-                    <% if value.include?("Instruction") %>
-                      <p>Наставления</p>
-                    <% end %>
+
+                    <div class="memory_content_account">
+                      <% if value.include?("SocialAccount") %>
+                        <div class="Icon" id="AccountIcon"></div>
+                        <p>Аккаунты</p>
+                      <% end %>
+                    </div>
+
+                    <div class="memory_content_account">
+                      <% if value.include?("Wallet") %>
+                        <div class="Icon" id="WalletIcon"></div>
+                        <p>Кошельки</p>
+                      <% end %>
+                    </div>
+
+                    <div class="memory_content_account">
+                      <% if value.include?("Subscription") %>
+                        <div class="Icon" id="SubscriptionIcon"></div>
+                        <p>Подписки</p>
+                      <% end %>
+                    </div>
+
+                    <div class="memory_content_account">
+                      <% if value.include?("Document") %>
+                        <div class="Icon" id="DocumentIcon"></div>
+                        <p>Документы</p>
+                      <% end %>
+                    </div>
+
+                    <div class="memory_content_account">
+                      <% if value.include?("Instruction") %>
+                        <div class="Icon" id="InstructionIcon"></div>
+                        <p>Наставления</p>
+                      <% end %>
+                    </div>
+
+
                   </div>
 
                   <div class="open_button">
@@ -59,3 +89,5 @@
 <% else %>
   <%= render "blank" %>
 <% end %>
+
+<div class="interval"></div>

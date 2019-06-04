@@ -11,7 +11,7 @@ class DocumentsController < ApplicationController
   # GET /documents/1
   # GET /documents/1.json
   def show
-
+    @appoint_responsible = AppointResponsible.new
   end
 
   # GET /documents/new
@@ -28,6 +28,7 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
+    @appoint_responsible = AppointResponsible.new
     @document = Document.new(document_params)
     @document.user_id = current_user.id
     @document.email = current_user.email

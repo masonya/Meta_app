@@ -16,13 +16,6 @@
   width: 390px;
 }
 
-.memory_content {
-  width: 319px;
-  height: 145px;
-  // background-color: red;
-  margin-left: 45px;
-  margin-top: 40px;
-}
 
 .open_button {
   display: flex;
@@ -47,13 +40,6 @@
   font-size: 15px;
 }
 
-
-.instruction_body {
-  width: 749px;
-  margin-left: 40px;
-  margin-top: 40px;
-  margin-bottom: 90px;
-}
 
 
 
@@ -80,8 +66,22 @@
   font-size: 15px;
 }
 
+.memory_content {
+  width: 345px;
+  height: 145px;
+  margin-left: 12px;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: wrap;
+}
 
-.main_first_mamory {
-  padding-top: 155px;
-  padding-left: 180px;
+.memory_content_account {
+  width: 140px;
+  display: flex;
+  margin-left: 30px;
+}
+
+.memory_content_account p {
+  margin-top: 9px;
+  margin-left: 10px;
 }

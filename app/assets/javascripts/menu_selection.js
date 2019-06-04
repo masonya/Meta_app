@@ -18,6 +18,9 @@ $(function() {
           case '/memory':
             $('.MemoryMenuButton a').css('color','#3A8BDF');
             break;
+          case '/inheritance':
+            $('.MemoryMenuButton a').css('color','#3A8BDF');
+            break;
           default:
             $('.TransmitMenuButton a').css('color','#3A8BDF');
 

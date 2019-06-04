@@ -30,6 +30,7 @@ class InstructionsController < ApplicationController
   # POST /instructions
   # POST /instructions.json
   def create
+    @appoint_responsible = AppointResponsible.new
     @instruction = Instruction.new(instruction_params)
     @instruction.user_id = current_user.id
     @instruction.email = current_user.email

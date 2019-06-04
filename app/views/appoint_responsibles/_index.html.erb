@@ -3,13 +3,14 @@
 <div class="custodian_container">
 <%= render 'appoint_responsibles/form' %>
 
-  <div class="custodian_container_title">
-    <p>Ваши хранители</p>
-  </div>
+
 
 
         <% @appoint_responsibles = AppointResponsible.where(:user_id => current_user.id) %>
           <% if @appoint_responsibles.present? %>
+          <div class="custodian_container_title">
+            <p>Ваши хранители</p>
+          </div>
             <% @appoint_responsibles.each do |appoint_responsible| %>
                 <% if appoint_responsible.accepted %>
                   <div class="custodian_container_content">
@@ -27,9 +28,19 @@
                   </div>
                 <% end %>
             <% end %>
-            <p>Еще один текст о том, кто такие хранители и зачем они нужны</p>
+            <div class="explanation_section">
+              <div class="explanation_img"></div>
+                <div class="explanation">
+                  <p>Еще один текст о том, кто такие хранители и зачем они нужны</p>
+                </div>
+              </div>
           <% else %>
-            <p>Текст о том, кто такие хранители и зачем они нужны</p>
+          <div class="explanation_section">
+            <div class="explanation_img"></div>
+              <div class="explanation">
+                <p>Текст о том, кто такие хранители и зачем они нужны</p>
+              </div>
+            </div>
           <% end %>
 
   <%#= link_to 'Назначить', new_appoint_responsible_path %>
