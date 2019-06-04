@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :appoint_responsibles
   resources :responsibility_transfers
   resources :inheritance
+  resources :landing
 
   # resources :inheritance do
   #   resources :transmitter_id
