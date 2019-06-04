@@ -45,7 +45,7 @@ body {
   top: -40px;
   width: 1370px;
   height: 836px;
-  background-image: image_url('Rectangle17.10.png');
+  background-image: image_url('Rectangle.png');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
@@ -92,13 +92,13 @@ body {
   background-repeat: no-repeat;
   z-index: 2;
 
-  animation: type 0.9s 1s steps(10, end) forwards;
-
-    @keyframes type {
-    to {
-    width: 100%;
-  }
-}
+//   animation: type 0.9s 1s steps(10, end) forwards;
+//
+//     @keyframes type {
+//     to {
+//     width: 100%;
+//   }
+// }
 }
 /*
 .LevitateUser {
