@@ -38,7 +38,7 @@
         <% end %>
 
 
-
+    <% if value.include?("SocialAccount" || "Wallet" || "Subscription") %>
         <h2 class="section_header">Виртуальные активы</h2>
         <section class="cards_area">
 
@@ -55,7 +55,7 @@
             <% end %>
 
         </section>
-
+    <% end %>
 
           <div class="backward_button">
             <%= link_to 'Назад', memory_index_path %>

@@ -1,5 +1,5 @@
 
-<%= render "nav_bar" %>
+<%#= render "nav_bar" %>
 <div class="MainCardsArea">
 
 
@@ -8,15 +8,15 @@
 
 
     <% if AppointResponsible.where(:inheritor_id => current_user.id, :file => nil).present? %>
-        <section class="main">
+        <section class="main_first_mamory">
             <h2 class="section_header">Ответственность</h2>
             <section class="cards_area">
 
-            <div id="up">
+            <div id="up2">
               <div class="banner">
                 <div class="banner_img1"></div>
                 <p>Нажимая кнопку «Согласиться», вы становитесь ответственным за загрузку сведетельства о смерти пользователя на сервис Meta. Оповещения будут появляться в разделе «Ответственность».</p>
-                <div class="close_button" id="down"></div>
+                <div class="close_button" id="down2"></div>
               </div>
             </div>
 
@@ -31,7 +31,7 @@
 
 
     <% if AccountTransfer.where(:inheritor_id => current_user.id, :accepted => false, :transferable_type => ["Wallet", "SocialAccount", "Subscription"]).present? %>
-      <section id="s2" class="main">
+      <section id="s2" class="main_first_mamory">
         <h2 class="section_header">Не принятые активы</h2>
         <section class="cards_area">
 
@@ -45,7 +45,7 @@
 
 
     <% if AccountTransfer.where(:inheritor_id => current_user.id, :accepted => true).present? %>
-      <section id="s2" class="main">
+      <section id="s2" class="main_first_mamory">
         <h2 class="section_header">Принятые активы</h2>
         <section class="cards_area">
 

@@ -7,9 +7,9 @@ $(function(){
   //   });
 
 
-  $("div#down").click(function() {
+  $("div#down2").click(function() {
      // $("div#up").removeClass();
-     $("div#up").addClass("closed_banner");
+     $("div#up2").addClass("closed_banner");
 
     });
 

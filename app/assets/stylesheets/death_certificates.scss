@@ -5,14 +5,32 @@
   align-items: center;
 }
 
-.uploading_page h1 {
+.uploading_page h2 {
   margin-top: 90px;
+  text-align: center;
 }
 
 .uploading_page h4 {
   font-size: 18px;
   color: #666666;
   margin-bottom: 60px;
+}
+
+.uploading_page p {
+  font-family: 'AvenirNextCyr-Regular';
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #B6B6B6;
+}
+
+.uploading_page a {
+  font-family: 'AvenirNextCyr-Regular';
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 440px;
+  text-align: center;
+  color: #649DF4;
 }
 
 
@@ -25,6 +43,51 @@
   background-repeat: no-repeat;
 }
 
-.uploader_doc {
 
+
+.uploading_page input[type=file]:before {
+    content: 'Выбрать';
+    color: white;
+    width: 211px;
+    height: 53px;
+    background-color: #649DF4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding-left: 32px;
+}
+
+.uploading_page input[type=file] {
+  cursor: pointer;
+  width: 130px;
+  height: 34px;
+  overflow: hidden;
+  margin-left: 305px;
+  margin-top: 230px;
+  border-radius: 3px;
+}
+
+.uploading_page .back {
+    height: 40px;
+    width: 115px;
+    margin-left: 135px;
+    margin-top: -40px;
+    background-color: #D8D8D8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+  }
+
+.uploading_page_img {
+  background-image: image_url('uploading_page_img.png');
+  top: 240px;
+  height: 189px;
+  width: 252px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.uploading_page_container {
+  margin-top: 250px;
 }

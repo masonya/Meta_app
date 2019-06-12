@@ -17,11 +17,11 @@
     <h2 class="section_header"></h2>
     <section class="cards_area">
 
-      <div id="up">
+      <div id="up2">
         <div class="banner">
-          <div class="banner_img1"></div>
+          <div class="banner_img2"></div>
           <p>В разделе «Память» Вы можете посмотреть завещание <br> и наследство, которое пользователи, ушедшие из жизни оставили Вам.</p>
-          <div class="close_button" id="down"></div>
+          <div class="close_button" id="down2"></div>
         </div>
       </div>
 
@@ -36,40 +36,50 @@
 
                   <div class="memory_content">
 
-                    <div class="memory_content_account">
+
                       <% if value.include?("SocialAccount") %>
-                        <div class="Icon" id="AccountIcon"></div>
-                        <p>Аккаунты</p>
+                        <div class="memory_content_account">
+                          <div class="Icon" id="AccountIcon"></div>
+                          <p>Аккаунты</p>
+                        </div>
                       <% end %>
-                    </div>
 
-                    <div class="memory_content_account">
+
+
                       <% if value.include?("Wallet") %>
-                        <div class="Icon" id="WalletIcon"></div>
-                        <p>Кошельки</p>
+                        <div class="memory_content_account">
+                          <div class="Icon" id="WalletIcon"></div>
+                          <p>Кошельки</p>
+                        </div>
                       <% end %>
-                    </div>
 
-                    <div class="memory_content_account">
+
+
                       <% if value.include?("Subscription") %>
-                        <div class="Icon" id="SubscriptionIcon"></div>
-                        <p>Подписки</p>
+                        <div class="memory_content_account">
+                          <div class="Icon" id="SubscriptionIcon"></div>
+                          <p>Подписки</p>
+                        </div>
                       <% end %>
-                    </div>
 
-                    <div class="memory_content_account">
+
+
                       <% if value.include?("Document") %>
-                        <div class="Icon" id="DocumentIcon"></div>
-                        <p>Документы</p>
+                        <div class="memory_content_account">
+                          <div class="Icon" id="DocumentIcon"></div>
+                          <p>Документы</p>
+                        </div>
                       <% end %>
-                    </div>
 
-                    <div class="memory_content_account">
+
+
                       <% if value.include?("Instruction") %>
-                        <div class="Icon" id="InstructionIcon"></div>
-                        <p>Наставления</p>
+                        <div class="memory_content_account">
+                          <div class="Icon" id="InstructionIcon"></div>
+                          <p>Наставления</p>
+                        </div>
                       <% end %>
-                    </div>
+
 
 
                   </div>

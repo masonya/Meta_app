@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: #3A8BDF;
+    color: #649DF4;
   }
 }
 
@@ -115,6 +115,11 @@ h2 {
   padding-top: 155px;
   padding-left: 270px;
   width: 1000px;
+}
+
+.main_first_mamory {
+  padding-top: 75px;
+  padding-left: 180px;
 }
 
 .cards_area {
@@ -356,6 +361,10 @@ h2 {
   height: 28px;
   background-color: #649DF4;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #90BDFF;
+  }
 }
 
 .UnacceptWrapper {
@@ -373,7 +382,17 @@ h2 {
   width: 100px;
   height: 28px;
   color: white;
+
+  &:hover {
+    color: white;
+  }
 }
+
+
+.ActionForCardSub {
+  height: 123px;
+}
+
 
 .ActionForCard h4 {
   margin-top: 18px;

@@ -17,6 +17,9 @@
 
 
     <% if user_signed_in? %>
+
+      <% if controller_name != 'AppointResponsible' && action_name != 'edit' && action_name != 'show' %>
+
       <section class="settingsbutton">
 
         <%= link_to root_path do %>
@@ -56,7 +59,7 @@
           </div>
 
           <div class="AppointMenuButton">
-            <%= link_to 'Назначить хранителя', appoint_responsibles_path %>
+            <%= link_to 'Назначить хранителя' %>
               <div class="ForFakeAppoint">
                 <div class="popup_appoint"><%= render "appoint_responsibles/index" %></div>
               </div>
@@ -75,6 +78,7 @@
           </div>
       </section>
 
+      <% end %>
     <% end %>
 
 

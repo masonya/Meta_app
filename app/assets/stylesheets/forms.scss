@@ -5,7 +5,7 @@
 }
 
 input[type=submit] {
-  background-color: #549ffd;
+  background-color: #649DF4;
   margin-top: 30px;
   height: 40px;
   width: 115px;
@@ -18,6 +18,10 @@ input[type=submit] {
   font-size: 15px;
   font-family: 'AvenirNextCyr-Light';
   font-weight: 100;
+
+  &:hover {
+    background-color: #90BDFF;
+  }
 }
 
 .back {
@@ -31,6 +35,10 @@ input[type=submit] {
   align-items: center;
   border-radius: 4px;
   position: relative;
+
+  &:hover {
+    background-color: #BCBCBC;
+  }
 }
 
 .back a {
