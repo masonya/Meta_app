@@ -1,11 +1,3 @@
-h1 {
-  font-family: 'AvenirNextCyr-Regular';
-  font-size: 46px;
-  line-height: 56px;
-  color: white;
-  /* font-weight: 500; */
-}
-
 body {
   margin: auto;
 }
@@ -14,21 +6,30 @@ body {
   display: flex;
   align-items: baseline;
   width: 100%;
-  height: 100%;
+  height: 1000px;
+  position: relative;
+
 }
 
 .textblock {
   position: absolute;
   left: 206px;
-  top: 159px;
+  top: 199px;
   width: 763px;
   z-index: 1;
 
+    h1 {
+      font-family: 'AvenirNextCyr-Medium';
+      font-size: 46px;
+      line-height: 56px;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+    }
 }
 
 .LogoWhite {
   position: absolute;
-  top: 49px;
+  top: 11px;
   width: 127px;
   height: 127px;
   background-image: image_url('LogoWhite.png');
@@ -38,10 +39,8 @@ body {
 }
 
 .BlueBlock {
-  /* display: flex;
-  justify-content: flex-start; */
   position: absolute;
-  right: -10px;
+  left: 73px;
   top: -40px;
   width: 1370px;
   height: 836px;
@@ -53,10 +52,8 @@ body {
 
 .imageblock {
   position: absolute;
-
   width: 763px;
   z-index: 1;
-
 }
 
 .ImgArrow {
@@ -69,6 +66,7 @@ body {
   background-repeat: no-repeat;
 }
 
+
 .ImgMacBook {
   position: absolute;
   left: 845px;
@@ -80,138 +78,830 @@ body {
   background-repeat: no-repeat;
 }
 
+.LevitateNotify {
+  position: absolute;
+  left: 1231px;
+  top: 172px;
+  height: 14px;
+  width: 14px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+
+
+  animation: type 2.4s 0s steps(2, end) infinite;
+}
+  @keyframes type {
+  to {
+  top: 183px;
+  background-image: image_url('notify.png');
+  opacity: 0.99;
+  }
+}
+
+
 
 .LevitateUser {
   position: absolute;
   left: 1054px;
   top: 385px;
-  height: 74px;
-  width: 161px;
+  height: 79px;
+  width: 171px;
   background-image: image_url('user.png');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 2;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.1s;
 
-//   animation: type 0.9s 1s steps(10, end) forwards;
-//
-//     @keyframes type {
-//     to {
-//     width: 100%;
-//   }
-// }
+  margin-top: -5px;
 }
-/*
-.LevitateUser {
-width: 0;
-animation: type 0.9s 1s steps(10, end) forwards;
 
-@keyframes type {
-to {
-width: 100%;
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px);  }
 }
- */
+
+.LevitatePayPal {
+  position: absolute;
+  left: 1228px;
+  top: 536px;
+  height: 143px;
+  width: 139px;
+  background-image: image_url('paypall.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: -25px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    to   { transform: translate(0, -0px); }
+}
+
+
 
 .MainFirst {
-  margin-top: 1040px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 2139px;
+  position: relative;
+
+  h2 {
+    font-family: 'AvenirNextCyr-Demi';
+    font-size: 35px;
+    line-height: 43px;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 0px;
+    margin-bottom: 33px;
+
+  }
+
+  p {
+    font-family: 'AvenirNextCyr-Regular';
+    font-size: 19px;
+    line-height: 23px;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 0px;
+
+  }
 }
 
 .FirstGroup {
   display: flex;
   flex-direction: row-reverse;
-  width: 1000px;
-  margin-left: 197px;
+  width: 100%;
+  margin-bottom: 203px;
 }
 
 .FirstGroupText {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-left: 200px;
-
+  margin-right: 233px;
+  margin-bottom: 51px;
 }
 
 .FirstGroupImg {
   height: 290px;
   width: 447px;
   background-image: image_url('1illustrate.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 161px;
 }
+
+.illustratePartFirst {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: 588px;
+  top: 30px;
+  background-image: image_url('MainFirstPart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  // margin-left: 30px;
+  margin-top: -25px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    to   { transform: translate(0, -0px); }
+
+// height: 141px; width: 139px;
+}
+
+.xx{
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  left: 442px;
+  top: 305px;
+  background-image: image_url('x.png');
+  opacity: 0.6;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 70px); }
+    to   { transform: translate(0, -0px); }
+}
+
 
 
 .SecondGroup {
   display: flex;
   flex-direction: row;
-  width: 1000px;
-  margin-left: 231px;
+  width: 100%;
+  margin-bottom: 113px;
 }
 
 .SecondGroupText {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-left: 200px;
+  margin-left: 231px;
+  margin-bottom: 55px;
 }
 
 .SecondGroupImg {
-  height: 440px;
-  width: 447px;
+  height: 385px;
+  width: 435px;
   background-image: image_url('2illustrate.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  margin-left: 164px;
 }
+
+.lupa {
+  position: absolute;
+  height: 33px;
+  width: 21px;
+  right: 343px;
+  top: 793px;
+  background-image: image_url('lupa.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    to   { transform: translate(0, -0px); }
+}
+
+
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 70px); }
+    to   { transform: translate(0, -0px); }
+}
+
 
 
 .ThirdGroup {
   display: flex;
   flex-direction: row-reverse;
-  width: 1000px;
-  margin-left: 197px;
+  width: 100%;
+  margin-bottom: 111px;
 }
 
 .ThirdGroupText {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-left: 200px;
-
-
+  margin-right: 209px;
+  margin-bottom: 94px;
 }
 
 .ThirdGroupImg {
-  height: 482px;
+  height: 481px;
   width: 447px;
   background-image: image_url('3illustrate.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 125px;
+
 }
+
+.circle {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 590px;
+  top: 1173px;
+  background-image: image_url('circle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 70px); }
+    to   { transform: translate(0, -0px); }
+}
+
+.x{
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  left: 564px;
+  top: 991px;
+  background-image: image_url('x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 70px); }
+    to   { transform: translate(0, -0px); }
+}
+
+.k{
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 532px;
+  top: 1110px;
+  background-image: image_url('k.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 70px); }
+    to   { transform: translate(0, -0px); }
+}
+
+
 
 
 .FourthGroup {
   display: flex;
   flex-direction: row;
-  width: 1000px;
-  margin-left: 231px;
-
+  width: 100%;
 }
 
 .FourthGroupText {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-left: 200px;
-
+  margin-left: 231px;
+  margin-bottom: 65px;
 }
 
 .FourthGroupImg {
   height: 352px;
   width: 416px;
   background-image: image_url('4illustrate.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 203px;
+}
+
+.particles {
+  position: absolute;
+  height: 40px;
+  width: 32px;
+  right: 190px;
+  top: 1706px;
+  background-image: image_url('particles.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    to   { transform: translate(0, -0px); }
+}
+
+
+.FirstShmut {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 800px;
+
+  h1 {
+    position: absolute;
+    left: -98px;
+    top: 1px;
+    font-family: 'AvenirNextCyr-Medium';
+    font-size: 46px;
+    line-height: 56px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.RedBlock {
+  // position: absolute;
+  width: 1125px;
+  height: 814px;
+  background-image: image_url('RectangleRed.png');
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.GirlWithComp {
+  position: absolute;
+  right: 93px;
+  top: 271px;
+  width: 833px;
+  height: 570px;
+  background-image: image_url('girlwithcomp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lock {
+  position: absolute;
+  right: 118px;
+  top: 319px;
+  height: 50px;
+  width: 40px;
+  background-image: image_url('lock.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    10%  { transform: translate(0, 18px); }
+    to   { transform: translate(0, -0px); }
+}
+
+
+
+
+.MainSecond {
+  margin-top: 170px;
+  margin-bottom: 189px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 1328px;
+  position: relative;
+
+  h2 {
+    font-family: 'AvenirNextCyr-Demi';
+    font-size: 35px;
+    line-height: 43px;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  p {
+    margin-top: 28px;
+    margin-bottom: 20px;
+    font-family: 'AvenirNextCyr-Regular';
+    font-size: 19px;
+    line-height: 23px;
+    -webkit-font-smoothing: antialiased;
+
+  }
+}
+
+
+.FirstGroupSecond {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 133px;
+
+}
+
+.FirstGroupSecondText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 235px;
+  margin-bottom: 53px;
+}
+
+.LatterLable {
+  width: 65px;
+  height: 67px;
+  background-image: image_url('ForTextFirst.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-left: 2px;
+}
+
+.LettersImg {
+  width: 576px;
+  height: 262px;
+  background-image: image_url('LettersGroup.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 140px;
+}
+
+
+.SecondGroupSecond {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-bottom: 176px;
+}
+
+.SecondGroupSecondText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-bottom: 26px;
+  margin-right: 267px;
+
+}
+
+.PenLable {
+  width: 65px;
+  height: 67px;
+  background-image: image_url('ForTextTwo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 23px;
+  margin-left: 2px;
+}
+
+.CardsImg {
+  width: 304px;
+  height: 334px;
+  background-image: image_url('CardsGroup.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 146px;
+}
+
+
+.ThirdGroupSecond {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ThirdGroupSecondText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 236px;
+  margin-top: 109px;
+}
+
+.LockLable {
+  width: 65px;
+  height: 67px;
+  background-image: image_url('ForTextThree.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 21px;
+  margin-left: 2px;
+
+}
+
+.ArtefactsImg {
+  width: 562px;
+  height: 418px;
+  background-image: image_url('ArtefactsGroup.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 92px;
+}
+
+
+.SecondShmut {
+  position: relative;
+  // top: 5609px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 823px;
+
+  h1 {
+    font-family: 'AvenirNextCyr-Medium';
+    font-size: 46px;
+    line-height: 56px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.textblockthird {
+  position: absolute;
+  z-index: 5;
+  top: 235px;
+  right: 102px;
+}
+
+.BlueBlockSecond {
+  width: 871px;
+  height: 861px;
+  background-image: image_url('RectangleThird.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.LudiImg {
+  position: absolute;
+  left: 52px;
+  top: 139px;
+  width: 644px;
+  height: 767px;
+  background-image: image_url('ludi.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 49px;
+}
+
+.letter {
+  position: absolute;
+  left: 312px;
+  top: 562px;
+  height: 65px;
+  width: 67px;
+  background-image: image_url('letter.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }
+
+}
+
+.lillock {
+  position: absolute;
+  left: 302px;
+  top: 296px;
+  height: 56px;
+  width: 60px;
+  background-image: image_url('lillock.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 3.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }
+
+}
+
+
+
+
+.CallToAction {
+  margin-top: 334px;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%
+  height 433px;
+}
+
+.GirlImg {
+  width: 528px;
+  height: 483px;
+  background-image: image_url('Girl.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  margin-right: 142px;
+}
+
+.palochka {
+  position: absolute;
+  left: 221px;
+  top: 129px;
+  height: 10px;
+  width: 10px;
+  background-image: image_url('palochka.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: -0.1s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }
+
+}
+
+.triangle {
+  position: absolute;
+  left: 596px;
+  top: 330px;
+  height: 17px;
+  width: 15px;
+  background-image: image_url('triangle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }
+
+
+}
+
+.triangletwo {
+  position: absolute;
+  left: 587px;
+  top: 48px;
+  height: 11px;
+  width: 10px;
+  background-image: image_url('triangletwo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }
+
+
+}
+
+
+
+.ActionText {
+  display: flex;
+  margin-right: 142px;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+    h3 {
+      font-family: 'AvenirNextCyr-Medium';
+      font-size: 36px;
+      font-weight: 100;
+      margin-bottom: 0px;
+      color: #78A9F5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-top: 3px;
+      margin-bottom: 0px;
+    }
+
+}
+
+
+
+.footer {
+  margin-top: 184px;
+  margin-bottom: 19px;
+  margin-left: 75px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 124px;
+
+}
+
+.LogoBlack {
+  position: relative;
+  width: 107px;
+  height: 28px;
+  background-image: image_url('LogoBlack.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h6 {
+  font-family: 'AvenirNextCyr-Regular';
+  font-size: 19px;
+  font-weight: 100;
+  color: #5E5E5E;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 25px;
+
 }

@@ -10,12 +10,6 @@
   </head>
 
   <body>
-
-
-
-
-
-
     <% if user_signed_in? %>
 
       <% if controller_name != 'AppointResponsible' && action_name != 'edit' && action_name != 'show' %>
@@ -23,28 +17,23 @@
       <section class="settingsbutton">
 
         <%= link_to root_path do %>
-           <div class="logo"></div>
+          <div class="logo"></div>
         <% end %>
 
         <div class="SectionButton">
+          <% a = AccountTransfer.where(:inheritor_id => current_user.id, :accepted => false, :transferable_type => ["Wallet", "SocialAccount", "Subscription"]) %>
+          <% if a.exists? %>
+            <div class="red_point">
+              <p> <%= a.count %> </p>
+            </div>
+          <% end %>
 
-        <% a = AccountTransfer.where(:inheritor_id => current_user.id, :accepted => false, :transferable_type => ["Wallet", "SocialAccount", "Subscription"]) %>
-        <% if a.exists? %>
-          <div class="red_point">
-            <p> <%= a.count %> </p>
-          </div>
-        <% end %>
-
-
-
-        <% b = current_user.inherited_accounts.where(:inheritor_id => current_user.id, :checked => true) %>
-        <% if b.exists? %>
-          <div class="memory_point">
-            <p>!</p>
-          </div>
-        <% end %>
-
-
+          <% b = current_user.inherited_accounts.where(:inheritor_id => current_user.id, :checked => true) %>
+          <% if b.exists? %>
+            <div class="memory_point">
+              <p>!</p>
+            </div>
+          <% end %>
 
           <div class="TransmitMenuButton">
             <%= link_to 'Передаю', root_path %>
@@ -65,22 +54,27 @@
               </div>
           </div>
 
-        </div>
+            <div class="ForFakeAppoint">
+              <div class="popup_appoint"><%= render "appoint_responsibles/index" %></div>
+            </div>
+          </div>
+        
 
         <div class="user"></div>
-          <div class="user_popup" id="up">
-              <div class="logout">
-              <div class="exitfrompopup">
-                <div class="exitbutton" id="down"></div>
-              </div>
-              <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-              </div>
+
+        <div class="user_popup" id="up">
+          <div class="logout">
+            <div class="exitfrompopup">
+              <div class="exitbutton" id="down"></div>
+            </div>
+
+            <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
           </div>
+        </div>
       </section>
 
       <% end %>
     <% end %>
-
 
     <%= yield %>
 
