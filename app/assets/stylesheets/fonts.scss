@@ -6,9 +6,14 @@
 @font-face {
   font-family: 'AvenirNextCyr-Regular';
   src: asset-url('AvenirNextCyr-Regular.ttf') format('truetype');
- }
+}
 
 @font-face {
   font-family: 'AvenirNextCyr-Medium';
   src: asset-url('AvenirNextCyr-Medium.ttf') format('truetype');
- }
+}
+
+ @font-face {
+  font-family: 'AvenirNextCyr-Demi';
+  src: asset-url('AvenirNextCyr-Demi.ttf') format('truetype');
+}
