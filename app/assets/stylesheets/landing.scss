@@ -88,8 +88,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 5;
-
-
   animation: type 2.4s 0s steps(2, end) infinite;
 }
   @keyframes type {
@@ -98,6 +96,18 @@ body {
   background-image: image_url('notify.png');
   opacity: 0.99;
   }
+}
+
+.ScaleNotify {
+  position: absolute;
+  left: 1234px;
+  top: 180px;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: red;
+  opacity: 0.65;
+  z-index: 4;
 }
 
 
@@ -903,5 +913,65 @@ h6 {
   color: #5E5E5E;
   -webkit-font-smoothing: antialiased;
   margin-top: 25px;
+  margin-bottom: 26px;
 
+}
+
+.form {
+  margin-top: 50px;
+  width: 353px;
+  height: 133px;
+  background-image: image_url('form.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.CallToActionButton {
+  margin-top: 26px;
+  width: 206px;
+  height: 44px;
+  margin-top: 43px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+  border: 1px solid #F6F6F6;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 4;
+}
+
+ .CallToActionButton a {
+   font-family: 'AvenirNextCyr-Regular';
+   font-size: 19px;
+   font-weight: 100;
+   color: #5E5E5E;
+   -webkit-font-smoothing: antialiased;
+    position: absolute;
+    width: 206px;
+    height: 44px;
+    z-index: 5;
+    padding-top: 10px;
+    padding-left: 46px;
+}
+
+.FirstShmut .CallToActionButton {
+  position: absolute;
+  top: 420px;
+  left: 111px;
+}
+
+
+.CallToAction .CallToActionButton {
+  margin-top: 0px;
+
+  position: relative;
+  background-color: #78A9F5;
+
+  &:hover {
+    background-color: #90BDFF;
+  }
+}
+
+.CallToAction .CallToActionButton a {
+  color: white;
 }
