@@ -1,0 +1,1114 @@
+/* @media all and (max-width: 1366px) {
+  body {
+    width: 1366px;
+  }
+
+  .textLeft {
+    top: 186px;
+    left: 124px;
+  }
+
+  .textRight {
+    top: 186px;
+    right: 124px;
+  }
+
+  .textCenter {
+    top: 186px;
+  }
+
+  .picRight {
+    top: 233px;
+    right: 124px;
+  }
+
+  .picRight2 {
+    top: 370px;
+    right: 3px;
+    width: 759px;
+    height: 404px;
+  }
+
+  .picLeft {
+    margin-top: 193px;
+    margin-left: 123px;
+    width: 488px;
+  }
+
+  #mockup1 {
+    width: 140px;
+    height: 316px;
+  }
+
+  #mockup2 {
+    width: 140px;
+    height: 395px;
+  }
+
+  #mockup3 {
+    width: 140px;
+    height: 474px;
+  }
+
+}
+
+
+@media all and (max-width: 1280px) {
+  body {
+    width: 1280px;
+  }
+
+  .textLeft {
+    left: 80px;
+  }
+
+  .textRight {
+    right: 80px;
+  }
+
+  .picRight {
+    top: 233px;
+    right: 80px;
+  }
+
+  .picRight2 {
+    top: 385px;
+    left: 508px
+  }
+  .picLeft {
+    margin-left: 80px;
+    width: 488px;
+  }
+}
+
+
+@media all and (max-width: 1180px) {
+  body {
+    width: 1180px;
+  }
+
+  .menubar {
+    width: 1180px;
+    height: 42px;
+  }
+
+  .logo {
+    width: 58px;
+    height: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 19px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .section  {
+    height: 568px;
+  }
+
+  .textLeft {
+    top: 134px;
+    width: 342px;
+    left: 192px;
+  }
+
+  .textRight {
+    top: 134px;
+    width: 342px;
+    right: 192px;
+  }
+
+  .textCenter {
+    top: 134px;
+    width: 548px;
+  }
+
+  .textCenter nav {
+    margin-top: 34px;
+  }
+
+  .big {
+    width: 214px;
+    height: 36px;
+    line-height: 32px;
+    font-size: 12px;
+  }
+
+  .small {
+    line-height: 18px;
+    font-size: 13px;
+    }
+
+  .picRight {
+    top: 166px;
+    right: 192px;
+    width: 376px;
+    height: 851px;
+  }
+
+  .picRight2 {
+    top: 243px;
+    right: 107px;
+    width: 540px;
+    height: 286px;
+  }
+
+  .line {
+    width: 22px;
+    height: 3px;
+    margin-top: 44px;
+  }
+
+  .picLeft {
+    height: 338px;
+    width: 346px;
+    margin-top: 138px;
+    margin-left: 192px;
+  }
+
+  #mockup1 {
+    width: 100px;
+    height: 226px;
+  }
+
+  #mockup2 {
+    width: 100px;
+    height: 282px;
+  }
+
+  #mockup3 {
+    width: 100px;
+    height: 338px;
+  }
+
+}
+
+
+@media all and (max-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+
+  .menubar {
+    width: 1024px;
+    height: 42px;
+  }
+
+  .textLeft {
+    left: 114px;
+  }
+
+  .textRight {
+    right: 114px;
+  }
+
+  .picRight {
+    right: 114px;
+  }
+
+  .picRight2 {
+    right: 29px;
+  }
+
+  .picLeft {
+    margin-left: 114px;
+  }
+
+}
+
+
+@media all and (max-width: 840px) {
+  body {
+    width: 840px;
+  }
+
+  .menubar {
+    width: 840px;
+  }
+
+  .section  {
+    height: 1024px;
+    width: 100%;
+  }
+
+  .textLeft {
+    left: 150px;
+  }
+
+  .textRight {
+    right: 150px;
+  }
+
+  .textCenter {
+    top: 184px;
+  }
+
+  .textCenter nav {
+    margin-top: 94px;
+  }
+
+  .picRight {
+    top: 512px;
+    width: 540px;
+    height: 1222px;
+    left: 110px;
+
+  }
+
+  .picRight2 {
+    top: 506px;
+    left: 158px;
+    width: 759px;
+    height: 403px;
+  }
+
+  .picLeft {
+    height: 474px;
+    width: 489px;
+    margin-top: 476px;
+    margin-left: 175px;
+  }
+
+  #mockup1 {
+    width: 140px;
+    height: 316px;
+  }
+
+  #mockup2 {
+    width: 140px;
+    height: 395px;
+  }
+
+  #mockup3 {
+    width: 140px;
+    height: 474px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  body {
+    width: 768px;
+  }
+
+  .menubar {
+    width: 768px;
+  }
+
+
+  .textLeft {
+    left: 114px;
+  }
+
+  .textRight {
+    right: 114px;
+  }
+
+
+  .picRight {
+    top: 482px;
+    left: 114px;
+
+  }
+
+  .picRight2 {
+    top: 506px;
+    left: 122px;
+  }
+
+  .picLeft {
+    height: 474px;
+    width: 489px;
+    margin-top: 456px;
+    margin-left: 139px;
+  }
+
+}
+
+
+@media all and (max-width: 638px) {
+  body {
+    width: 638px;
+  }
+
+  .menubar {
+    width: 638px;
+  }
+
+
+  .textLeft {
+    left: 114px;
+  }
+
+  .textRight {
+    right: 186px;
+  }
+
+
+  .textCenter {
+    top: 134px;
+    width: 459px;
+  }
+
+  .picRight {
+    top: 482px;
+    left: 114px;
+    width: 413px;
+
+  }
+
+  .picRight2 {
+    top: 506px;
+    left: 122px;
+  }
+
+  .picLeft {
+    height: 474px;
+    width: 440px;
+    margin-top: 456px;
+    margin-left: 99px;
+  }
+
+  #mockup1 {
+    width: 120px;
+    height: 273px;
+  }
+
+  #mockup2 {
+    width: 120px;
+    height: 338px;
+  }
+
+  #mockup3 {
+    width: 120px;
+    height: 406px;
+  }
+
+} */
+
+
+
+
+
+
+
+
+@media all and (max-width: 768px) {
+  body {
+    /* overflow-x:hidden; */
+    /* width: 670px; */
+  }
+
+
+.cover {
+    height: 775px;
+  }
+
+  .textblock h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainFirst h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainFirst p {
+    font-size: 16px;
+  }
+
+  .MainSecond h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainSecond p {
+    font-size: 16px;
+  }
+
+  .SecondShmut h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .LogoWhite {
+    top: 9px;
+    width: 73px;
+    height: 73px;
+}
+
+  .BlueBlock {
+    left: 10px;
+    width: 750px;
+    height: 680px;
+  }
+
+  .textblock {
+    left: 105px;
+    top: 135px;
+    width: 275px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .imageblock {
+    margin-left: -440px;
+  }
+
+  .ImgMacBook {
+    left: 801px;
+    top: -2px;
+    width: 400px;
+    height: 607px;
+    background-image: url("Mac_responsive.png");
+  }
+
+  .ImgArrow {
+    display: none;
+  }
+
+  .LevitateUser {
+    display: none;
+  }
+
+  .LevitateNotify {
+    display: none;
+  }
+
+  .LevitatePayPal {
+    display: none;
+  }
+
+  .illustratePartFirst {
+    display: none;
+  }
+
+  .xx {
+    display: none;
+  }
+
+  .lupa {
+    display: none;
+  }
+
+  .x {
+    display: none;
+  }
+
+.k {
+    display: none;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .particles {
+    display: none;
+  }
+
+  .lock {
+    display: none;
+  }
+
+  .lillock {
+    display: none;
+}
+
+.letter {
+    display: none;
+}
+
+.triangletwo {
+    display: none;
+  }
+
+  .triangle {
+    display: none;
+  }
+
+  .palochka {
+    display: none;
+  }
+
+
+  .FirstGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+
+  .FirstGroupImg {
+    height: 351px;
+    width: 300px;
+    position: absolute;
+    margin-left: -33px;
+}
+
+.FirstGroupText {
+  width: 259px;
+  margin-top: 230px;
+  margin-right: inherit;
+}
+
+
+.SecondGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.SecondGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.SecondGroupText {
+  width: 326px;
+  margin-top: 280px;
+  margin-left: inherit;
+}
+
+.ThirdGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.ThirdGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.ThirdGroupText {
+  width: 326px;
+  margin-top: 360px;
+  margin-right: inherit;
+}
+
+.FourthGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.FourthGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.FourthGroupText {
+  width: 326px;
+  margin-top: 300px;
+  margin-left: inherit;
+}
+
+.FirstShmut {
+  margin-top: 430px;
+  height: 648px;
+}
+
+.RedBlock {
+    width: 1926px;
+    height: 660px;
+    /* margin-right: 176px; */
+    margin-left: -202px;
+  }
+
+  .GirlWithComp {
+    right: -3px;
+    top: 257px;
+    width: 453px;
+    height: 418px;
+  }
+
+  .FirstShmut .textblock {
+    left: 200px;
+    top: 135px;
+    width: 275px;
+  }
+
+
+  .MainSecond {
+    margin-top: inherit;
+    height: inherit;
+  }
+
+
+  .FirstGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+  }
+
+  .LettersImg {
+    height: 361px;
+    width: 400px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 230px;
+  }
+
+  .FirstGroupSecondText {
+    width: 326px;
+    margin-left: inherit;
+  }
+
+
+  .SecondGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+  }
+
+  .CardsImg {
+    height: 351px;
+    width: 300px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 295px;
+  }
+
+  .SecondGroupSecondText {
+    width: 326px;
+    margin-right: inherit;
+  }
+
+  .ThirdGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 130px;
+  }
+
+  .ArtefactsImg {
+    height: 351px;
+    width: 390px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 340px;
+  }
+
+  .ThirdGroupSecondText {
+    width: 326px;
+    margin-left: inherit;
+  }
+
+  .BlueBlockSecond {
+    width: 725px;
+    height: 716px;
+    margin-left: 251px;
+  }
+
+  .textblockthird {
+    left: 370px;
+    top: 300px;
+    width: 330px;
+  }
+
+  .LudiImg {
+    left: 40px;
+    top: -8px;
+    width: 562px;
+    height: 724px;
+  }
+
+  .GirlImg {
+    width: 987px;
+    height: 263px;
+    margin-right: 142px;
+  }
+
+  .CallToAction {
+    margin-top: 1px;
+  }
+
+  .CallToAction h2, .CallToAction h3 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .CallToAction h6 {
+    font-size: 16px;
+  }
+
+  .footer {
+    width: auto;
+    height: auto;
+  }
+
+}
+
+
+
+
+
+
+@media all and (max-width: 375px) {
+  body {
+    /* overflow-x:hidden; */
+    /* width: 670px; */
+  }
+
+
+.cover {
+    height: 775px;
+  }
+
+  .textblock h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainFirst h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainFirst p {
+    font-size: 16px;
+  }
+
+  .MainSecond h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainSecond p {
+    font-size: 16px;
+  }
+
+  .SecondShmut h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .LogoWhite {
+    top: 9px;
+    width: 73px;
+    height: 73px;
+}
+
+  .BlueBlock {
+    left: 10px;
+    width: 750px;
+    height: 680px;
+  }
+
+  .textblock {
+    left: 105px;
+    top: 135px;
+    width: 275px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .imageblock {
+    margin-left: -440px;
+  }
+
+  .ImgMacBook {
+    left: 801px;
+    top: -2px;
+    width: 400px;
+    height: 607px;
+    background-image: url("Mac_responsive.png");
+  }
+
+  .ImgArrow {
+    display: none;
+  }
+
+  .LevitateUser {
+    display: none;
+  }
+
+  .LevitateNotify {
+    display: none;
+  }
+
+  .LevitatePayPal {
+    display: none;
+  }
+
+  .illustratePartFirst {
+    display: none;
+  }
+
+  .xx {
+    display: none;
+  }
+
+  .lupa {
+    display: none;
+  }
+
+  .x {
+    display: none;
+  }
+
+.k {
+    display: none;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .particles {
+    display: none;
+  }
+
+  .lock {
+    display: none;
+  }
+
+  .lillock {
+    display: none;
+}
+
+.letter {
+    display: none;
+}
+
+.triangletwo {
+    display: none;
+  }
+
+  .triangle {
+    display: none;
+  }
+
+  .palochka {
+    display: none;
+  }
+
+
+  .FirstGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+
+  .FirstGroupImg {
+    height: 351px;
+    width: 300px;
+    position: absolute;
+    margin-left: -33px;
+}
+
+.FirstGroupText {
+  width: 259px;
+  margin-top: 230px;
+  margin-right: inherit;
+}
+
+
+.SecondGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.SecondGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.SecondGroupText {
+  width: 326px;
+  margin-top: 280px;
+  margin-left: inherit;
+}
+
+.ThirdGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.ThirdGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.ThirdGroupText {
+  width: 326px;
+  margin-top: 360px;
+  margin-right: inherit;
+}
+
+.FourthGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.FourthGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.FourthGroupText {
+  width: 326px;
+  margin-top: 300px;
+  margin-left: inherit;
+}
+
+.FirstShmut {
+  margin-top: 430px;
+  height: 648px;
+}
+
+.RedBlock {
+    width: 1926px;
+    height: 660px;
+    /* margin-right: 176px; */
+    margin-left: -202px;
+  }
+
+  .GirlWithComp {
+    right: -3px;
+    top: 257px;
+    width: 453px;
+    height: 418px;
+  }
+
+  .FirstShmut .textblock {
+    left: 200px;
+    top: 135px;
+    width: 275px;
+  }
+
+
+  .MainSecond {
+    margin-top: inherit;
+    height: inherit;
+  }
+
+
+  .FirstGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+  }
+
+  .LettersImg {
+    height: 361px;
+    width: 400px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 230px;
+  }
+
+  .FirstGroupSecondText {
+    width: 326px;
+    margin-left: inherit;
+  }
+
+
+  .SecondGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+  }
+
+  .CardsImg {
+    height: 351px;
+    width: 300px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 295px;
+  }
+
+  .SecondGroupSecondText {
+    width: 326px;
+    margin-right: inherit;
+  }
+
+  .ThirdGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 130px;
+  }
+
+  .ArtefactsImg {
+    height: 351px;
+    width: 390px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 340px;
+  }
+
+  .ThirdGroupSecondText {
+    width: 326px;
+    margin-left: inherit;
+  }
+
+  .BlueBlockSecond {
+    width: 725px;
+    height: 716px;
+    margin-left: 251px;
+  }
+
+  .textblockthird {
+    left: 370px;
+    top: 300px;
+    width: 330px;
+  }
+
+  .LudiImg {
+    left: 40px;
+    top: -8px;
+    width: 562px;
+    height: 724px;
+  }
+
+  .GirlImg {
+    width: 987px;
+    height: 263px;
+    margin-right: 142px;
+  }
+
+  .CallToAction {
+    margin-top: 1px;
+  }
+
+  .CallToAction h2, .CallToAction h3 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .CallToAction h6 {
+    font-size: 16px;
+  }
+
+  .footer {
+    width: auto;
+    height: auto;
+  }
+
+}
