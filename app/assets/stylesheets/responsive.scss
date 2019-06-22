@@ -1,0 +1,358 @@
+
+
+
+
+@media all and (max-width: 768px) {
+  body {
+    /* overflow-x:hidden; */
+    /* width: 670px; */
+  }
+
+
+.cover {
+    height: 775px;
+  }
+
+  .textblock h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainFirst h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainFirst p {
+    font-size: 16px;
+  }
+
+  .MainSecond h2 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .MainSecond p {
+    font-size: 16px;
+  }
+
+  .SecondShmut h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .LogoWhite {
+    top: 9px;
+    width: 73px;
+    height: 73px;
+}
+
+  .BlueBlock {
+    left: 10px;
+    width: 750px;
+    height: 680px;
+  }
+
+  .textblock {
+    left: 105px;
+    top: 135px;
+    width: 275px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .imageblock {
+    margin-left: -440px;
+  }
+
+  .ImgMacBook {
+    left: 801px;
+    top: -2px;
+    width: 400px;
+    height: 607px;
+    background-image: url("Mac_responsive.png");
+  }
+
+  .ImgArrow {
+    display: none;
+  }
+
+  .LevitateUser {
+    display: none;
+  }
+
+  .LevitateNotify {
+    display: none;
+  }
+
+  .LevitatePayPal {
+    display: none;
+  }
+
+  .illustratePartFirst {
+    display: none;
+  }
+
+  .xx {
+    display: none;
+  }
+
+  .lupa {
+    display: none;
+  }
+
+  .x {
+    display: none;
+  }
+
+.k {
+    display: none;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .particles {
+    display: none;
+  }
+
+  .lock {
+    display: none;
+  }
+
+  .lillock {
+    display: none;
+}
+
+.letter {
+    display: none;
+}
+
+.triangletwo {
+    display: none;
+  }
+
+  .triangle {
+    display: none;
+  }
+
+  .palochka {
+    display: none;
+  }
+
+
+  .FirstGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+
+  .FirstGroupImg {
+    height: 351px;
+    width: 300px;
+    position: absolute;
+    margin-left: -33px;
+}
+
+.FirstGroupText {
+  width: 259px;
+  margin-top: 230px;
+  margin-right: inherit;
+}
+
+
+.SecondGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.SecondGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.SecondGroupText {
+  width: 326px;
+  margin-top: 280px;
+  margin-left: inherit;
+}
+
+.ThirdGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.ThirdGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.ThirdGroupText {
+  width: 326px;
+  margin-top: 360px;
+  margin-right: inherit;
+}
+
+.FourthGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.FourthGroupImg {
+  height: 351px;
+  width: 300px;
+  position: absolute;
+  margin-left: -33px;
+}
+
+.FourthGroupText {
+  width: 326px;
+  margin-top: 300px;
+  margin-left: inherit;
+}
+
+.FirstShmut {
+  margin-top: 430px;
+  height: 648px;
+}
+
+.RedBlock {
+    width: 1926px;
+    height: 660px;
+    /* margin-right: 176px; */
+    margin-left: -202px;
+  }
+
+  .GirlWithComp {
+    right: -3px;
+    top: 257px;
+    width: 453px;
+    height: 418px;
+  }
+
+  .FirstShmut .textblock {
+    left: 200px;
+    top: 135px;
+    width: 275px;
+  }
+
+
+  .MainSecond {
+    margin-top: inherit;
+    height: inherit;
+  }
+
+
+  .FirstGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+  }
+
+  .LettersImg {
+    height: 361px;
+    width: 400px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 230px;
+  }
+
+  .FirstGroupSecondText {
+    width: 326px;
+    margin-left: inherit;
+  }
+
+
+  .SecondGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+  }
+
+  .CardsImg {
+    height: 351px;
+    width: 300px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 295px;
+  }
+
+  .SecondGroupSecondText {
+    width: 326px;
+    margin-right: inherit;
+  }
+
+  .ThirdGroupSecond {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 130px;
+  }
+
+  .ArtefactsImg {
+    height: 351px;
+    width: 390px;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 340px;
+  }
+
+  .ThirdGroupSecondText {
+    width: 326px;
+    margin-left: inherit;
+  }
+
+  .BlueBlockSecond {
+    width: 725px;
+    height: 716px;
+    margin-left: 251px;
+  }
+
+  .textblockthird {
+    left: 370px;
+    top: 300px;
+    width: 330px;
+  }
+
+  .LudiImg {
+    left: 40px;
+    top: -8px;
+    width: 562px;
+    height: 724px;
+  }
+
+  .GirlImg {
+    width: 987px;
+    height: 263px;
+    margin-right: 142px;
+  }
+
+  .CallToAction {
+    margin-top: 1px;
+  }
+
+  .CallToAction h2, .CallToAction h3 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .CallToAction h6 {
+    font-size: 16px;
+  }
+
+  .footer {
+    width: auto;
+    height: auto;
+  }
+
+}
