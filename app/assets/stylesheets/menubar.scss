@@ -18,10 +18,9 @@
 }
 
 .user {
-  width: 30px;
-  height: 30px;
-  background-color: #000000;
-  opacity: 0.7;
+  width: 34px;
+  height: 34px;
+  background-color: #E4E4E4;
   border-radius: 100%;
   right: 33px;
   margin-left: 25px;
@@ -71,14 +70,6 @@
   background-repeat: no-repeat;
 }
 
-// .devider {
-//   position: absolute;
-//   width: 130px;
-//   height: 1px;
-//   top: 50px;
-//   background-color: #1d2129;
-//   opacity: 0.2;
-// }
 
 .popup_content{
   display: flex;
@@ -101,7 +92,6 @@
   background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
   border: 1px solid #F6F6F6;
-  // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   margin-left: 20px;
   border-radius: 3px;
 }
@@ -128,7 +118,7 @@
   width: 200px;
   height: 40px;
   background-color: #649DF4;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-left: 378px;
   border-radius: 3px;
   margin-right: -580px;
@@ -196,10 +186,10 @@
 
 .ForFakeAppoint {
   display: flex;
+  display: none;
   justify-content: center;
   width: 350px;
   height: 30px;
-  display: none;
   position: absolute;
   margin-top: 35px;
 }
@@ -215,24 +205,18 @@
   width: 350px;
   min-height: 40px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
-  border: 1px solid #F6F6F6;
   margin-top: 20px;
+  border-radius: 2px;
+  border: 0px solid #F0F0F0;
 }
-
-
-
-
-
 
 .custodian_container {
   width: 350px;
   background-color: #F7F9FA;
-
 }
 
-
 .custodian_container_title {
-  border: 0.5px solid #DADADA;
+  border: 0.8px solid #F0F0F0;
   width: 349px;
   height: 40px;
   display: flex;
@@ -247,7 +231,7 @@
 }
 
 .custodian_container_content {
-  border: 0.5px solid #DADADA;
+  border: 0.8px solid #F0F0F0;
   width: 349px;
   height: 55px;
   margin-top: -1px;
@@ -264,11 +248,11 @@
 .unaccepted_custodian {
   background-image: image_url('unaccepted.png');
   width: 240px;
-  height: 65px;
+  height: 69px;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 .delete_custodian {
@@ -278,38 +262,36 @@
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  margin-left: 300px;
+  margin-left: 305px;
 }
 
 .custodian input[type=email] {
-  // padding-left: -100px;
-  text-decoration: #dfdede;
   height: 55px;
-  width: 350px;
+  width: 351px;
   padding: 24px;
-  border: 1px solid #dbdbdb;
+  border: 0.8px solid #F0F0F0;
   border-radius: 2px;
   box-sizing: border-box;
   resize: vertical;
   font-size: 14px;
   font-family: 'AvenirNextCyr-Light';
   font-weight: 100;
-  color: #767676;
+  color: black;
   margin-bottom: auto;
 }
 
 
 .custodian_button input[type=submit] {
-  background-color: rgba(0, 120, 201, 0.0);
-  height: 25px;
-  width: 25px;
+  background-color: white;
+  height: 20px;
+  width: 28px;
   border: none;
   cursor: pointer;
   position: absolute;
   margin-top: -38px;
-  margin-left: 300px;
+  margin-left: 302px;
   background-image: image_url('plane.png');
-  opacity: 0.6;
+
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -317,7 +299,7 @@
 
 .explanation_section {
   width: 350px;
-  height: 235px;
+  height: 230px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -331,7 +313,8 @@
 .explanation p {
   text-align: center;
   color: #786F6F;
-  margin-top: 130px;;
+  margin-top: 130px;
+  font-size: 15px;
 }
 
 .explanation_img {
