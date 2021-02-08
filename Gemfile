@@ -45,7 +45,7 @@ group :development, :test do
 end
 
 
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'devise'
 gem "mini_magick"
 gem 'cancancan', '~> 2.0'
